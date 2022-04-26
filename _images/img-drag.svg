@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="67px" viewBox="0 0 66 67" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>img-drag</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="img-drag">
+            <g id="Page-1">
+                <polyline id="Stroke-1" stroke="#0070B9" points="64.8253 64.9705 64.8253 65.9705 63.8253 65.9705"></polyline>
+                <path d="M60.9454,65.9705 L14.3884,65.9705" id="Stroke-3" stroke="#0070B9" stroke-dasharray="1.92,2.88"></path>
+                <polyline id="Stroke-6" stroke="#0070B9" points="12.9489 65.9705 11.9489 65.9705 11.9489 64.9705"></polyline>
+                <path d="M11.9489,62.0896 L11.9489,15.5326" id="Stroke-9" stroke="#0070B9" stroke-dasharray="1.92,2.88"></path>
+                <polyline id="Stroke-10" stroke="#0070B9" points="11.9489 14.0935 11.9489 13.0935 12.9489 13.0935"></polyline>
+                <path d="M15.8287,13.0935 L62.3857,13.0935" id="Stroke-11" stroke="#0070B9" stroke-dasharray="1.92,2.88"></path>
+                <polyline id="Stroke-12" stroke="#0070B9" points="63.8253 13.0935 64.8253 13.0935 64.8253 14.0935"></polyline>
+                <path d="M64.8253,16.9734 L64.8253,63.5304" id="Stroke-14" stroke="#0070B9" stroke-dasharray="1.92,2.88"></path>
+                <polyline id="Stroke-18" stroke="#0070B9" points="59.1007 58.1004 59.1007 59.1004 58.1007 59.1004"></polyline>
+                <path d="M55.2208,59.1004 L8.6638,59.1004" id="Stroke-19" stroke="#0070B9" stroke-dasharray="1.92,2.88"></path>
+                <polyline id="Stroke-20" stroke="#0070B9" points="7.2242 59.1004 6.2242 59.1004 6.2242 58.1004"></polyline>
+                <path d="M6.2242,55.2205 L6.2242,8.6635" id="Stroke-21" stroke="#0070B9" stroke-dasharray="1.92,2.88"></path>
+                <polyline id="Stroke-22" stroke="#0070B9" points="6.2242 7.2244 6.2242 6.2244 7.2242 6.2244"></polyline>
+                <path d="M10.1041,6.2244 L56.6611,6.2244" id="Stroke-23" stroke="#0070B9" stroke-dasharray="1.92,2.88"></path>
+                <polyline id="Stroke-24" stroke="#0070B9" points="58.1007 6.2244 59.1007 6.2244 59.1007 7.2244"></polyline>
+                <path d="M59.1007,10.1043 L59.1007,56.6613" id="Stroke-25" stroke="#0070B9" stroke-dasharray="1.92,2.88"></path>
+                <polygon id="Fill-26" fill="#FAFAFA" fill-rule="nonzero" points="0.5 53.377 53.376 53.377 53.376 0.5 0.5 0.5"></polygon>
+                <polygon id="Stroke-27" stroke="#0070B9" points="0.5 53.377 53.376 53.377 53.376 0.5 0.5 0.5"></polygon>
+                <path d="M6.2242,8.2351 L32.6622,8.2351" id="Stroke-29" stroke="#0070B9"></path>
+                <path d="M6.2242,14.6375 L32.6622,14.6375" id="Stroke-30" stroke="#0070B9"></path>
+                <path d="M6.2242,21.0408 L48.1392,21.0408" id="Stroke-31" stroke="#0070B9"></path>
+                <path d="M6.2242,27.4441 L48.1392,27.4441" id="Stroke-32" stroke="#0070B9"></path>
+                <path d="M6.2242,33.8474 L48.1392,33.8474" id="Stroke-33" stroke="#0070B9"></path>
+                <path d="M6.2242,40.2508 L48.1392,40.2508" id="Stroke-34" stroke="#0070B9"></path>
+                <path d="M6.2242,46.6541 L48.1392,46.6541" id="Stroke-35" stroke="#0070B9"></path>
+            </g>
+            <g id="navigation-2" transform="translate(32.000000, 1.000000)" fill="#0070B9" fill-rule="nonzero">
+                <polygon id="Shape" transform="translate(8.854638, 9.548825) rotate(-35.000000) translate(-8.854638, -9.548825) " points="8.85463777 2.16315031 13.7784206 15.5277036 10.2881076 14.2366366 10.2881076 16.9344987 7.49298578 16.9344987 7.49298578 14.1955979 3.93085495 15.5277036"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Tyrian &ndash; HealthEquity's Design System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="_images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="_images/favicon.png" type="image/x-icon" />
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="_css/bootstrap-grid.css">
+  <link rel="stylesheet" type="text/css" href="_css/bootstrap-reboot.css">
+  <link rel="stylesheet" type="text/css" href="_css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="_css/particles.css">
+  <link rel="stylesheet" type="text/css" href="_css/tyrian.css">
+  <link rel="stylesheet" type="text/css" href="_css/tyrian-icons.css">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet"> <!-- lato -->
+  <link rel="stylesheet" href="https://use.typekit.net/ter1zgq.css">  <!-- museo sans -->
+  <link rel="stylesheet" href="http://fonts.cdnfonts.com/css/neue-haas-grotesk-text-pro"> <!-- neue haas grotesk -->
+
+
+  <!-- javascript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+</head>
+
+<body>
+
+  <script src="_js/particles.js"></script>
+  <script src="_js/particles-app.js"></script>
+
+  <div class="site-container">
+    <div class="site-pusher">
+
+      <header class="header">
+
+        <a href="https://design.healthequity.com/index.html" class="header__logo"><img src="_images/tyrian-icon.svg" max-height="48px" max-width="240px" alt="Tyrian Icon Logo"></a>
+
+        <nav class="menu">
+          <ul>
+            <li>
+              <a href="start/design/index.html">Getting Started</a>
+            </li>
+            <li>
+              <a href="foundation/index.html">Foundation</a>
+            </li>
+            <li>
+              <a href="components/index.html">Components</a>
+            </li>
+            <li>
+              <a href="patterns/index.html">Patterns</a>
+            </li>
+            <li>
+              <a href="mobile/index.html">Mobile</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="menu-right">
+          <div class="dropdown mb-3">
+            <a class="btn dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" >
+              <span class="t-info-circle"></span>
+            </a>
+            <div class="dropdown-menu">
+              <p class="dropdown-item"><smart>Everything that exists maintains and is maintained by other existences.</smart></p>
+            </div>
+          </div>
+        </nav>
+
+      </header>
+    <script>
+    var colors = new Array(
+        [89,44,130],
+        [0,170,198],
+        [137,89,181],
+        [213,88,145],);
+
+      var step = 0;
+      //color table indices for:
+      // current color left
+      // next color left
+      // current color right
+      // next color right
+      var colorIndices = [0,1,2,3];
+
+      //transition speed
+      var gradientSpeed = 0.0005;
+
+      function updateGradient()
+      {
+
+        if ( $===undefined ) return;
+
+      var c0_0 = colors[colorIndices[0]];
+      var c0_1 = colors[colorIndices[1]];
+      var c1_0 = colors[colorIndices[2]];
+      var c1_1 = colors[colorIndices[3]];
+
+      var istep = 1 - step;
+      var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
+      var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
+      var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
+      var color1 = "rgb("+r1+","+g1+","+b1+")";
+
+      var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
+      var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
+      var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
+      var color2 = "rgb("+r2+","+g2+","+b2+")";
+
+       $('#gradient').css({
+         background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
+          background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
+
+        step += gradientSpeed;
+        if ( step >= 1 )
+        {
+          step %= 1;
+          colorIndices[0] = colorIndices[1];
+          colorIndices[2] = colorIndices[3];
+
+          //pick two new target color indices
+          //do not pick the same as the current one
+          colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+          colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+
+        }
+      }
+
+      setInterval(updateGradient,10);
+    </script>
+    <div class="hero-content bg-purple pb-3" id="gradient">
+      <div class="container-fluid">
+        <div class="m-2 pt-2 pb-3">
+          <div class="d-inline-flex">
+            <h1 class="text-white display-4 mr-2"><strong>Tyrian</strong></h1>
+            <h2 class="text-white mt-4"><span class="font-weight-light">&ndash; HealthEquity's Design System</span></h2>
+          </div>
+          <h3 class="text-gray5 font-weight-light w-70">Tyrian purple is a natural dye produced by predatory sea snails, the dye is color fast and was extremely difficult to extract, textiles made with this dye became prized royal luxuries. It is believed that the intensity of the purple hue improved rather than faded as the dyed cloth aged. <br><br>Tyrian is constructed to help prototype and build out HealthEquity's applications and products. Built on top of Bootstrap, an open source toolkit for developing with HTML, CSS, and JS.</h3>
+        </div>
+      </div> <!-- END container -->
+    </div>
+    <div class="site-content pt-2 pb-3">
+      <div class="container-fluid pl-0">
+        <div class="row m-2">
+          <div class="col-lg-2 mb-3 pr-5">
+            <h4 class="text-primary font-weight-light">Getting Started</h4>
+            <p class="font-weight-light">Learn how to use the system to design a more thoughtful product experience.</p>
+            <a class="" href="start/design/index.html">Get started now</a>
+          </div>
+          <div class="col-lg-2 mb-3 pr-5">
+            <h4 class="text-primary font-weight-light">Foundation</h4>
+            <p class="font-weight-light">Find out how we approach the visual elements of our interface with purpose.</p>
+            <a class="" href="foundation/index.html">View foundation elements</a>
+          </div>
+          <div class="col-lg-2 mb-3 pr-5">
+            <h4 class="text-primary font-weight-light">Components</h4>
+            <p class="font-weight-light">Use components as building blocks as you develop new products and features.</p>
+            <a class="" href="components/index.html">View components</a>
+          </div>
+          <div class="col-lg-2 mb-3 pr-5">
+            <h4 class="text-primary font-weight-light">Patterns</h4>
+            <p class="font-weight-light">See how we put the pieces together to create meaningful product experiences.</p>
+            <a class="" href="patterns/index.html">View patterns</a>
+          </div>
+          <div class="col-lg-2 mb-3 pr-5">
+            <h4 class="text-primary font-weight-light">Mobile</h4>
+            <p class="font-weight-light">Mobile elements and components to be used for our mobile apps.</p>
+            <a class="" href="mobile/index.html">View mobile guidelines</a>
+          </div>
+        </div>
+      </div> <!-- END container -->
+    </div> <!-- END site-content -->
+    <footer class="pt-3 pb-4">
+      <div class="container-fluid m-2">
+        <small class="text-muted">Copyright &copy; 2022 HealthEquity <span class="light"> &nbsp;/&nbsp; v0.7 &nbsp;/&nbsp; Updated on March 15, 2022 at 11:29 am</span></small>
+      </div>
+    </footer>
+    <div class="site-cache" id="site-cache"></div>
+  </div> <!-- END site-pusher -->
+</div> <!-- END site-container -->
+</body>
+<script>
+$(document).ready(function(){
+
+	(function($) {
+
+		$('#header__icon').click(function(e){
+			e.preventDefault();
+			$('body').toggleClass('with--sidebar');
+		});
+
+    $('#site-cache').click(function(e){
+      $('body').removeClass('with--sidebar');
+    });
+
+	})(jQuery);
+
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</html>

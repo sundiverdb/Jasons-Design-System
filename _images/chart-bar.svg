@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="241px" height="135px" viewBox="0 0 241 135" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>chart-bar</title>
+    <desc>Created with Sketch.</desc>
+    <g id="chart-bar" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(0.000000, 0.000000)">
+        <g id="Group-2-Copy" transform="translate(16.000000, 16.000000)" stroke="#FFFFFF" stroke-width="2">
+            <polygon id="Bar_1_1" fill="#B2E5ED" points="0 0 0 20.6 60 20.6 60 0"></polygon>
+            <polygon id="Bar_2_1" fill="#7FC4DE" points="0 20.6 0 42.23 80 42.23 80 20.6"></polygon>
+            <polygon id="Bar_3_1" fill="#4CA2CF" points="0 42.23 0 60.77 120 60.77 120 42.23"></polygon>
+            <polygon id="Bar_4_1" fill="#1981C0" points="0 60.77 0 81.37 180 81.37 180 60.77"></polygon>
+            <polygon id="Bar_5_1" fill="#03609C" points="0 81.37 0 103 160 103 160 81.37"></polygon>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="240px" height="135px" viewBox="0 0 240 135" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>chart-pie</title>
+    <desc>Created with Sketch.</desc>
+    <g id="chart-pie" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Pie-chart-Copy-4" transform="translate(16.000000, 16.000000)">
+            <rect id="Rectangle-Copy" x="0" y="0" width="104" height="69"></rect>
+            <path d="M102.911927,62 C106.095386,46.8221317 102.211216,31.0308806 92.3366337,19.0057195 C82.4620512,6.9805585 67.6469199,0 52,0 L52,51.5182934 L102.911927,62" id="Pie_0" stroke="#FFFFFF" stroke-width="2" fill="#3B1D56"></path>
+            <path d="M45,103.510585 C72.0901103,107.23322 97.4365358,89.3456727 103,62.5786685 L52.0815157,52 L45,103.510585" id="Pie_1" stroke="#FFFFFF" stroke-width="2" fill="#6F316A"></path>
+            <path d="M2,65.8503534 C7.80071405,85.6508245 24.5898644,100.188985 44.9016458,103 L52,51 L2,65.8503534" id="Pie_2" stroke="#FFFFFF" stroke-width="2" fill="#A2447D"></path>
+            <path d="M14.9810671,16 C1.69701294,29.4067128 -3.22603899,48.9376388 2.12578063,67 L52,52.3539038 L14.9810671,16" id="Pie_3" stroke="#FFFFFF" stroke-width="2" fill="#D55891"></path>
+            <path d="M52,0 C38.0930848,0 24.7662857,5.57651711 15,15.4824224 L52,52 L52,0" id="Pie_4" stroke="#FFFFFF" stroke-width="2" fill="#E38AB1"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="600px" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Typography</title>
+    <g id="Typography" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <text id="h1-Heading" font-family="Lato-Regular, Lato" font-size="40" font-weight="normal" fill="#767676">
+            <tspan x="40" y="69">h1 Heading</tspan>
+        </text>
+        <text id="Display-2" font-family="Lato-Light, Lato" font-size="60" font-weight="300" fill="#767676">
+            <tspan x="360" y="199">Display 2</tspan>
+        </text>
+        <text id="Display-1" font-family="Lato-Light, Lato" font-size="72" font-weight="300" fill="#767676">
+            <tspan x="360" y="101">Display 1</tspan>
+        </text>
+        <text id="Display-3" font-family="Lato-Light, Lato" font-size="48" font-weight="300" fill="#767676">
+            <tspan x="360" y="283">Display 3</tspan>
+        </text>
+        <text id="Display-4" font-family="Lato-Light, Lato" font-size="40" font-weight="300" fill="#767676">
+            <tspan x="360" y="356">Display 4</tspan>
+        </text>
+        <text id="h2-Heading" font-family="Lato-Regular, Lato" font-size="32" font-weight="normal" fill="#767676">
+            <tspan x="40" y="134">h2 Heading</tspan>
+        </text>
+        <text id="h3-Heading" font-family="Lato-Regular, Lato" font-size="28" font-weight="normal" fill="#767676">
+            <tspan x="40" y="193">h3 Heading</tspan>
+        </text>
+        <text id="h4-Heading" font-family="Lato-Regular, Lato" font-size="24" font-weight="normal" fill="#767676">
+            <tspan x="40" y="247">h4 Heading</tspan>
+        </text>
+        <text id="h5-Heading" font-family="Lato-Regular, Lato" font-size="20" font-weight="normal" fill="#767676">
+            <tspan x="40" y="296">h5 Heading</tspan>
+        </text>
+        <text id="h6-Heading" font-family="Lato-Regular, Lato" font-size="18" font-weight="normal" fill="#767676">
+            <tspan x="40" y="342">h6 Heading</tspan>
+        </text>
+        <text id="p-Paragraph" font-family="Lato-Regular, Lato" font-size="16" font-weight="normal" fill="#767676">
+            <tspan x="40" y="388">p Paragraph</tspan>
+        </text>
+        <text id="a-Link" font-family="Lato-Regular, Lato" font-size="16" font-weight="normal" fill="#0070B9">
+            <tspan x="40" y="431">a Link</tspan>
+        </text>
+    </g>
+</svg>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1280px" height="707px" viewBox="0 0 1280 707" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>rfs-chart</title>
+    <g id="rfs-chart" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="rfs-graph" transform="translate(8.000000, 8.000000)">
+            <line x1="115" y1="387" x2="717" y2="281" id="Path" stroke="#FF3370" stroke-width="2" fill="#000000" fill-rule="nonzero"></line>
+            <line x1="715" y1="41" x2="715" y2="611" id="Path" stroke="#DCDCDC" fill="#000000" fill-rule="nonzero"></line>
+            <text id="Breakpoint:" fill="#6C6C6C" fill-rule="nonzero" font-family="Lato-Bold, Lato" font-size="13" font-weight="bold">
+                <tspan x="679.4" y="13">Breakpoint:</tspan>
+            </text>
+            <text id="1200" fill="#6C6C6C" fill-rule="nonzero" font-family="Lato-Bold, Lato" font-size="13" font-weight="bold">
+                <tspan x="701" y="32">1200</tspan>
+            </text>
+            <line x1="294" y1="41" x2="294" y2="611" id="Path" stroke="#DCDCDC" fill="#000000" fill-rule="nonzero"></line>
+            <text id="360" fill="#6C6C6C" fill-rule="nonzero" font-family="Lato-Bold, Lato" font-size="13" font-weight="bold">
+                <tspan x="281" y="31">360</tspan>
+            </text>
+            <line x1="498" y1="41" x2="498" y2="611" id="Path" stroke="#DCDCDC" fill="#000000" fill-rule="nonzero"></line>
+            <text id="768" fill="#6C6C6C" fill-rule="nonzero" font-family="Lato-Bold, Lato" font-size="13" font-weight="bold">
+                <tspan x="486" y="31">768</tspan>
+            </text>
+            <line x1="115" y1="51" x2="115" y2="601" id="Path" stroke="#000000" fill="#000000" fill-rule="nonzero"></line>
+            <line x1="115" y1="601" x2="1115" y2="601" id="Path" stroke="#000000" fill="#000000" fill-rule="nonzero"></line>
+            <text id="value-(px)" fill="#323232" fill-rule="nonzero" font-family="Lato-Regular, Lato" font-size="20" font-weight="normal">
+                <tspan x="71" y="36">value (px)</tspan>
+            </text>
+            <text id="viewport-width-(px)" fill="#323232" fill-rule="nonzero" font-family="Lato-Regular, Lato" font-size="20" font-weight="normal">
+                <tspan x="541.3" y="671">viewport width (px)</tspan>
+            </text>
+            <line x1="105" y1="501" x2="125" y2="501" id="Path" stroke="#000000" fill="#000000" fill-rule="nonzero"></line>
+            <text id="10" fill="#323232" fill-rule="nonzero" font-family="Lato-Regular, Lato" font-size="20" font-weight="normal">
+                <tspan x="80" y="507">10</tspan>
+            </text>
+            <line x1="105" y1="401" x2="125" y2="401" id="Path" stroke="#000000" fill="#000000" fill-rule="nonzero"></line>
+            <text id="20" fill="#323232" fill-rule="nonzero" font-family="Lato-Regular, Lato" font-size="20" font-weight="normal">
+                <tspan x="78" y="407">20</tspan>
+            </text>
+            <line x1="105" y1="301" x2="125" y2="301" id="Path" stroke="#000000" fill="#000000" fill-rule="nonzero"></line>
+            <text id="30" fill="#323232" fill-rule="nonzero" font-family="Lato-Regular, Lato" font-size="20" font-weight="normal">
+                <tspan x="78" y="307">30</tspan>
+            </text>
+            <line x1="105" y1="201" x2="125" y2="201" id="Path" stroke="#000000" fill="#000000" fill-rule="nonzero"></line>
+            <text id="40" fill="#323232" fill-rule="nonzero" font-family="Lato-Regular, Lato" font-size="20" font-weight="normal">
+                <tspan x="78" y="207">40</tspan>
+            </text>
+            <line x1="105" y1="101" x2="125" y2="101" id="Path" stroke="#000000" fill="#000000" fill-rule="nonzero"></line>
+            <text id="50" fill="#323232" fill-rule="nonzero" font-family="Lato-Regular, Lato" font-size="20" font-weight="normal">
+                <tspan x="78" y="107">50</tspan>
+            </text>
+            <line x1="215" y1="591" x2="215" y2="611" id="Path" stroke="#000000" fill="#000000" fill-rule="nonzero"></line>
+            <g id="Group" transform="translate(197.000000, 617.000000)" fill="#323232" fill-rule="nonzero" font-family="Lato-Regular, Lato" font-size="20" font-weight="normal">
+                <g id="Group-2">
+                    <text id="200">
+                        <tspan x="0" y="20">200</tspan>
+                    </text>
+                    <text id="400">
+                        <tspan x="100" y="20">400</tspan>
+                    </text>
+                    <text id="600">
+                        <tspan x="200" y="20">600</tspan>
+                    </text>
+                    <text id="800">
+                        <tspan x="300" y="20">800</tspan>
+                    </text>
+                    <text id="1000">
+                        <tspan x="395" y="20">1000</tspan>
+                    </text>
+                    <text id="1200">
+                        <tspan x="495" y="20">1200</tspan>
+                    </text>
+                    <text id="1400">
+                        <tspan x="597" y="20">1400</tspan>
+                    </text>
+                    <text id="1600">
+                        <tspan x="695" y="20">1600</tspan>
+                    </text>
+                    <text id="1800">
+                        <tspan x="795" y="20">1800</tspan>
+                    </text>
+                </g>
+            </g>
+            <line x1="315" y1="591" x2="315" y2="611" id="Path" stroke="#000000" fill="#000000" fill-rule="nonzero"></line>
+            <g id="Group" transform="translate(297.000000, 607.000000)"></g>
+            <line x1="415" y1="591" x2="415" y2="611" id="Path" stroke="#000000" fill="#000000" fill-rule="nonzero"></line>
+            <g id="Group" transform="translate(397.000000, 607.000000)"></g>
+            <line x1="515" y1="591" x2="515" y2="611" id="Path" stroke="#000000" fill="#000000" fill-rule="nonzero"></line>
+            <g id="Group" transform="translate(497.000000, 607.000000)"></g>
+            <line x1="615" y1="591" x2="615" y2="611" id="Path" stroke="#000000" fill="#000000" fill-rule="nonzero"></line>
+            <g id="Group" transform="translate(592.000000, 607.000000)"></g>
+            <line x1="715" y1="591" x2="715" y2="611" id="Path" stroke="#000000" fill="#000000" fill-rule="nonzero"></line>
+            <g id="Group" transform="translate(692.000000, 607.000000)"></g>
+            <line x1="816" y1="591" x2="816" y2="611" id="Path" stroke="#000000" fill="#000000" fill-rule="nonzero"></line>
+            <g id="Group" transform="translate(794.000000, 607.000000)"></g>
+            <line x1="915" y1="591" x2="915" y2="611" id="Path" stroke="#000000" fill="#000000" fill-rule="nonzero"></line>
+            <g id="Group" transform="translate(892.000000, 607.000000)"></g>
+            <line x1="1015" y1="591" x2="1015" y2="611" id="Path" stroke="#000000" fill="#000000" fill-rule="nonzero"></line>
+            <g id="Group" transform="translate(992.000000, 607.000000)"></g>
+            <line x1="115" y1="401" x2="1125" y2="401" id="Path" stroke="#B2E5ED" stroke-width="2" fill="#000000" fill-rule="nonzero"></line>
+            <line x1="715" y1="361" x2="1125" y2="361" id="Path" stroke="#4BBF81" stroke-width="2" fill="#000000" fill-rule="nonzero"></line>
+            <g id="Group" transform="translate(1133.000000, 354.000000)" fill="#007F94" fill-rule="nonzero" font-family="Helvetica-Bold, Helvetica" font-size="12" font-weight="bold">
+                <text id="20">
+                    <tspan x="0" y="52">20</tspan>
+                </text>
+                <text id="24">
+                    <tspan x="0" y="11">24</tspan>
+                </text>
+            </g>
+            <g id="Group" transform="translate(268.000000, 371.000000)" fill-rule="nonzero" font-family="Helvetica-Bold, Helvetica" font-size="12" font-weight="bold">
+                <text id="20" fill="#007F94">
+                    <tspan x="7" y="27">20</tspan>
+                </text>
+                <text id="~22" fill="#488045">
+                    <tspan x="0.64453125" y="11">~22</tspan>
+                </text>
+            </g>
+            <g id="Group" transform="translate(472.000000, 359.000000)" fill-rule="nonzero" font-family="Helvetica-Bold, Helvetica" font-size="12" font-weight="bold">
+                <text id="20" fill="#007F94">
+                    <tspan x="7" y="39">20</tspan>
+                </text>
+                <text id="~23" fill="#488045">
+                    <tspan x="0.64453125" y="11">~23</tspan>
+                </text>
+            </g>
+            <line x1="115" y1="441" x2="1125" y2="441" id="Path" stroke="#C095E8" stroke-width="2" fill="#000000" fill-rule="nonzero"></line>
+            <text id="Base-value:" fill="#6C6C6C" fill-rule="nonzero" font-family="Helvetica-Bold, Helvetica" font-size="13" font-weight="bold">
+                <tspan x="0" y="404">Base value:</tspan>
+            </text>
+            <g id="Group" transform="translate(275.000000, 425.000000)" fill="#8959B5" fill-rule="nonzero" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold">
+                <text id="16">
+                    <tspan x="0" y="12">16</tspan>
+                </text>
+            </g>
+            <g id="Group" transform="translate(479.000000, 425.000000)" fill="#8959B5" fill-rule="nonzero" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold">
+                <text id="16">
+                    <tspan x="0" y="12">16</tspan>
+                </text>
+            </g>
+            <g id="Group" transform="translate(115.000000, 405.000000)" fill-rule="nonzero">
+                <line x1="0" y1="16" x2="1010" y2="16" id="Path" stroke="#2FA2ED" stroke-width="2" fill="#000000"></line>
+                <text id="16" fill="#8959B5" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold">
+                    <tspan x="580" y="32">16</tspan>
+                </text>
+                <text id="18" fill="#0070B9" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold">
+                    <tspan x="1018" y="21">18</tspan>
+                </text>
+                <text id="18" fill="#0070B9" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold">
+                    <tspan x="160" y="12">18</tspan>
+                </text>
+                <text id="18" fill="#0070B9" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold">
+                    <tspan x="364" y="12">18</tspan>
+                </text>
+                <text id="18" fill="#0070B9" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold">
+                    <tspan x="580" y="12">18</tspan>
+                </text>
+            </g>
+            <g id="Group" transform="translate(268.000000, 315.000000)" fill="#D55891" fill-rule="nonzero" font-family="Helvetica-Bold, Helvetica" font-size="12" font-weight="bold">
+                <text id="~27">
+                    <tspan x="0" y="11">~27</tspan>
+                </text>
+            </g>
+            <g id="Group" transform="translate(470.000000, 254.000000)" fill="#D55891" fill-rule="nonzero" font-family="Helvetica-Bold, Helvetica" font-size="12" font-weight="bold">
+                <text id="~34">
+                    <tspan x="0" y="11">~34</tspan>
+                </text>
+            </g>
+            <g id="Group" transform="translate(692.000000, 188.000000)" fill="#D55891" fill-rule="nonzero" font-family="Helvetica-Bold, Helvetica" font-size="12" font-weight="bold">
+                <text id="40">
+                    <tspan x="0" y="11">40</tspan>
+                </text>
+            </g>
+            <g id="Group" transform="translate(268.000000, 356.000000)" fill="#6C6C6C" fill-rule="nonzero" font-family="Helvetica-Bold, Helvetica" font-size="12" font-weight="bold">
+                <text id="~23">
+                    <tspan x="0" y="11">~23</tspan>
+                </text>
+            </g>
+            <g id="Group" transform="translate(471.000000, 333.000000)" fill="#6C6C6C" fill-rule="nonzero" font-family="Helvetica-Bold, Helvetica" font-size="12" font-weight="bold">
+                <text id="~26">
+                    <tspan x="0" y="11">~26</tspan>
+                </text>
+            </g>
+            <g id="Group" transform="translate(268.000000, 267.000000)" fill-rule="nonzero" font-family="Helvetica-Bold, Helvetica" font-size="12" font-weight="bold">
+                <text id="28" fill="#6C6C6C">
+                    <tspan x="426" y="51">28</tspan>
+                </text>
+                <text id="~25" fill="#D80443">
+                    <tspan x="0" y="84">~25</tspan>
+                </text>
+                <text id="~27" fill="#D80443">
+                    <tspan x="203" y="49">~27</tspan>
+                </text>
+                <text id="32" fill="#D80443">
+                    <tspan x="426" y="11">32</tspan>
+                </text>
+            </g>
+            <g id="Group" transform="translate(268.000000, 283.000000)" fill="#595959" fill-rule="nonzero" font-family="Helvetica-Bold, Helvetica" font-size="12" font-weight="bold">
+                <text id="~30">
+                    <tspan x="0" y="11">~30</tspan>
+                </text>
+            </g>
+            <g id="Group" transform="translate(471.000000, 195.000000)" fill="#595959" fill-rule="nonzero" font-family="Helvetica-Bold, Helvetica" font-size="12" font-weight="bold">
+                <text id="~39">
+                    <tspan x="0" y="11">~39</tspan>
+                </text>
+            </g>
+            <g id="Group" transform="translate(692.000000, 107.000000)" fill="#595959" fill-rule="nonzero" font-family="Helvetica-Bold, Helvetica" font-size="12" font-weight="bold">
+                <text id="48">
+                    <tspan x="0" y="11">48</tspan>
+                </text>
+            </g>
+            <line x1="715" y1="321" x2="1125" y2="321" id="Path" stroke="#FFCC66" stroke-width="2" fill="#000000" fill-rule="nonzero"></line>
+            <line x1="715" y1="281" x2="1125" y2="281" id="Path" stroke="#FF3370" stroke-width="2" fill="#000000" fill-rule="nonzero"></line>
+            <line x1="115" y1="391" x2="717" y2="321" id="Path" stroke="#FFCC66" stroke-width="2" fill="#000000" fill-rule="nonzero"></line>
+            <line x1="115" y1="396" x2="715" y2="361" id="Path" stroke="#4BBF81" stroke-width="2" fill="#000000" fill-rule="nonzero"></line>
+            <g id="Group" transform="translate(1133.000000, 275.000000)" fill-rule="nonzero" font-family="Helvetica-Bold, Helvetica" font-size="12" font-weight="bold">
+                <text id="28" fill="#6C6C6C">
+                    <tspan x="0" y="50">28</tspan>
+                </text>
+                <text id="32" fill="#D80443">
+                    <tspan x="0" y="11">32</tspan>
+                </text>
+            </g>
+            <line x1="715" y1="201" x2="1125" y2="201" id="Path" stroke="#D55891" stroke-width="2" fill="#000000" fill-rule="nonzero"></line>
+            <line x1="115" y1="381" x2="715" y2="201" id="Path" stroke="#D55891" stroke-width="2" fill="#000000" fill-rule="nonzero"></line>
+            <g id="Group" transform="translate(1133.000000, 195.000000)" fill="#D55891" fill-rule="nonzero" font-family="Helvetica-Bold, Helvetica" font-size="12" font-weight="bold">
+                <text id="40">
+                    <tspan x="0" y="11">40</tspan>
+                </text>
+            </g>
+            <line x1="715" y1="119" x2="1125" y2="119" id="Path" stroke="#C2C2C2" stroke-width="2" fill="#000000" fill-rule="nonzero"></line>
+            <line x1="115" y1="374" x2="715" y2="119" id="Path" stroke="#C2C2C2" stroke-width="2" fill="#000000" fill-rule="nonzero"></line>
+            <g id="Group" transform="translate(1133.000000, 113.000000)" fill="#595959" fill-rule="nonzero" font-family="Helvetica-Bold, Helvetica" font-size="12" font-weight="bold">
+                <text id="48">
+                    <tspan x="0" y="11">48</tspan>
+                </text>
+            </g>
+            <text id="20" fill="#007F94" fill-rule="nonzero" font-family="Helvetica-Bold, Helvetica" font-size="12" font-weight="bold">
+                <tspan x="695" y="398">20</tspan>
+            </text>
+            <text id="24" fill="#488045" fill-rule="nonzero" font-family="Helvetica-Bold, Helvetica" font-size="12" font-weight="bold">
+                <tspan x="695" y="358">24</tspan>
+            </text>
+            <text id="16" fill="#8959B5" fill-rule="nonzero" font-family="Lato-Bold, Lato" font-size="12" font-weight="bold">
+                <tspan x="1133" y="446">16</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
