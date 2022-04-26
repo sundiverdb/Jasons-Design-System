@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Foundation &ndash; Typography</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../_images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../../_images/favicon.png" type="image/x-icon" />
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-grid.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-reboot.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian.css">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+
+  <!-- javascript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+</head>
+
+<body>
+  <div class="site-container">
+    <div class="site-pusher">
+
+      <header class="header">
+
+        <div id="page-header"></div>
+        <script>
+          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+        </script>
+
+      </header>
+
+
+    <div class="site-content">
+      <div class="container-fluid p-4">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-sm-3 col-xl-2 bd-sidebar">
+            <h5 class="mt-2 pb-2">Foundation</h5>
+            <div class="div-2 mb-2"></div>
+
+            <div id="foundation-nav"></div>
+            <script>
+              $( "#foundation-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #foundation" );
+            </script>
+
+          </div>
+          <div class="col-12 col-sm-9 col-xl-10">
+            <h1 class="m-0 text-purple">Typography</h1>
+            <h3 class="text-gray60 light lh-3 w-70 mb-4">We use typography to establish a clear hierarchy, and organize the experience.</h3>
+            <div class="row">
+              <div class="col-md-4">
+                <h3 class="text-gray54">Lato</h3>
+                <h1 class="m-0">h1. Heading</h1>
+                <p class="text-gray54 light">Lato 400 &ndash; 2.5rem &ndash; 40px</p>
+                <h2 class="mb-0">h2. Heading</h2>
+                <p class="text-gray54 light">Lato 400 &ndash; 2rem &ndash; 32px</p>
+                <h3 class="mb-0">h3. Heading</h3>
+                <p class="text-gray54 light">Lato 400 &ndash; 1.75rem &ndash; 28px</p>
+                <h4 class="mb-0">h4. Heading</h4>
+                <p class="text-gray54 light">Lato 400 &ndash; 1.5rem &ndash; 24px</p>
+                <h5 class="mb-0">h5. Heading</h5>
+                <p class="text-gray54 light">Lato 400 &ndash; 1.25rem &ndash; 20px</p>
+                <h6 class="mb-0">h6. Heading</h6>
+                <p class="text-gray54 light">Lato 400 &ndash; 1.125rem &ndash; 18px</p>
+                <p class="mb-0">p. Paragraph</p>
+                <p class="text-gray54 light">Lato 400 &ndash; 1rem &ndash; 16px</p>
+                <a href="#">a. Link</a>
+                <p class="text-gray54 light">Lato 400 &ndash; 1rem &ndash; 16px &ndash; #0070b9</p>
+              </div>
+              <div class="col-md-4">
+                <h3 class="condensed text-gray54">Oswald</h3>
+                <h1 class="condensed text-primary m-0">h1. Heading</h1>
+                <p class="text-gray54 light">Oswald &ndash; 2.5rem &ndash; 40px</p>
+                <h2 class="condensed text-primary mb-0">h2. Heading</h2>
+                <p class="text-gray54 light">Oswald &ndash; 2rem &ndash; 32px</p>
+                <h3 class="condensed text-primary mb-0">h3. Heading</h3>
+                <p class="text-gray54 light">Oswald &ndash; 1.75rem &ndash; 28px</p>
+                <h3 class="slab text-gray54 mt-5">Sanchez Slab</h3>
+                <h4 class="slab text-spruce mb-0">h4. Heading</h4>
+                <p class="text-gray54 light">Sanchez Slab &ndash; 1.5rem &ndash; 24px</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <h3 id="font-weight">Font weight
+                  <a class="anchor" href="#font-weight">#</a>
+                </h3>
+                <p class="font-weight-bold"><code>.font-weight-bold</code> for 700 Bold text</p>
+                <p class="font-weight-normal"><code>.font-weight-normal</code> for 400 Normal weight text</p>
+                <p class="font-weight-light"><code>.font-weight-light</code> for 300 Light weight text</p>
+                <p class="font-italic"><code>.font-italic</code> for Italic text</p>
+                <h3 id="text-transform" class="mt-5">Text transform
+                  <a class="anchor" href="#text-transform">#</a>
+                </h3>
+                <p class="text-lowercase"><code>.text-lowercase</code> for Lowercased text.</p>
+                <p class=""><code>.text-uppercase</code> <span class="text-uppercase">for Uppercased text.</span></p>
+                <p class=""><code>.text-capitalize</code> <span class="text-capitalize">for CapiTaliZed text.</span></p>
+                <small class="text-muted">Note how <code>.text-capitalize</code> only changes the first letter of each word, leaving the case of any other letters unaffected.</small>
+                <h3 id="inline-text" class="mt-5">Inline text elements
+                  <a class="anchor" href="#inline-text">#</a>
+                </h3>
+                <p><code>&lt;mark&gt;</code> tag to <mark>highlight</mark> text</p>
+                <p><code>&lt;u&gt;</code> tag to <u>underline</u> text</p>
+                <p><code>&lt;small&gt;</code> tag for <small>fine print</small> text</p>
+                <p><code>&lt;strong&gt;</code> tag to <strong>bold</strong> text</p>
+                <p><code>&lt;em&gt;</code> tag to <em>italicize</em> text</p>
+              </div>
+              <div class="col-md-4">
+                <h3>Display headings</h3>
+                <p>Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a <strong>display heading</strong>&ndash;a larger, slightly more opinionated heading style.</p>
+                <h1 class="m-0 display-1">Display 1</h1>
+                <p class="text-gray54 light ml-2">Lato 300 &ndash; 4.5rem &ndash; 72px</p>
+                <h2 class="m-0 display-2">Display 2</h2>
+                <p class="text-gray54 light ml-2">Lato 300 &ndash; 3.75rem &ndash; 60px</p>
+                <h3 class="m-0 display-3">Display 3</h3>
+                <p class="text-gray54 light ml-2">Lato 300 &ndash; 3rem &ndash; 48px</p>
+                <h4 class="m-0 display-4">Display 4</h4>
+                <p class="text-gray54 light ml-2">Lato 300 &ndash; 2.5rem &ndash; 40px</p>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-md-4">
+                <h3 id="text-colors">Text colors
+                  <a class="anchor" href="#text-colors">#</a>
+                </h3>
+                <p>Default text color is Gray 80% (#323232)</p>
+                <p class="text-gray72">.text-gray72 for Gray 72% (#474747)</p>
+                <p class="text-gray66">.text-gray66 for Gray 66% (#595959)</p>
+                <p class="text-gray54">.text-gray58 for Gray 58% (#6c6c6c)</p>
+                <p class="text-gray54">.text-gray54 for Gray 54% (#767676)</p>
+                <p class="text-gray54">.text-gray42 for Gray 42% (#949494)</p>
+                <p class="text-purple">.text-purple for HQY Purple (#592c82)</p>
+                <p class="text-violet">.text-violet for Violet (#8959b5)</p>
+                <p class="text-blue">.text-blue for HQY Blue (#0070b9)</p>
+                <p class="text-spruce">.text-spruce for Spruce (#007f94)</p>
+                <p class="text-forest">.text-forest for Forest (#488045)</p>
+                <p class="text-red">.text-red for Red (#d80443)</p>
+              </div>
+              <div class="col-md-4">
+                <div class="d-inline-block bg-dark p-3 mt-5">
+                  <p class="text-white">.text-white for White (#ffffff)</p>
+                  <p class="text-gray5">.text-gray5 for Gray 5% (#eeeeee)</p>
+                  <p class="text-gray15">.text-gray15 for Gray 15% (#dcdcdc)</p>
+                  <p class="text-gray24">.text-gray24 for Gray 24% (#c2c2c2)</p>
+                  <p class="text-gray30">.text-gray30 for Gray 30% (#afafaf)</p>
+                  <p class="text-lavender">.text-lavender for Lavender (#c095e8)</p>
+                  <p class="text-capri">.text-capri for Capri Blue (#2fa2ed)</p>
+                  <p class="text-teal">.text-teal for HQY Teal (#00aac6)</p>
+                  <p class="text-mint">.text-mint for Mint Green (#4bbf81)</p>
+                  <p class="text-yellow">.text-yellow for Yellow (#ffcc66)</p>
+                  <p class="text-ruby">.text-ruby for Ruby Red (#ff3370)</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              
+              <div class="col-md-4">
+                
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+                <h3 id="text-alignment" class="mt-5">Text alignment
+                  <a class="anchor" href="#text-alignment">#</a>
+                </h3>
+                <p>Easily realign text to components with text alignment classes.</p>
+                <p class="text-left">Left aligned text on all viewport sizes with <code>.text-left</code> class.</p>
+                <p class="text-center">Center aligned text on all viewport sizes with <code>.text-center</code> class.</p>
+                <p class="text-right">Right aligned text on all viewport sizes with <code>.text-right</code> class.</p>
+              </div>
+            </div>
+            <h3 id="responsive-font" class="mt-5">Responsive font sizes
+              <a class="anchor" href="#responsive-font">#</a>
+            </h3>
+            <p>Bootstrap v4.3 ships with the option to enable responsive font sizes, allowing text to scale more naturally across device and viewport sizes. <abbr title="Responsive font sizes">RFS</abbr> can be enabled by changing the <code class="highlighter-rouge">$enable-responsive-font-sizes</code> Sass variable to <code class="highlighter-rouge">true</code> and recompiling Bootstrap.</p>
+            <p>To support <abbr title="Responsive font sizes">RFS</abbr>, we use a Sass mixin to replace our normal <code class="highlighter-rouge">font-size</code> properties. Responsive font sizes will be compiled into <code class="highlighter-rouge">calc()</code> functions with a mix of <code class="highlighter-rouge">rem</code> and viewport units to enable the responsive scaling behavior. More about <abbr title="Responsive font sizes">RFS</abbr> and its configuration can be found on its <a href="https://github.com/twbs/rfs/tree/v8.0.4">GitHub repository</a>.</p>
+              <h4 class="mt-4 text-gray54">Font Size Chart</h4>
+              <img class="w-100" src="../../_images/rfs-chart.svg" alt="Responsive Font Size Chart">
+            <div class="row">
+              <div class="col">
+                <p class="mt-4">For additional specifics on using the Bootstrap text utilities follow the link below.</p>
+                <p class="mt-5 text-gray54"><a  href="https://getbootstrap.com/docs/4.5/content/typography/" target="_blank">getbootstrap.com/docs/4.5/content/typography/</a></p>
+                <p class="text-gray54"><a  href="https://getbootstrap.com/docs/4.5/utilities/text/" target="_blank">getbootstrap.com/docs/4.5/utilities/text/</a></p>
+              </div>
+            </div>
+
+            </div>
+          </div>
+        </div>
+      </div> <!-- END container -->
+    </div> <!-- END site-content -->
+    <div class="site-cache" id="site-cache"></div>
+  </div> <!-- END site-pusher -->
+</div> <!-- END site-container -->
+</body>
+<script>
+$(document).ready(function(){
+
+	(function($) {
+
+		$('#header__icon').click(function(e){
+			e.preventDefault();
+			$('body').toggleClass('with--sidebar');
+		});
+
+    $('#site-cache').click(function(e){
+      $('body').removeClass('with--sidebar');
+    });
+
+	})(jQuery);
+
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</html>

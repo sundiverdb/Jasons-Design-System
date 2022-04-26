@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HQY &ndash; Empty States</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../_images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../../_images/favicon.png" type="image/x-icon" />
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-grid.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-reboot.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian.css">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+
+  <!-- javascript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+</head>
+
+<body>
+  <div class="site-container">
+    <div class="site-pusher">
+
+      <header class="header">
+
+        <div id="page-header"></div>
+        <script>
+          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+        </script>
+        
+      </header>
+
+    <div class="site-content">
+      <div class="container-fluid p-4">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-sm-3 col-xl-2 bd-sidebar">
+            <h5 class="mt-2 pb-2">Patterns</h5>
+            <div class="div-2 mb-2"></div>
+            
+            <div id="patterns-nav"></div>
+            <script>
+              $( "#patterns-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #patterns" );
+            </script>
+
+          </div>
+          <div class="col-12 col-sm-9 col-xl-10">
+            <h1 class="text-purple mt-0">Empty States</h1>
+            <h3 class="text-gray60 light lh-3 w-70 mb-4">Empty states occur when an item's content can't be shown.</h3>
+            <p>Empty states can display a wide variety of content. For example they can include a list without items, or a search that returns no results. Although not typical they need to be designed to prevent confusion.</p>
+            <p>Empty states can be used to provide educational content to help with onboarding, it can build trust, and encourage continued use of a product. Along with generating awareness and building the brand.</p>
+            <h3>Types of empty states</h3>
+            <ul class="pl-3">
+              <li class="mb-2"><strong>First use</strong> occurs within a new product or service when their is nothing to show. </li>
+              <li class="mb-2"><strong>User cleared</strong> occurs when users complete actions and the result is an empty screen.</li>
+              <li class="mb-2"><strong>Errors</strong> these occur when something goes wrong, or when there are issues with network connection.</li>
+              <li class="mb-2"><strong>No results or data</strong> occurs when there is nothing to show. This can happen if someone performs a search and the query is empty or there isn't any data to show after filtering the content.</li>
+            </ul>
+            <h3>Displaying an empty state</h3>
+            <p>The most basic empty state consists of a non-interactive text tagline, but may include an image or icon when desired.</p>
+            <strong>Use a tagline that:</strong>
+            <ul class="pl-3">
+              <li>Has a clear and helpful message</li>
+              <li>Is consistent with HealthEquity's brand and language</li>
+              <li>Conveys the purpose of the screen, without appearing actionable</li>
+            </ul>
+            <strong>Use an image that:</strong>
+            <ul class="pl-3 mb-4">
+              <li>Has a neutral or professional tone</li>
+              <li>Is consistent with HealthEquity's brand and tone</li>
+            </ul>
+            <h3 id="simple-empty-state" class="mt-5">Simple Empty State
+              <a class="anchor" href="#simple-empty-state">#</a>
+            </h3>
+            <img class="w-100" src="../../_images/empty-basic.png" alt="Basic empty state text: No results found - Try adjusting your search">
+            <ol class="mb-5 pl-3 mt-3">
+              <li class="mb-2"><strong>Empty message header</strong> clearly informs that the search query did not return any results.</li>
+              <li class="mb-2"><strong>Description or instruction</strong> should provide a helpful reference and let the users know what is going on.</li>
+            </ol>
+            <h3 id="illustrated-empty-state" class="mt-5">Illustrated Empty State
+              <a class="anchor" href="#illustrated-empty-state">#</a>
+            </h3>
+            <img class="w-100" src="../../_images/empty-contextual.png" alt="Empty state with icon and message">
+            <ol class="mb-5 pl-3 mt-3">
+              <li class="mb-2"><strong>Icon/image</strong> that helps inform about the current empty state and is builds on the brand.</li>
+              <li class="mb-2"><strong>Header</strong> title should explain the general context of the empty state.</li>
+              <li class="mb-2"><strong>Description or instruction</strong> should provide a helpful reference and let the users know what is going on.</li>
+              <li class="mb-2"><strong>Button/link</strong> should give the user an action that they may take next.</li>
+            </ol>
+        </div>
+      </div> <!-- END container -->
+    </div> <!-- END site-content -->
+    <div class="site-cache" id="site-cache"></div>
+  </div> <!-- END site-pusher -->
+</div> <!-- END site-container -->
+</body>
+<script>
+$(document).ready(function(){
+
+	(function($) {
+
+		$('#header__icon').click(function(e){
+			e.preventDefault();
+			$('body').toggleClass('with--sidebar');
+		});
+
+    $('#site-cache').click(function(e){
+      $('body').removeClass('with--sidebar');
+    });
+
+	})(jQuery);
+
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</html>

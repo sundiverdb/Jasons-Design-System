@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tyrian &ndash; FAQ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../_images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../../_images/favicon.png" type="image/x-icon" />
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-grid.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-reboot.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian.css">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+
+  <!-- javascript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+</head>
+
+<body>
+  <div class="site-container">
+    <div class="site-pusher">
+
+      <header class="header">
+
+        <div id="page-header"></div>
+        <script>
+          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+        </script>
+
+      </header>
+
+    <div class="site-content">
+      <div class="container-fluid p-4">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-sm-3 col-xl-2 bd-sidebar">
+            <h5 class="mt-2 pb-2">Getting Started</h5>
+            <div class="div-2 mb-2"></div>
+
+            <div id="start-nav"></div>
+            <script>
+              $( "#start-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #start" );
+            </script>
+
+          </div>
+          <div class="col-12 col-sm-8 col-xl-8">
+            <h1 class="m-0 text-purple">FAQ</h1>
+            <h3 class="text-gray60 light lh-3 mb-4">Commonly asked questions about the design system.</h3>
+            <h3 class="mb-2">What is Tyrian?</h3>
+            <p>Tyrian is HealthEquity's Design System which includes a collection of individual brand, foundation, components, mobile guidelines, and patterns for creating a unified frontend experience across HealthEquity's products. Tyrian is built on top of Bootstrap 4.</p>
+            <h3 class="mt-4 mb-2">How is this any different from a style guide?</h3>
+            <p>A style guide is a single point in the design process. A design system is a living document that is continually refined to serve an entire ecosystem of products.</p>
+            <h3 class="mt-4 mb-2">How can I participate in building the design system?</h3>
+            <p>We have some rough guidelines for contributing, chat with a member of the UX team or attend a UX Guild meeting to find out how you could participate. We appreciate all the input and help we can get.</p>
+            <h3 class="mt-4 mb-2">Which browsers do we support?</h3>
+            <p>We hope to be able to support the following browsers:</p>
+            <ul>
+              <li>Chrome Latest</li>
+              <li>Edge Latest</li>
+              <li>Firefox Latest</li>
+              <li>Safari Latest</li>
+            </ul>
+            <h3 class="mt-4 mb-2">I just found a bug, who should I tell?</h3>
+            <p>Contact the UX team/UX guild directly, as we don't have a process in place for handling bugs, yet!</p>
+            <h3 class="mt-4 mb-2">Why hasn't the bug I reported been fixed yet?</h3>
+            <p>Have you made a big enough stink about it? If not, please bring it back up to our attention. We will try and address any bugs that are found as soon as possible.</p>
+            <h3 class="mt-4 mb-2">I can't update to the latest version of a component, because it will break stuff?</h3>
+            <p>Please let us know of the issue so we can help you figure out a solution.</p>
+            <h3 class="mt-4 mb-2">I can't seem to find the component I need?</h3>
+            <p>If we haven't provided a component here in the design system yet we are most likely using the Bootstrap default. If the component you are looking for doesn't have a bootstrap version, let us know.</p>
+            <h3 class="mt-4 mb-2">Where do I go if I still have some concerns or questions?</h3>
+            <p>Please contact a representative of the UX team/UX guild.</p>
+            <p>Email: <a href="mailto:jgrotegut@healthequity.com" target="_top">Jason Grotegut</a> &ndash; <small class="text-gray54">Sr. UX Designer</small><br>
+              Email: <a href="mailto:dstanley@healthequity.com" target="_top">David Stanley</a> &ndash; <small class="text-gray54">Sr. Software Engineer</small></p>
+          </div>
+        </div>
+      </div> <!-- END container -->
+    </div> <!-- END site-content -->
+    <div class="site-cache" id="site-cache"></div>
+  </div> <!-- END site-pusher -->
+</div> <!-- END site-container -->
+<script>
+  var cipboard = new ClipboardJS('.btn-clipboard)'); clipboard.on('success', function(e) { console.log(e); }); clipboard.on('error', function(e) { console.log(e); });
+</script>
+</body>
+<script>
+$(document).ready(function(){
+
+	(function($) {
+
+		$('#header__icon').click(function(e){
+			e.preventDefault();
+			$('body').toggleClass('with--sidebar');
+		});
+
+    $('#site-cache').click(function(e){
+      $('body').removeClass('with--sidebar');
+    });
+
+	})(jQuery);
+
+});
+</script>
+</html>

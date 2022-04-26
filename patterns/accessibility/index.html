@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HQY &ndash; Accessibility</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../_images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../../_images/favicon.png" type="image/x-icon" />
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-grid.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-reboot.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian.css">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+
+  <!-- javascript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+</head>
+
+<body>
+  <div class="site-container">
+    <div class="site-pusher">
+
+      <header class="header">
+
+        <div id="page-header"></div>
+        <script>
+          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+        </script>
+
+      </header>
+
+    <div class="site-content">
+      <div class="container-fluid p-4">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-sm-3 col-xl-2 bd-sidebar">
+            <h5 class="mt-2 pb-2">Patterns</h5>
+            <div class="div-2 mb-2"></div>
+
+            <div id="patterns-nav"></div>
+            <script>
+              $( "#patterns-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #patterns" );
+            </script>
+
+          </div>
+          <div class="col-12 col-sm-9 col-xl-10">
+            <h1 class="text-purple mt-0">Accessibility</h1>
+            <h3 class="text-gray60 light lh-3 w-70 mb-4">Making a better experience means it should be usable for everyone.</h3>
+            <p>Our products and web portals should be accessible to everyone, including those with vision, hearing, cognitive, and motor impairments. Accessible design lets people of all abilities interact with, understand, and navigate our products.</p>
+            <ul class="w-60 0 mb-4 text-gray54">
+              <li>Accessibility is about having a good understanding of our users jobs to be done and their journeys in achieving those jobs, along with anticipating their needs.</li>
+              <li>Accessibile design is everyone's responsibility, from information and user experience design, through development, and into help and support.</li>
+            </ul>
+            <h3>Structure &amp; Hierarchy</h3>
+            <p>Consistent, clear hierarchy helps users who navigate the page using links or headers. Use headings and titles to outline the page so that users can see the structure and how the sections relate. Give users feedback so they know where they are in the application.</p>
+            <h5 id="level-of-importance">List by level of importance
+              <a class="anchor" href="#level-of-importance">#</a>
+            </h5>
+            <p>Place items on the page in order of their level of importance so that users don't have to search for them.</p>
+            <img class="w-100" src="../../_images/accessibility-importance.png" alt="Importance hierarchy on the page">
+            <p class="mt-3">Create and maintain a consistent hierarchy so that users can use alternative input methods to move through the page. Try and keep headings in order without skipping levels. (h1, h2, h3, h4)</p>
+            <p>Test the UI with color correction, magnification, and other accessibility settings to ensure the layout works with assistive settings.</p>
+            <h5 id="group-similar" class="mt-4">Group similar items
+              <a class="anchor" href="#group-similar">#</a>
+            </h5>
+            <p>Group items under titles or headings that clearly communicate the content of the group.</p>
+            <div class="row w-80 pb-2 border-bottom">
+              <div class="col-1 text-gray54">
+
+              </div>
+              <div class="col-2 text-gray54">
+                Example Group
+              </div>
+              <div class="col-3 text-gray54">
+                Group Items
+              </div>
+              <div class="col-6 text-gray54">
+                Reason
+              </div>
+            </div>
+            <div class="row w-80 mt-3">
+              <div class="col-1">
+                <strong>Do:</strong>
+              </div>
+              <div class="col-2">
+                Fruit
+              </div>
+              <div class="col-3">
+                <ul class="pl-3">
+                  <li>Apple</li>
+                  <li>Banana</li>
+                  <li>Orange</li>
+                  <li>Strawberry</li>
+                </ul>
+              </div>
+              <div class="col-6">
+                The category is clear and items are grouped well.
+              </div>
+            </div>
+            <div class="row w-80 mt-3">
+              <div class="col-1">
+                <strong>Don't:</strong>
+              </div>
+              <div class="col-2">
+                Things
+              </div>
+              <div class="col-3">
+                <ul class="pl-3">
+                  <li>Car oil</li>
+                  <li>Get orange juice</li>
+                  <li>Paint</li>
+                </ul>
+              </div>
+              <div class="col-6">
+                The category is vague, and the list is a mix of items and tasks.
+              </div>
+            </div>
+            <h5 id="chunking" class="mt-4">Chunking
+              <a class="anchor" href="#chunking">#</a>
+            </h5>
+            <p>By combining many units of information into a limited number of units or chunks, the information becomes easier to process and remember. Use the estimate of 4 &#xb1; 1 when the information isn't going to be searched or scanned.</p>
+            <div class="row w-80 pb-2 border-bottom">
+              <div class="col-1 text-gray54">
+
+              </div>
+              <div class="col-2 text-gray54">
+                Phone Number
+              </div>
+              <div class="col-3 text-gray54">
+                Card Number
+              </div>
+              <div class="col-6 text-gray54">
+                Reason
+              </div>
+            </div>
+            <div class="row w-80 mt-3">
+              <div class="col-1">
+                <strong>Do:</strong>
+              </div>
+              <div class="col-2">
+                012.345.6789
+              </div>
+              <div class="col-3">
+                4111 &nbsp;1234 &nbsp;5678 &nbsp;9012
+              </div>
+              <div class="col-6">
+                A separator and spacing help these numbers become recognized quickly.
+              </div>
+            </div>
+            <div class="row w-80 mt-3">
+              <div class="col-1">
+                <strong>Don't:</strong>
+              </div>
+              <div class="col-2">
+                0123456789
+              </div>
+              <div class="col-3">
+                4111123456789012
+              </div>
+              <div class="col-6">
+                These numbers are difficult to recognize and retain in short term memory.
+              </div>
+            </div>
+            <h3 id="keyboard-navigation" class="mt-5">Keyboard Navigation
+              <a class="anchor" href="#keyboard-navigation">#</a>
+            </h3>
+            <p>Some users can't use a mouse, and instead navigate through applications using tools such as a keyboard, mouth wand, or eye tracking system. Users should be able to navigate and use the product with a keyboard or screenreader. Make sure anything users can see by hovering with a mouse is also accessible to keyboard focus and screenreaders.</p>
+            <p>When creating an application, ask yourself whether you can use a keyboard to:</p>
+            <ul>
+              <li>Navigate</li>
+              <li>Perform the same tasks as users who use a mouse</li>
+              <li>Tell where you are on the page</li>
+              <li>Tell where the keyboard focus is</li>
+            </ul>
+            <h5 id="manage-focus" class="mt-4">Manage focus
+              <a class="anchor" href="#manage-focus">#</a>
+            </h5>
+            <p>Keyboard focus follows the page as the eye would scan it. Focus travels top to bottom, left to right, moving from most to least important item. Users can navigate applications using alternative input methods (D-pads, trackballs, keyboards, and navigation gestures), and the focus flows in a logical order.</p>
+            <img class="w-100" src="../../_images/accessibility-focus.png" alt="Managing the focus order">
+            <ul class="mt-3 w-60">
+              <li>Be conscious of the order of elements on the page. Do they make sense from the user's perspective?</li>
+              <li>Indicate where focus is.</li>
+              <li>Don't use input focus to select, trigger events, or display messages. Users may need to navigate through all controls before making changes.</li>
+              <li>Keep in mind where the focus moves when the element in focus disappears. Users should return to wherever they were before they focused on the element.</li>
+            </ul>
+            <h5 id="use-tooltips"class="mt-4">Use tooltips
+              <a class="anchor" href="#use-tooltips">#</a>
+            </h5>
+            <p>Users can activate tooltips by keyboard. When an element gets keyboard focus, a tooltip displays. When that element loses focus, the tooltip disappears.</p>
+            <img class="w-100" src="../../_images/accessibility-tooltip.png" alt="Tooltip example">
+            <h5 class="mt-4">Validate forms inline</h5>
+            <p>Validate forms in-line so keyboard users don't have to navigate far to get feedback.</p>
+            <img class="w-100" src="../../_images/accessibility-validation.png" alt="Tooltip example">
+            <h3 id="meaningful-text" class="mt-5">Meaningful Text
+              <a class="anchor" href="#meaningful-text">#</a>
+            </h3>
+            <p>Consistent and helpful text makes the user interface accessible to users who use a screen reader. Screen readers help users with visual impairments by reading both visible and non-visible alternative text aloud.</p>
+            <p>All text should support accessibility, whether it's visible (UI labels, headings, buttons, forms, hyperlinks, and help text) or non-visible (alternative text for images and buttons).</p>
+            <h5>Be concise</h5>
+            <p>Keep content and accessibility text concise. People using screen readers hear every UI element read aloud, so the shorter the text, the faster they can navigate the content.</p>
+            <h5>Use consistent labels</h5>
+            <p>Consistently label elements and components that have the same functionality. When users encounter these elements in different contexts, they should easily recognize and understand the function or actions of an element. For instance, a menu item that is labelled <em>Expenses</em> should open a page that is titled <em>Expenses</em>. A dialogue with the title <em>Copy page</em> has a button labeled <em>Copy</em>.</p>
+            <ul>
+              <li><strong>Do:</strong> Copy a document, copy a page</li>
+              <li><strong>Don't:</strong> Clone a document, copy a page</li>
+            </ul>
+            <h5>Describe what an element does</h5>
+            <p>Label elements with action verbs that indicate what happens when the element is selected.</p>
+            <ul>
+              <li><strong>Do:</strong> Reimburse me - When read aloud the text, indicates the action.</li>
+              <li><strong>Don't:</strong> Reimbursement - Just labeling the element doesn't let the user know what will happen when it is selected.</li>
+            </ul>
+            <p>In buttons, describe what the action does, and if possible, reveal what will happen.</p>
+            <ul>
+              <li><strong>Do:</strong> Enroll</li>
+              <li><strong>Don't:</strong> Go for it!</li>
+            </ul>
+            <p>Hyperlinks should indicate where the user will go when they select the link.</p>
+            <ul>
+              <li><strong>Do:</strong> <u>Learn how to optimize your HSA</u></li>
+              <li><strong>Don't:</strong> <u>Learn more</u></li>
+            </ul>
+            <h3 id="images-and-video" class="mt-5">Images and video
+              <a class="anchor" href="#images-and-video">#</a>
+            </h3>
+            <p>Describe non-text elements in the UI or with alternative text so that screen readers can succinctly describe images and media.</p>
+            <h5>Images that contain information</h5>
+            <p>If an image contains information that can only be understood by seeing the image, then you need to explain the content of the image using alternative text. Follow these guidelines when you write alt text:</p>
+            <ul class="w-60">
+              <li>The text should be an adequate replacement for both the content and the function of the image.</li>
+              <li>Determine the correct content and then deliver that message as succinctly as possible. Aim for no more than a few words, though sometimes a short sentence or two may be necessary.</li>
+              <li>Don't repeat information that is contained in the text found on the page around the image.</li>
+              <li>Don't use phrases like "image of ..." or "a photo of ..." to describe the image. This is apparent when using screen readers and the description itself should be enough to replace the meaning of the image.</li>
+              <li>If the meaning and content of an image is conveyed by surrounding text, header, or captions, then you might not need as much alternative text.</li>
+            </ul>
+            <h5>Decorative images</h5>
+            <p>If the image is used strictly to make the page pleasant to the eye, doesn't contain a link, and isn't used to deliver information, then include the alt attribute, but leave it empty. For example, <em>alt=""</em></p>
+            <h5>Videos</h5>
+            <p>Provide transcripts and in-sync captioning. Make sure users can control when the video or gif starts and stops.</p>
+            <h3 id="colors" class="mt-5">Colors
+              <a class="anchor" href="#colors">#</a>
+            </h3>
+            <p>We comply with <a class="external-link" href="http://www.w3.org/TR/WCAG/">AA standard contrast ratios</a>. To do this, we choose primary, secondary and extended colors that support usability. This ensures sufficient color contrast between elements so that users with low vision can see and use our products.</p>
+            <h5>Include visual cues</h5>
+            <p>Don't convey information using color alone. Use multiple visual cues, such as stroke weight, patterns, shape, text, or illustrations to ensure that all users receive the same information.</p>
+            <p>This helps users who are unable to, or have difficulty with, distinguishing one color from another. This includes people who are color blind, have low vision, or are blind.</p>
+            <h5>Use high contrast</h5>
+            <p>High color contrast helps users who are partially or completely color-blind see differences between certain colors. It creates a strong visual hierarchy and improves usability for everyone. Make sure that the combination of text and background color do not fall below the <a class="external-link" href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">WCAG recommended threshold</a> ratio of 4.5:1 for standard text and 3:1 for larger text.
+            </p>
+            <p>Decorative images and disabled states don't have contrast requirements.</p>
+            <div class="row w-80 pb-2 border-bottom">
+              <div class="col-5 text-gray54">
+                Do
+              </div>
+              <div class="col-5 text-gray54">
+                Don't
+              </div>
+              <div class="col-2 text-gray54">
+
+              </div>
+            </div>
+            <div class="row w-80 mt-3">
+              <div class="col-5">
+                <div class="inline-alert alert-error" role="alert">
+                  Critical inline error
+                </div>
+                <p class="mt-2">AA passes 4.51:1</p>
+              </div>
+              <div class="col-5">
+                <div class="inline-alert alert-error" role="alert">
+                  <span class="text-gray30">Critical inline error</span>
+                </div>
+                <p class="mt-2">AA fails 2.11:1</p>
+              </div>
+              <div class="col-2">
+
+              </div>
+            </div>
+            <div class="row w-80 mt-3">
+              <div class="col-5">
+                <button type="button" class="btn btn-primary">Primary</button>
+                <p class="mt-2">AAA passes 9.96:1</p>
+              </div>
+              <div class="col-5">
+                <button type="button" class="btn bg-teal"><span class="text-white">Primary</span></button>
+                <p class="mt-2">AA fails 2.78:1</p>
+              </div>
+              <div class="col-2">
+
+              </div>
+            </div>
+            <div class="row w-80 mt-3">
+              <div class="col-5">
+                <h2><span class="badge badge-pill badge-primary">New</span></h2>
+                <p class="mt-2">AA passes 5.23:1</p>
+              </div>
+              <div class="col-5">
+                <h2><span class="badge badge-pill badge-primary"><span class="text-gray30">New</span></span></h2>
+                <p class="mt-2">AA fails 2.38:1</p>
+              </div>
+              <div class="col-2">
+
+              </div>
+            </div>
+            <h3 id="testing-and-research"class="mt-5">Testing and research
+              <a class="anchor" href="#testing-and-research">#</a>
+            </h3>
+            <p>These guidelines will help improve accessibility in your applications, but they don't guarantee a fully accessible experience. We also recommend that you:</p>
+            <ul class="w-60">
+              <li>Test the entire application and journeys using various assistive technologies and text scaling.</li>
+              <li>Include users with impairments when testing.</li>
+              <li>Ensure that the tasks in your applications can be accomplished by anyone, regardless of ability.</li>
+            </ul>
+            <p>When in doubt, refer to the following guidelines:</p>
+            <ul class="w-60">
+              <li>WebAIM - <a class="external-link" href="http://webaim.org/"></a><a href="http://webaim.org/">http://webaim.org/</a></li>
+              <li>Web Accessibility Initiative - <a class="external-link" href="https://www.w3.org/">https://www.w3.org/</a></li>
+            </ul>
+        </div>
+      </div> <!-- END container -->
+    </div> <!-- END site-content -->
+    <div class="site-cache" id="site-cache"></div>
+  </div> <!-- END site-pusher -->
+</div> <!-- END site-container -->
+</body>
+<script>
+$(document).ready(function(){
+
+	(function($) {
+
+		$('#header__icon').click(function(e){
+			e.preventDefault();
+			$('body').toggleClass('with--sidebar');
+		});
+
+    $('#site-cache').click(function(e){
+      $('body').removeClass('with--sidebar');
+    });
+
+	})(jQuery);
+
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</html>

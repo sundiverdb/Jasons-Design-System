@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Foundation &ndash; Grid</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../_images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../../_images/favicon.png" type="image/x-icon" />
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-grid.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-reboot.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian.css">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+
+  <!-- javascript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+</head>
+
+<body>
+  <div class="site-container">
+    <div class="site-pusher">
+
+      <header class="header">
+
+        <div id="page-header"></div>
+        <script>
+          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+        </script>
+
+      </header>
+
+    <div class="site-content">
+      <div class="container-fluid p-4">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-sm-3 col-xl-2 bd-sidebar">
+            <h5 class="mt-2 pb-2">Foundation</h5>
+            <div class="div-2 mb-2"></div>
+
+            <div id="foundation-nav"></div>
+            <script>
+              $( "#foundation-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #foundation" );
+            </script>
+
+          </div>
+          <div class="col-12 col-sm-9 col-xl-10">
+                <h1 class="m-0 text-purple">Grid</h1>
+                <h3 class="text-gray60 light lh-3 w-70 mb-4">We use Bootstrap's grid to structure our layout and define the organization of our content.</h3>
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="card bg-purple example-box"></div>
+                  </div>
+                  <div class="col-md-9">
+                    <div class="card bg-teal example-box"></div>
+                  </div>
+                </div>
+                <div class="row mt-4">
+                  <div class="col-md-7">
+                    <div class="card bg-blue example-box"></div>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="card bg-green example-box"></div>
+                  </div>
+                </div>
+
+                <h2 class="mt-4">How it works</h2>
+                <p>Bootstrap's grid system uses a series of containers, rows, and columns to layout and align content. It's built with <a class="text-blue" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes" target="_blank">flexbox</a> and is fully responsive.</p>
+                <div class="bd-example-row">
+
+<div class="bd-example">
+
+  <div class="row mb-4">
+    <div class="col-md-4">
+      <div class="card bg-yellow25">
+        <div class="card-body">
+          <h5 class="card-title text-center">One of three columns</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card bg-yellow25">
+        <div class="card-body">
+          <h5 class="card-title text-center">One of three columns</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card bg-yellow25">
+        <div class="card-body">
+          <h5 class="card-title text-center">One of three columns</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bd-clipboard invisible">
+  <button class="btn-clipboard" type="button" data-clipboard-action="copy" data-clipboard-target="pre" data-toggle="tooltip" data-placement="top" data-original-title="Copy to clipboard">Copy</button>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm"</span><span class="nt">&gt;</span>
+      One of three columns
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm"</span><span class="nt">&gt;</span>
+      One of three columns
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm"</span><span class="nt">&gt;</span>
+      One of three columns
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+</div>
+
+<p>The above example creates three equal-width columns on small, medium, large, and extra large devices using our predefined grid classes. Those columns are centered in the page with the parent <code class="highlighter-rouge">.container</code>.</p>
+
+<p>Breaking it down, here's how it works:</p>
+
+<ul>
+  <li>Containers provide a means to center and horizontally pad your site's contents. Use <code class="highlighter-rouge">.container</code> for a responsive pixel width or <code class="highlighter-rouge">.container-fluid</code> for <code class="highlighter-rouge">width:100%</code> across all viewport and device sizes.</li>
+  <li>Rows are wrappers for columns. Each column has horizontal <code class="highlighter-rouge">padding</code> (called a gutter) for controlling the space between them. This <code class="highlighter-rouge">padding</code> is then counteracted on the rows with negative margins. This way, all the content in your columns is visually aligned down the left side.</li>
+  <li>In a grid layout, content must be placed within columns and only columns may be immediate children of rows.</li>
+  <li>Thanks to flexbox, grid columns without a specified <code class="highlighter-rouge">width</code> will automatically layout as equal width columns. For example, four instances of <code class="highlighter-rouge">.col-sm</code> will each automatically be 25% wide from the small breakpoint and up. See the <a target="_blank" href="https://getbootstrap.com/docs/4.5/layout/grid/#auto-layout-columns">auto-layout columns</a> section for more examples.</li>
+  <li>Column classes indicate the number of columns you'd like to use out of the possible 12 per row. So, if you want three equal-width columns across, you can use <code class="highlighter-rouge">.col-4</code>.</li>
+  <li>Column <code class="highlighter-rouge">width</code>s are set in percentages, so they're always fluid and sized relative to their parent element.</li>
+  <li>Columns have horizontal <code class="highlighter-rouge">padding</code> to create the gutters between individual columns, however, you can remove the <code class="highlighter-rouge">margin</code> from rows and <code class="highlighter-rouge">padding</code> from columns with <code class="highlighter-rouge">.no-gutters</code> on the <code class="highlighter-rouge">.row</code>.</li>
+  <li>To make the grid responsive, there are five grid breakpoints, one for each <a target="_blank" href="https://getbootstrap.com/docs/4.5/layout/overview/#responsive-breakpoints">responsive breakpoint</a>: all breakpoints (extra small), small, medium, large, and extra large.</li>
+  <li>Grid breakpoints are based on minimum width media queries, meaning <strong>they apply to that one breakpoint and all those above it</strong> (e.g., <code class="highlighter-rouge">.col-sm-4</code> applies to small, medium, large, and extra large devices, but not the first <code class="highlighter-rouge">xs</code> breakpoint).</li>
+  <li>You can use predefined grid classes (like <code class="highlighter-rouge">.col-4</code>) or <a target="_blank" href="https://getbootstrap.com/docs/4.5/layout/grid/#sass-mixins">Sass mixins</a> for more semantic markup.</li>
+</ul>
+<div class="callout-card callout-warning w-50">
+  By default the design system uses the <code>.container-fluid</code> class for the primary page content container.
+</div>
+<h2 id="grid-options" class="mt-4">Grid options
+  <a class="anchor" href="#grid-options">#</a>
+</h2>
+<p>While we use <code class="highlighter-rouge">em</code>s or <code class="highlighter-rouge">rem</code>s for defining most sizes, <code class="highlighter-rouge">px</code>s are used for grid breakpoints and container widths. This is because the viewport width is in pixels and does not change with the <a target="_blank" href="https://drafts.csswg.org/mediaqueries-3/#units">font size</a>.</p>
+<p>See how aspects of the grid system work across multiple devices with a handy table.</p>
+<div class="row">
+  <div class="col-md-8">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th></th>
+          <th class="text-center">
+            Extra small<br>
+            <small>&lt;576px</small>
+          </th>
+          <th class="text-center">
+            Small<br>
+            <small>≥576px</small>
+          </th>
+          <th class="text-center">
+            Medium<br>
+            <small>≥768px</small>
+          </th>
+          <th class="text-center">
+            Large<br>
+            <small>≥992px</small>
+          </th>
+          <th class="text-center">
+            Extra large<br>
+            <small>≥1200px</small>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="text-nowrap" scope="row">Max container width</th>
+          <td>None (auto)</td>
+          <td>540px</td>
+          <td>720px</td>
+          <td>960px</td>
+          <td>1140px</td>
+        </tr>
+        <tr>
+          <th class="text-nowrap" scope="row">Class prefix</th>
+          <td><code>.col-</code></td>
+          <td><code>.col-sm-</code></td>
+          <td><code>.col-md-</code></td>
+          <td><code>.col-lg-</code></td>
+          <td><code>.col-xl-</code></td>
+        </tr>
+        <tr>
+          <th class="text-nowrap" scope="row"># of columns</th>
+          <td colspan="5">12</td>
+        </tr>
+        <tr>
+          <th class="text-nowrap" scope="row">Gutter width</th>
+          <td colspan="5">30px (15px on each side of a column)</td>
+        </tr>
+        <tr>
+          <th class="text-nowrap" scope="row">Nestable</th>
+          <td colspan="5">Yes</td>
+        </tr>
+        <tr>
+          <th class="text-nowrap" scope="row">Column ordering</th>
+          <td colspan="5">Yes</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+                <p class="mt-4">For additional specifics on using the Bootstrap grid follow the link below.</p>
+                <p class="text-gray54"><a  href="https://getbootstrap.com/docs/4.5/layout/grid/" target="_blank">getbootstrap.com/docs/4.5/layout/grid/</a></p>
+            </div>
+        </div>
+      </div> <!-- END container -->
+    </div> <!-- END site-content -->
+    <div class="site-cache" id="site-cache"></div>
+  </div> <!-- END site-pusher -->
+</div> <!-- END site-container -->
+</body>
+<script>
+$(document).ready(function(){
+
+	(function($) {
+
+		$('#header__icon').click(function(e){
+			e.preventDefault();
+			$('body').toggleClass('with--sidebar');
+		});
+
+    $('#site-cache').click(function(e){
+      $('body').removeClass('with--sidebar');
+    });
+
+	})(jQuery);
+
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</html>

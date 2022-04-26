@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HQY &ndash; Getting Started: Development</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../_images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../../_images/favicon.png" type="image/x-icon" />
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-grid.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-reboot.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian.css">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+
+  <!-- javascript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+</head>
+
+<body>
+  <div class="site-container">
+    <div class="site-pusher">
+
+      <header class="header">
+
+        <div id="page-header"></div>
+        <script>
+          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+        </script>
+
+      </header>
+
+    <div class="site-content">
+      <div class="container-fluid p-4">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-sm-3 col-xl-2 bd-sidebar">
+            <h5 class="mt-2 pb-2">Getting Started</h5>
+            <div class="div-2 mb-2"></div>
+
+            <div id="start-nav"></div>
+            <script>
+              $( "#start-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #start" );
+            </script>
+
+          </div>
+          <div class="col-12 col-sm-8 col-xl-8">
+            <h1 class="m-0 text-purple">Getting Started for Developers</h1>
+            <h3 class="text-gray60 light lh-3 mb-4">Tyrian provides front-end developers & engineers a collection of reusable HTML and CSS elements to build websites and user interfaces.</h3>
+            <h3>Tyrian's CSS</h3>
+            <p>The system uses <a href="https://getbootstrap.com/" target="_blank">Bootstrap 4</a> as the foundation for its HTML and CSS. Adopting Tyrian enables developers to use consistent markup, styles, and behavior in prototype and production work. As we move forward we will build out SCSS files with the ability to compile for the specific needs in the interim we have a working global CSS file available for use.</p>
+            <p><a href="../../_css/tyrian.css" target="_blank">tyrian.css</a></p>
+            <h4 class="mb-2">Code styles</h4>
+            <ul class="pl-3">
+              <li><strong>Syntax</strong>: rules and structure for formatting our code (e.g. curly braces always go on a new line)</li>
+              <li><strong>Semantics</strong>: rules for making our code understandable (e.g. alphabetizing property declarations)</li>
+            </ul>
+            <p>Don't get caught up in wars over tabs vs spaces. These styles help us produce consistently written code, not to achieve theoretical perfection.</p>
+            <h4 class="mb-2">BEM</h4>
+            <p>Tyrian uses <strong>BEM</strong> which is an abbreviation for the methodology that we follow &ndash; Block, Element, and Modifier.</p>
+            <div class="row mb-4">
+              <div class="col-3">
+                <h5 class="text-forest">Block</h5>
+                <p>Standalone entity that is meaningful on its own.</p>
+                <h6>Examples</h6>
+                <p class="badge badge-pill badge-light d-inline-block mb-0">header</p>
+                <p class="badge badge-pill badge-light d-inline-block mb-0">container</p>
+                <p class="badge badge-pill badge-light d-inline-block mb-0">nav</p>
+                <p class="badge badge-pill badge-light d-inline-block mb-0">checkbox</p>
+                <p class="badge badge-pill badge-light d-inline-block mb-0">label</p>
+                <p class="badge badge-pill badge-light d-inline-block mb-0">input</p>
+              </div>
+              <div class="col-3">
+                <h5 class="text-blue">Element</h5>
+                <p>A part of a block that has no standalone meaning and is semantically tied to its block.</p>
+                <h6>Examples</h6>
+                <p class="badge badge-pill badge-light d-inline-block mb-0">nav item</p>
+                <p class="badge badge-pill badge-light d-inline-block mb-0">list item</p>
+                <p class="badge badge-pill badge-light d-inline-block mb-0">checkbox description</p>
+                <p class="badge badge-pill badge-light d-inline-block mb-0">card body</p>
+              </div>
+              <div class="col-3">
+                <h5 class="text-red">Modifier</h5>
+                <p>A flag on a block or element. Use them to change appearance or behavior.</p>
+                <h6>Examples</h6>
+                <p class="badge badge-pill badge-light d-inline-block mb-0">disabled</p>
+                <p class="badge badge-pill badge-light d-inline-block mb-0">highlighted</p>
+                <p class="badge badge-pill badge-light d-inline-block mb-0">checked</p>
+                <p class="badge badge-pill badge-light d-inline-block mb-0">fixed</p>
+                <p class="badge badge-pill badge-light d-inline-block mb-0">size</p>
+                <p class="badge badge-pill badge-light d-inline-block mb-0">big</p>
+                <p class="badge badge-pill badge-light d-inline-block mb-0">color yellow</p>
+              </div>
+            </div>
+            <p>To learn more about BEM visit <a href="http://getbem.com/introduction/" target="_blank">getbem.com/introduction</a></p>
+            <h3 class="mt-4">If you have a question.</h3>
+            <p>Please contact the lead engineer from the UX guild.</p>
+            <p>Email: <a href="mailto:dstanley@healthequity.com" target="_top">David Stanley</a> &ndash; <small class="text-gray54">Sr. Software Engineer</small></p>
+          </div>
+        </div>
+      </div> <!-- END container -->
+    </div> <!-- END site-content -->
+    <div class="site-cache" id="site-cache"></div>
+  </div> <!-- END site-pusher -->
+</div> <!-- END site-container -->
+<script>
+  var cipboard = new ClipboardJS('.btn-clipboard)'); clipboard.on('success', function(e) { console.log(e); }); clipboard.on('error', function(e) { console.log(e); });
+</script>
+</body>
+<script>
+$(document).ready(function(){
+
+	(function($) {
+
+		$('#header__icon').click(function(e){
+			e.preventDefault();
+			$('body').toggleClass('with--sidebar');
+		});
+
+    $('#site-cache').click(function(e){
+      $('body').removeClass('with--sidebar');
+    });
+
+	})(jQuery);
+
+});
+</script>
+</html>

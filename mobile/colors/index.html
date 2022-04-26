@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mobile &ndash; Colors</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../_images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../../_images/favicon.png" type="image/x-icon" />
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-grid.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-reboot.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian.css">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+
+  <!-- javascript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+  
+</head>
+
+<body>
+  <div class="site-container">
+    <div class="site-pusher">
+
+      <header class="header">
+
+        <div id="page-header"></div>
+        <script>
+          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+        </script>
+        
+      </header>
+
+      <div class="site-content">
+        <div class="container-fluid p-4">
+          <div class="row flex-xl-nowrap">
+            <div class="col-12 col-sm-3 col-xl-2 bd-sidebar">
+              <h5 class="mt-2 pb-2">Mobile</h5>
+              <div class="div-2 mb-2"></div>
+
+              <div id="mobile-nav"></div>
+
+              <script>
+                $( "#mobile-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #mobile" );
+              </script>
+
+
+            </div>
+            <div class="col-12 col-sm-8 col-xl-10">
+              <h1 class="m-0 text-purple">Colors</h1>
+              <h3 class="text-gray60 light w-70 lh-3 mb-4">Colors used in the mobile app design follow HealthEquity brand colors, with the exception that the HealthEquity Blue is used as the primary color, and a subtle gradient is used to add some dimension to smaller screens.</h3>
+
+                <h2 id="primary">Primary Colors
+                  <a class="anchor" href="#primary">#</a>
+                </h2>
+                <div class="row mb-4">
+                  <div class="col-xl-3 mb-2">
+                    <div class="card text-white bg-blue">
+                      <div class="card-body">
+                        <h5 class="card-title">HQY - Blue</h5>
+                        <p class="card-text light">#0070b9<br>rgba(0, 112, 185, 1)</p>
+                        <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 mb-2">
+                    <div class="card text-white bg-purple">
+                      <div class="card-body">
+                        <h5 class="card-title">HQY - Purple</h5>
+                        <p class="card-text light">#592c82<br>rgba(89, 44, 130, 1)<br></p>
+                        <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AAA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 mb-2">
+                    <div class="card text-white bg-teal">
+                      <div class="card-body">
+                        <h5 class="card-title">HQY - Teal</h5>
+                        <p class="card-text light">#00aac6<br>rgba(0, 170, 198, 1)</p>
+                        <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-xl-5 mb-2">
+                    <div class="card text-white bg-mobile-gradient">
+                      <div class="card-body">
+                        <h5 class="card-title">Background Gradient</h5>
+                        <p class="card-text light">#0070b9 &nbsp;<span class="fa fa-angle-down"></span>&nbsp; #004b7c<br>rgba(0, 112, 185, 1) &nbsp;<span class="fa fa-angle-down"></span>&nbsp; rgba(0, 75, 124, 1)</p>
+                        <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h2 id="secondary">Secondary Colors
+                  <a class="anchor" href="#secondary">#</a>
+                </h2>
+                <div class="row mb-4">
+                  <div class="col-xl-3 mb-2">
+                    <div class="card text-white bg-green">
+                      <div class="card-body">
+                        <h5 class="card-title">HQY - Green</h5>
+                        <p class="card-text light">#53934f<br>rgba(83, 147, 79, 1)</p>
+                        <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA+</span><span class="badge badge-dark ml-1">Pass</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 mb-2">
+                    <div class="card text-white bg-red">
+                      <div class="card-body">
+                        <h5 class="card-title">Red</h5>
+                        <p class="card-text light">#e60448<br>rgba(230, 4, 72, 1)</p>
+                        <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-xl-3 mb-2">
+                    <div class="card text-blue bg-ice">
+                      <div class="card-body">
+                        <h5 class="card-title">Ice</h5>
+                        <p class="card-text light">#f2f8fb<br>rgba(242, 248, 251, 1)</p>
+                        <p class="mb-1 text-gray80">AAA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                      </div>
+                    </div>  
+                  </div>
+                  <div class="col-xl-3 mb-2">
+                    <div class="card text-green bg-celadon">
+                      <div class="card-body">
+                        <h5 class="card-title">Celadon</h5>
+                        <p class="card-text light">#f6f9f6<br>rgba(247, 251, 247, 1)</p>
+                        <p class="mb-1 text-gray80">AAA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 mb-2">
+                    <div class="card text-red bg-fairy">
+                      <div class="card-body">
+                        <h5 class="card-title">Fairy</h5>
+                        <p class="card-text light">#fff9f9<br>rgba(254, 249, 249, 1)</p>
+                        <p class="mb-1 text-gray80">AAA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h2 id="grays">Grays
+                  <a class="anchor" href="grays">#</a>
+                </h2>
+                <div class="row mb-4">
+                  <div class="col-xl-3 mb-2">
+                    <div class="card text-white bg-gray90">
+                      <div class="card-body">
+                        <h5 class="card-title">Gray 90%</h5>
+                        <p class="card-text light">#1a1a1a<br>rgba(26, 26, 26, 1)</p>
+                        <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AAA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3">
+                    <div class="card text-white bg-gray88">
+                      <div class="card-body">
+                        <h5 class="card-title">Gray 88%</h5>
+                        <p class="card-text light">#1f1f1f<br>rgba(31, 31, 31, 1)</p>
+                        <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AAA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 mb-2">
+                    <div class="card text-white bg-gray80">
+                      <div class="card-body">
+                        <h5 class="card-title">Gray 80%</h5>
+                        <p class="card-text light">#323232<br>rgba(50, 50, 50, 1)</p>
+                        <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AAA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 mb-2">
+                    <div class="card text-white bg-gray72">
+                      <div class="card-body">
+                        <h5 class="card-title">Gray 72%</h5>
+                        <p class="card-text light">#474747<br>rgba(71, 71, 71, 1)</p>
+                        <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AAA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-xl-3 mb-2">
+                    <div class="card text-white bg-gray66">
+                      <div class="card-body">
+                        <h5 class="card-title">Gray 66%</h5>
+                        <p class="card-text light">#595959<br>rgba(89, 89, 89, 1)</p>
+                        <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AAA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 mb-2">
+                    <div class="card text-white bg-gray54">
+                      <div class="card-body">
+                        <h5 class="card-title">Gray 54%</h5>
+                        <p class="card-text light">#767676<br>rgba(118, 118, 118, 1)</p>
+                        <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 mb-2">
+                    <div class="card text-white bg-gray42">
+                      <div class="card-body">
+                        <h5 class="card-title">Gray 42%</h5>
+                        <p class="card-text light">#949494<br>rgba(148, 148, 148, 1)</p>
+                        <p class="mb-1 text-gray80">AA+<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA+</span><span class="badge badge-dark ml-1">Pass</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 mb-2">
+                    <div class="card bg-gray30">
+                      <div class="card-body">
+                        <h5 class="card-title">Gray 30%</h5>
+                        <p class="card-text light">#afafaf<br>rgba(175, 175, 175, 1)</p>
+                        <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-xl-3 mb-2">
+                    <div class="card bg-gray24">
+                      <div class="card-body">
+                        <h5 class="card-title">Gray 24%</h5>
+                        <p class="card-text light">#c2c2c2<br>rgba(194, 194, 194, 1)</p>
+                        <p class="mb-1 text-gray80">AAA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 mb-2">
+                    <div class="card bg-gray15">
+                      <div class="card-body">
+                        <h5 class="card-title">Gray 15%</h5>
+                        <p class="card-text light">#dcdcdc<br>rgba(220, 220, 220, 1)</p>
+                        <p class="mb-1 text-gray80">AAA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3  mb-2">
+                    <div class="card bg-gray5">
+                      <div class="card-body">
+                        <h5 class="card-title">Gray 5%</h5>
+                        <p class="card-text light">#eeeeee<br>rgba(238, 238, 238, 1)</p>
+                        <p class="mb-1 text-gray80">AAA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3">
+                    <div class="card bg-gray2">
+                      <div class="card-body">
+                        <h5 class="card-title">Gray 2%</h5>
+                        <p class="card-text light">#fafafa<br>rgba(250, 250, 250, 1)</p>
+                        <p class="mb-1 text-gray80">AAA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-xl-3">
+                    <div class="card bg-white">
+                      <div class="card-body">
+                        <h5 class="card-title">White</h5>
+                        <p class="card-text light">#ffffff<br>rgba(255, 255, 255, 1)</p>
+                        <p class="mb-1 text-gray80">AAA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- END container -->
+    </div> <!-- END site-content -->
+    <div class="site-cache" id="site-cache"></div>
+  </div> <!-- END site-pusher -->
+</div> <!-- END site-container -->
+<script>
+  var cipboard = new ClipboardJS('.btn-clipboard)'); clipboard.on('success', function(e) { console.log(e); }); clipboard.on('error', function(e) { console.log(e); });
+</script>
+</body>
+<script>
+$(document).ready(function(){
+
+	(function($) {
+
+		$('#header__icon').click(function(e){
+			e.preventDefault();
+			$('body').toggleClass('with--sidebar');
+		});
+
+    $('#site-cache').click(function(e){
+      $('body').removeClass('with--sidebar');
+    });
+
+	})(jQuery);
+
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</html>

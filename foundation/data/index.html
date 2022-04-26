@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Foundation &ndash; Data Visualization</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../_images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../../_images/favicon.png" type="image/x-icon" />
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-grid.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-reboot.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian.css">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+
+  <!-- javascript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+</head>
+
+<body>
+  <div class="site-container">
+    <div class="site-pusher">
+
+      <header class="header">
+
+        <div id="page-header"></div>
+        <script>
+          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+        </script>
+
+      </header>
+
+    <div class="site-content">
+      <div class="container-fluid p-4">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-sm-3 col-xl-2 bd-sidebar">
+            <h5 class="mt-2 pb-2">Foundation</h5>
+            <div class="div-2 mb-2"></div>
+
+            <div id="foundation-nav"></div>
+            <script>
+              $( "#foundation-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #foundation" );
+            </script>
+
+          </div>
+          <div class="col-12 col-sm-9 col-xl-10">
+            <h1 class="text-purple mt-0">Data Visualization</h1>
+            <h3 class="text-gray60 light lh-3 w-70 mb-4">The graphical representation of data to simplify complex concepts and enable understanding.</h3>
+            <h3>Charts</h3>
+            <p>Charts are not just decorative, they should enable exploration, montitoring, and provide explanation. Charts should be simple and represent data in a way that improves its consumption.</p>
+            <h4 class="">Types of charts</h4>
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="card">
+                  <img src="../../_images/chart-bar.svg" class="card-img-top" alt="bar chart example">
+                  <div class="card-body">
+                    <h5 class="card-title">Bar</h5>
+                    <p class="card-text">Each bar is mapped to a value with a length determined by the metric. Bar charts may be displayed vertically or horizontally.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card">
+                  <img src="../../_images/chart-stacked-bar.svg" class="card-img-top" alt="stacked bar chart example">
+                  <div class="card-body">
+                    <h5 class="card-title">Stacked Bar</h5>
+                    <p class="card-text">Stacked bar charts use color to show additional dimensions as parts of a whole. No more than six categorical colors should be used.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card">
+                  <img src="../../_images/chart-line.svg" class="card-img-top" alt="line chart example">
+                  <div class="card-body">
+                    <h5 class="card-title">Line</h5>
+                    <p class="card-text">Use to compare many singular or similar data points plotted on a line that change over time. Helpful in displaying data chronologically.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-4">
+              <div class="col-sm-3">
+                <div class="card">
+                  <img src="../../_images/chart-area.svg" class="card-img-top" alt="area chart example">
+                  <div class="card-body">
+                    <h5 class="card-title">Area</h5>
+                    <p class="card-text">Use to compare many similar data points within a time frame where seeing the overlap of the data is important.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card">
+                  <img src="../../_images/chart-pie.svg" class="card-img-top" alt="pie chart example">
+                  <div class="card-body">
+                    <h5 class="card-title">Pie</h5>
+                    <p class="card-text">Divided segments of an arc to show the proportional value of each piece of data.Use to show a few large segments of a total set.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card">
+                  <img src="../../_images/chart-donut.svg" class="card-img-top" alt="line chart example">
+                  <div class="card-body">
+                    <h5 class="card-title">Donut</h5>
+                    <p class="card-text">Show smaller segments in a total set or to show progress in smaller areas, also an additional data point or icon may be presented in the center.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h3 id="usage" class="mt-5">Usage
+              <a class="anchor" href="#usage">#</a>
+            </h3>
+            <div class="row">
+              <div class="col-sm">
+                <h5 class="text-purple">Categorical colors</h5>
+                <p>Categorical colors are ordered but may be used out of order if necessary, use them for categorical scales. Do not use them for ordinal, interval, or ratio scales.</p>
+                <small>Example: locations (e.g., cities, states) or names (e.g., employee, company)</small>
+              </div>
+              <div class="col-sm">
+                <h5 class="text-purple">Sequential colors</h5>
+                <p>Sequential colors are ordered. Use these for ordinal and interval scales. It's also acceptable to use these for ratio scales. Do not use these for categorical scales.</p>
+                <small>Example: ranked list (e.g., 1st, 2nd, 3rd), or (e.g., 2005, 2010, 2015, 2020)</small>
+              </div>
+              <div class="col-sm">
+                <h5 class="text-purple">Diverging colors</h5>
+                <p>Diverging colors are ordered. Use these for ordinal and ratio scales, especially when there is a meaningful middle value. These may also be used for interval scales. Do not use these for categorical scales.</p>
+                <small>Example: ratios (e.g., low, neutral, high), (e.g., -20, -10, 0, 10, 20)</small>
+              </div>
+            </div>
+            <h4 class="mt-4 text-gray66">Be consistent</h4>
+            <p>With color when there are multiple charts in the same view or presenting similar context. If a color is used to represent something in one chart, all other charts should have that same color relationship.</p>
+            <h3 id="chart-colors" class="mt-5">Chart colors
+              <a class="anchor" href="#chart-colors">#</a>
+            </h3>
+            <h4>Categorical</h4>
+            <div class="row pl-3 pr-3">
+              <div class="col-sm p-0 mr-1 mb-2">
+                <div class="card blank-card bg-lavender p-5" data-toggle="tooltip" data-placement="bottom" title="#c095e8"></div>
+                <small class="text-gray66">Lavender</small>
+              </div>
+              <div class="col-sm p-0 mr-1 mb-2">
+                <div class="card blank-card bg-capri p-5" data-toggle="tooltip" data-placement="bottom" title="#2fa2ed"></div>
+                <small class="text-gray66">Capri</small>
+              </div>
+              <div class="col-sm p-0 mr-1 mb-2">
+                <div class="card blank-card bg-celeste p-5" data-toggle="tooltip" data-placement="bottom" title="#b2e5ed"></div>
+                <small class="text-gray66">Celeste</small>
+              </div>
+              <div class="col-sm p-0 mr-1 mb-2">
+                <div class="card blank-card bg-mint p-5" data-toggle="tooltip" data-placement="bottom" title="#4bbf81"></div>
+                <small class="text-gray66">Mint</small>
+              </div>
+              <div class="col-sm p-0 mr-1 mb-2">
+                <div class="card blank-card bg-yellow p-5" data-toggle="tooltip" data-placement="bottom" title="#ffcc66"></div>
+                <small class="text-gray66">Yellow</small>
+              </div>
+              <div class="col-sm p-0 mr-1 mb-2">
+                <div class="card blank-card bg-ruby p-5" data-toggle="tooltip" data-placement="bottom" title="#ff3370"></div>
+                <small class="text-gray66">Ruby</small>
+              </div>
+              <div class="col-sm p-0 mr-1 mb-2">
+                <div class="card blank-card bg-magenta p-5" data-toggle="tooltip" data-placement="bottom" title="#d55891"></div>
+                <small class="text-gray66">Magenta</small>
+              </div>
+              <div class="col-sm p-0 mr-1 mb-2">
+                <div class="card blank-card bg-gray24 p-5" data-toggle="tooltip" data-placement="bottom" title="#c2c2c2"></div>
+                <small class="text-gray66">Gray 24%</small>
+              </div>
+            </div>
+
+
+            <h4 class="mt-5">Sequential</h4>
+            <h6 class="mb-0">Tyrian</h6>
+            <div class="row pl-3 pr-3">
+              <div class="col-sm p-0">
+                <div class="card blank-card bg-tyrian p-5" data-toggle="tooltip" data-placement="bottom" title="Tyrian #3b1d56"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #552760;" data-toggle="tooltip" data-placement="bottom" title="#552760"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #6F316A;" data-toggle="tooltip" data-placement="bottom" title="#6F316A"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #883B74;" data-toggle="tooltip" data-placement="bottom" title="#883B74"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #A2447D;" data-toggle="tooltip" data-placement="bottom" title="#A2447D"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #BB4E87;" data-toggle="tooltip" data-placement="bottom" title="#BB4E87"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card bg-magenta p-5" data-toggle="tooltip" data-placement="bottom" title="Magenta #d55991"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #DB70A0;" data-toggle="tooltip" data-placement="bottom" title="#DB70A0"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #E38AB1;" data-toggle="tooltip" data-placement="bottom" title="#E38AB1"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #E9A3C0;" data-toggle="tooltip" data-placement="bottom" title="#E9A3C0"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #F0BCCF;" data-toggle="tooltip" data-placement="bottom" title="#F0BCCF"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card bg-pink p-5" data-toggle="tooltip" data-placement="bottom" title="Pink #f7d5df"></div>
+              </div>
+            </div>
+            <div class="row mt-2 pl-3 pr-3">
+              <div class="col" style="background: linear-gradient(to right, #3b1d56 0%, #d55891 58%, #f7d5df 100%);">
+                <p>&nbsp;</p>
+              </div>
+            </div>
+
+            <h6 class="mt-4 mb-0">Uranian</h6>
+            <div class="row pl-3 pr-3">
+              <div class="col-sm p-0">
+                <div class="card blank-card bg-celeste p-5" data-toggle="tooltip" data-placement="bottom" title="Celeste #b2e5ed"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #98D4E5;" data-toggle="tooltip" data-placement="bottom" title="#98D4E5"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #7FC4DE;" data-toggle="tooltip" data-placement="bottom" title="#7FC4DE"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #66B3D7;" data-toggle="tooltip" data-placement="bottom" title="#66B3D7"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #4CA2CF;" data-toggle="tooltip" data-placement="bottom" title="#4CA2CF"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #3391C8;" data-toggle="tooltip" data-placement="bottom" title="#3391C8"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #1981C0;" data-toggle="tooltip" data-placement="bottom" title="#1981C0"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card bg-blue p-5" data-toggle="tooltip" data-placement="bottom" title="Blue #0070b9"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #03609C;" data-toggle="tooltip" data-placement="bottom" title="#03609C"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #065080;" data-toggle="tooltip" data-placement="bottom" title="#065080"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #094063;" data-toggle="tooltip" data-placement="bottom" title="#094063"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card bg-cerulean p-5" data-toggle="tooltip" data-placement="bottom" title="Cerulean #0d3147"></div>
+              </div>
+            </div>
+            <div class="row mt-2 pl-3 pr-3">
+              <div class="col"  style="background: linear-gradient(to right, #b2e5ed 0%, #0070b9 67%, #0d3147 100%);">
+                <p>&nbsp;</p>
+              </div>
+            </div>
+
+            <h6 class="mt-4 mb-0">Neptonian</h6>
+            <div class="row pl-3 pr-3">
+              <div class="col-sm p-0">
+                <div class="card blank-card bg-purple p-5" data-toggle="tooltip" data-placement="bottom" title="Purple #592c82"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #4A418D;" data-toggle="tooltip" data-placement="bottom" title="#4A418D"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #3C5699;" data-toggle="tooltip" data-placement="bottom" title="#3C5699"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #2D6BA4;" data-toggle="tooltip" data-placement="bottom" title="#2D6BA4"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #1E80AF;" data-toggle="tooltip" data-placement="bottom" title="#1E80AF"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #0F95BA;" data-toggle="tooltip" data-placement="bottom" title="#0F95BA"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card bg-teal p-5" data-toggle="tooltip" data-placement="bottom" title="Teal #00aac6"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #24B6CE;" data-toggle="tooltip" data-placement="bottom" title="#24B6CE"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #47C1D5;" data-toggle="tooltip" data-placement="bottom" title="#47C1D5"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #6BCEDE;" data-toggle="tooltip" data-placement="bottom" title="#6BCEDE"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #8ED9E5;" data-toggle="tooltip" data-placement="bottom" title="#8ED9E5"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card bg-celeste p-5" data-toggle="tooltip" data-placement="bottom" title="Celeste #b2e5ed"></div>
+              </div>
+            </div>
+            <div class="row mt-2 pl-3 pr-3">
+              <div class="col"  style="background: linear-gradient(to right, #592c82 0%, #00aac6 58%, #b2e5ed 100%);">
+                <p>&nbsp;</p>
+              </div>
+            </div>
+
+            <h6 class="mt-4 mb-0">Gaian</h6>
+            <div class="row pl-3 pr-3">
+              <div class="col-sm p-0">
+                <div class="card blank-card bg-mint p-5" data-toggle="tooltip" data-placement="bottom" title="Mint #4bbf81"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #40B389;" data-toggle="tooltip" data-placement="bottom" title="#40B389"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #36A991;" data-toggle="tooltip" data-placement="bottom" title="#36A991"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #2B9D99;" data-toggle="tooltip" data-placement="bottom" title="#2B9D99"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #2192A1;" data-toggle="tooltip" data-placement="bottom" title="#2192A1"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #1687A9;" data-toggle="tooltip" data-placement="bottom" title="#1687A9"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #0B7BB1;" data-toggle="tooltip" data-placement="bottom" title="#0B7BB1"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card bg-blue p-5" data-toggle="tooltip" data-placement="bottom" title="Blue #0070b9"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #03609C;" data-toggle="tooltip" data-placement="bottom" title="#03609C"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #065080;" data-toggle="tooltip" data-placement="bottom" title="#065080"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #094063;" data-toggle="tooltip" data-placement="bottom" title="#094063"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card bg-cerulean p-5" data-toggle="tooltip" data-placement="bottom" title="Cerulean #0d3147"></div>
+              </div>
+            </div>
+            <div class="row mt-2 pl-3 pr-3">
+              <div class="col"  style="background: linear-gradient(to right, #4bbf81 0%, #0070b9 67%, #0d3147 100%);">
+                <p>&nbsp;</p>
+              </div>
+            </div>
+
+            <h4 class="mt-5">Diverging</h4>
+            <h6 class="mb-0">Refracted</h6>
+            <div class="row pl-3 pr-3">
+              <div class="col-sm p-0">
+                <div class="card blank-card bg-cerulean p-5" data-toggle="tooltip" data-placement="bottom" title="Cerulean #0d3147"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #1A5C86;" data-toggle="tooltip" data-placement="bottom" title="#1A5C86"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #2786C4;" data-toggle="tooltip" data-placement="bottom" title="#2786C4"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card bg-capri p-5" data-toggle="tooltip" data-placement="bottom" title="Capri #2fa2ed"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #97C5ED;" data-toggle="tooltip" data-placement="bottom" title="#97C5ED"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card bg-thistle p-5" data-toggle="tooltip" data-placement="bottom" title="Thistle #e6e0ed"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #F195B7;" data-toggle="tooltip" data-placement="bottom" title="#F195B7"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card bg-ruby p-5" data-toggle="tooltip" data-placement="bottom" title="Ruby #ff3370"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #CF295B;" data-toggle="tooltip" data-placement="bottom" title="#CF295B"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #871A3B;" data-toggle="tooltip" data-placement="bottom" title="#871A3B"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card bg-carmine p-5" data-toggle="tooltip" data-placement="bottom" title="Carmine #3d0b1a"></div>
+              </div>
+            </div>
+            <div class="row mt-2 pl-3 pr-3">
+              <div class="col"  style="background: linear-gradient(to right, #0D3147 0%, #49ABED 36%, #E7E0EE 50%, #FC4C82 64%, #3D0B1A 100%);">
+                <p>&nbsp;</p>
+              </div>
+            </div>
+
+            <h6 class="mt-4 mb-0">Primary</h6>
+            <div class="row pl-3 pr-3">
+              <div class="col-sm p-0">
+                <div class="card blank-card bg-blue p-5" data-toggle="tooltip" data-placement="bottom" title="Blue #0070b9"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #358CC3;" data-toggle="tooltip" data-placement="bottom" title="#358CC3"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #68A7CC;" data-toggle="tooltip" data-placement="bottom" title="#68A7CC"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #9AC2D5;" data-toggle="tooltip" data-placement="bottom" title="#9AC2D5"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #CDDDDF;" data-toggle="tooltip" data-placement="bottom" title="#CDDDDF"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card bg-canary p-5" data-toggle="tooltip" data-placement="bottom" title="Canary #fff8e8"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #FAC7C8;" data-toggle="tooltip" data-placement="bottom" title="#FAC7C8"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #F597A9;" data-toggle="tooltip" data-placement="bottom" title="#F597A9"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #F06789;" data-toggle="tooltip" data-placement="bottom" title="#F06789"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card p-5" style="background: #EB3769;" data-toggle="tooltip" data-placement="bottom" title="#EB3769"></div>
+              </div>
+              <div class="col-sm p-0">
+                <div class="card blank-card bg-red p-5" data-toggle="tooltip" data-placement="bottom" title="Red #e60448"></div>
+              </div>
+            </div>
+            <div class="row mt-2 pl-3 pr-3">
+              <div class="col"  style="background: linear-gradient(to right, #0070b9 0%, #FFF8E8 50%, #e60448 100%);">
+                <p>&nbsp;</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div> <!-- END container -->
+    </div> <!-- END site-content -->
+    <div class="site-cache" id="site-cache"></div>
+  </div> <!-- END site-pusher -->
+</div> <!-- END site-container -->
+</body>
+<script>
+$(document).ready(function(){
+
+	(function($) {
+
+		$('#header__icon').click(function(e){
+			e.preventDefault();
+			$('body').toggleClass('with--sidebar');
+		});
+
+    $('#site-cache').click(function(e){
+      $('body').removeClass('with--sidebar');
+    });
+
+	})(jQuery);
+
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</html>

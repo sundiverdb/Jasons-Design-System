@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HQY &ndash; Page Layout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../_images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../../_images/favicon.png" type="image/x-icon" />
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-grid.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-reboot.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian.css">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+
+  <!-- javascript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+</head>
+
+<body>
+  <div class="site-container">
+    <div class="site-pusher">
+
+      <header class="header">
+
+        <div id="page-header"></div>
+        <script>
+          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+        </script>
+
+      </header>
+
+    <div class="site-content">
+      <div class="container-fluid p-4">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-sm-3 col-xl-2 bd-sidebar">
+            <h5 class="mt-2 pb-2">Patterns</h5>
+            <div class="div-2 mb-2"></div>
+
+            <div id="patterns-nav"></div>
+            <script>
+              $( "#patterns-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #patterns" );
+            </script>
+
+          </div>
+          <div class="col-12 col-sm-9 col-xl-10">
+            <h1 class="text-purple mt-0">Page Layout</h1>
+            <h3 class="text-gray60 light lh-3 w-70 mb-4">Page layout influences how users scan the page. Screens should be designed to follow common scanning patterns, with the right information at the right time.</h3>
+            <p>People don't read every word on a page, we scan. In an attempt to be efficient to achieve our goals. We have learned that scanning can deliver almost the same amount of information as reading, but with less time and effort.</p>
+            <p>People scan based on their task, their previous experience with the site, the HealthEquity brand or other sites, and also the type of content.</p>
+            <h3 id="common-patterns">Common scanning patterns
+              <a class="anchor" href="#common-patterns">#</a>
+            </h3>
+            <ul>
+              <li>F-pattern</li>
+              <li>Spotted</li>
+              <li>Layer-cake</li>
+              <li>Commitment</li>
+              <li>Zigzag</li>
+              <li>Exhaustive review</li>
+            </ul>
+
+            <h5 class="mt-4">F-pattern</h5>
+            <p>After consuming headings and subheadings users tend to read the beginning lines near the top of the page, working their way down reading less as they go. This form of scanning tends to appear like a capital letter F — from which the name is derived for this pattern.</p>
+            <img class="w-70" src="../../_images/f-pattern.png" alt="F-Pattern eye scanning">
+
+            <h5 class="mt-4">Spotted</h5>
+            <p>This pattern involves focusing on specific words or chunks of information spread throughout the page. These words or chunks stand out because of their associated hierarchy (e.g. links, colored words, bolded words, and bulleted lists). The user might also be tracking the specific information they need to accomplish their task (e.g. Names, Addresses, digits or other numerical information).</p>
+            <img class="w-70" src="../../_images/spotted.png" alt="Spotted eye scanning">
+
+            <h5 class="mt-4">Layer-cake</h5>
+            <p>Users layer-cake the page by focusing almost exclusively on page headings and subheadings, rarely stopping to consume any text in between. Users follow this pattern until they find the heading that resresents the infomration they are looking for.</p>
+            <img class="w-70" src="../../_images/layer-cake.png" alt="Layer-Cake eye scanning">
+
+            <h5 class="mt-4">Commitment</h5>
+            <p>This is more traditional reading rather than just scanning the page. Users focus in on all or nearly all the words and content of the page. This lends itself to the best comprehension but requires the most effort.</p>
+            <img class="w-70" src="../../_images/commitment.png" alt="Classic line by line scanning">
+
+            <h5 class="mt-4">Zigzag</h5>
+            <p>Usually associated with layouts that have images alternating with text. This layout is genreally used to break the monotony of a long page but it isn't as efficient for the user to scan following this pattern.</p>
+            <img class="w-70" src="../../_images/zig-zag.png" alt="Zig-zag eye scanning">
+
+            <h5 class="mt-4">Exhaustive review</h5>
+            <p>Occurs when a user returns to a certain part of the page again, in extreme cases they return multiple times. This usually happens because the user is confused, or that the information presented in the section under review doesn't meet the expectations for what they believe should be there.</p>
+            <img class="w-70" src="../../_images/exhaustive-review.png" alt="Stuck on confusing spots when scanning">
+        </div>
+      </div> <!-- END container -->
+    </div> <!-- END site-content -->
+    <div class="site-cache" id="site-cache"></div>
+  </div> <!-- END site-pusher -->
+</div> <!-- END site-container -->
+</body>
+<script>
+$(document).ready(function(){
+
+	(function($) {
+
+		$('#header__icon').click(function(e){
+			e.preventDefault();
+			$('body').toggleClass('with--sidebar');
+		});
+
+    $('#site-cache').click(function(e){
+      $('body').removeClass('with--sidebar');
+    });
+
+	})(jQuery);
+
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mobile &ndash; Typography</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../_images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../../_images/favicon.png" type="image/x-icon" />
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-grid.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-reboot.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian.css">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+
+  <!-- javascript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+  
+</head>
+
+<body>
+  <div class="site-container">
+    <div class="site-pusher">
+
+      <header class="header">
+
+        <div id="page-header"></div>
+        <script>
+          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+        </script>
+        
+      </header>
+
+      <div class="site-content">
+        <div class="container-fluid p-4">
+          <div class="row flex-xl-nowrap">
+            <div class="col-12 col-sm-3 col-xl-2 bd-sidebar">
+              <h5 class="mt-2 pb-2">Mobile</h5>
+              <div class="div-2 mb-2"></div>
+
+              <div id="mobile-nav"></div>
+
+              <script>
+                $( "#mobile-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #mobile" );
+              </script>
+
+
+            </div>
+            <div class="col-12 col-sm-8 col-xl-10">
+              <h1 class="m-0 text-purple">Typography</h1>
+              <h3 class="text-gray60 light w-70 lh-3 mb-4">Typography in the mobile app represents one area that is a significant departure from the rest of HealthEquity branding and style. We strive to make the mobile expeirence feel as natural as possible regardless of our members' device operating system, and as such we use fonts that are native to each platform.</h3>
+
+                <h2>iOS (San Francisco)</h2>
+                <div class="row">
+                  <div class="col-md-4">
+
+                    <h3>Main App and Body Text</h3>
+                                      
+                    <h4 class="m-0 text-gray66 sf-display">Heading 1 (page titles)</h4>
+                    <p class="text-gray54 light">SF Pro Display &ndash; Regular &ndash; 24px &ndash; Gray 66%</p>
+                    
+                    <h6 class="mb-0 text-gray66 font-weight-bold sf-display">Heading 2</h6>
+                    <p class="text-gray54 light">SF Pro Display &ndash; Bold &ndash; 18px &ndash; Gray 66%</p>
+
+                    <p class="mb-0 text-gray66 font-weight-bold sf-text">Heading 3</p>
+                    <p class="text-gray54 light">SF Pro Text &ndash; Bold &ndash; 16px &ndash; Gray 66%</p>
+                    
+                    <p class="mb-0 text-gray66 sf-text" style="font-size: 14px;">Body text</p>
+                    <p class="text-gray54 light">SF Pro Text &ndash; Regular &ndash; 14px &ndash; Gray 66% &ndash; line-height 20px</p>
+                    
+                    <p class="mb-0 text-blue sf-text" style="font-size: 14px;">Link</p>
+                    <p class="text-gray54 light">SF Pro Text &ndash; Regular &ndash; 14px &ndash; HQY Blue</p>
+                    
+                    <p class="mb-0 text-gray66 sf-text" style="font-size: 10px;">Body text small</p>
+                    <p class="text-gray54 light">SF Pro Text &ndash; Regular &ndash; 10px &ndash; Gray 66% &ndash; line-height 20px</p>
+                    
+                    <h6 class="mb-0 text-blue sf-display">Main menu link</h6>
+                    <p class="text-gray54 light">SF Pro Display &ndash; Regular &ndash; 18px &ndash; HQY Blue</p>
+                    
+                    <p class="mb-0 text-gray30 bg-gray66 d-inline-block p-1 sf-compact" style="font-size: 10px;">Tab menu unselected</p>
+                    <p class="text-gray54 light">SF Compact Text &ndash; Semibold &ndash; 10px &ndash; Gray 30%</p>
+                    
+                    <p class="mb-0 text-white bg-gray66 d-inline-block p-1 sf-compact" style="font-size: 10px;">Tab menu selected</p>
+                    <p class="text-gray54 light">SF Compact Text &ndash; Semibold &ndash; 10px &ndash; White</p>
+
+                    <p class="mb-0 text-gray54 sf-text" style="font-size: 26px;">Thin medium</p>
+                    <p class="text-gray54 light">SF Pro Display &ndash; Thin &ndash; 26px &ndash; Gray 54%</p>
+
+
+
+                  </div>
+                  <div class="col-md-4">
+
+                    <h3>Dashboard</h3>
+
+                    <h1 class="m-0 text-gray2 sf-display bg-gray66 d-inline-block p-1" style="font-size: 42px; font-weight: 300;">Dashboard thin main</h1>
+                    <p class="text-gray54 light">SF Pro Display &ndash; Thin &ndash; 42px &ndash; Gray 2%</p>
+                    
+                    <h6 class="m-0 text-gray2 sf-display bg-gray66 d-inline-block p-1" style="font-weight: 300;">Dashboard thin small</h6>
+                    <p class="text-gray54 light">SF Pro Display &ndash; Thin &ndash; 18px &ndash; Gray 2%</p>
+                    
+                    <h2 class="m-0 text-purple sf-display d-inline-block" style="font-weight: 300;">Dashboard thin card</h2>
+                    <p class="text-gray54 light">SF Pro Display &ndash; Thin &ndash; 18px &ndash; HQY Purple</p>
+                    
+                    <p class="mb-0 text-gray54 sf-text" style="font-size: 12px;">Dashboard card title</p>
+                    <p class="text-gray54 light">SF Pro Text &ndash; Regular &ndash; 12px &ndash; Gray 54%</p>
+                    
+                    <p class="mb-0 text-gray42 sf-text" style="font-size: 9px;">Dashboard card info</p>
+                    <p class="text-gray54 light">SF Pro Text &ndash; Regular &ndash; 9px &ndash; Gray 42%</p>
+                      
+                  </div>
+
+                  <div class="col-md-4">
+
+                    <h3>Warnings and Alerts</h3>
+                    <p>This section is in progress.</p>
+                    <!-- add red small warning text from about us -->
+
+
+
+
+                  </div>
+
+
+                <!-- /row -->
+                </div>
+                
+                <h2>Android (Roboto)</h2>
+                <p>Adjustments for the Android platform are forthcoming, but should generally follow the sizes and colors of the iOS styles.</p>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- END container -->
+    </div> <!-- END site-content -->
+    <div class="site-cache" id="site-cache"></div>
+  </div> <!-- END site-pusher -->
+</div> <!-- END site-container -->
+<script>
+  var cipboard = new ClipboardJS('.btn-clipboard)'); clipboard.on('success', function(e) { console.log(e); }); clipboard.on('error', function(e) { console.log(e); });
+</script>
+</body>
+<script>
+$(document).ready(function(){
+
+	(function($) {
+
+		$('#header__icon').click(function(e){
+			e.preventDefault();
+			$('body').toggleClass('with--sidebar');
+		});
+
+    $('#site-cache').click(function(e){
+      $('body').removeClass('with--sidebar');
+    });
+
+	})(jQuery);
+
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</html>

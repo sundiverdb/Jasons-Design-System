@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HQY &ndash; Onboarding</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../_images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../../_images/favicon.png" type="image/x-icon" />
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-grid.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-reboot.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian.css">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+
+  <!-- javascript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+</head>
+
+<body>
+  <div class="site-container">
+    <div class="site-pusher">
+
+      <header class="header">
+
+        <div id="page-header"></div>
+        <script>
+          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+        </script>
+        
+      </header>
+
+    <div class="site-content">
+      <div class="container-fluid p-4">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-sm-3 col-xl-2 bd-sidebar">
+            <h5 class="mt-2 pb-2">Patterns</h5>
+            <div class="div-2 mb-2"></div>
+            
+            <div id="patterns-nav"></div>
+            <script>
+              $( "#patterns-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #patterns" );
+            </script>
+
+          </div>
+          <div class="col-12 col-sm-9 col-xl-10">
+            <h1 class="text-purple mt-0">Onboarding</h1>
+            <h3 class="text-gray60 light lh-3 w-70 mb-4">We need to provide the user with the necessary knowledge, skills, and education to achieve their goals.</h3>
+            <p>Users want to get started using an application right away but but might need guidance with the look, feel, and functions once filled with data. Onboarding is a designed series of interactions and instructions that help ease the user into the product experience.</p>
+            <p>Onboarding should give the user a sense of what will be required to get what they need out of the product. First impressions only happen once and can dictate whether your users will continue to use your product or not.</p>
+            <p>A good <a href="../../patterns/empty-states/index.html">empty state</a> is critical for educating and providing a good first time experience. Consider presenting sample content or educating on what the user can do with in the application. If the screen is simply left blank the user might feel intimidated if there is little or no guidance on what to do.</p>
+            <h3 id="types-of-onboarding">Types of onboarding
+              <a class="anchor" href="#types-of-onboarding">#</a>
+            </h3>
+            <ul class="pl-3">
+              <li>Quick Tour</li>
+              <li>Guided Tour</li>
+              <li>Inline Hints</li>
+              <li>Guided Task Completion</li>
+            </ul>
+            <h5>Quick Tour</h5>
+            <p>This generally appears on the first launch of the application, the user is presented with a few quick screens outlining the value of the product and some basic information on how to get around.</p>
+            <p>This simple introduction serves as a welcome mat for users. It should never contain more than a few short phrases accompanied by simple graphics.</p>
+            <h5>Guided Tour</h5>
+            <p>This method also usually appears on the first launch, the user is presented with a series of popovers that draw attention to areas of interaction, button, navigation menus and help alert the user to useful elements in the app.</p>
+            <p>These popovers are especially useful in highlighting more complex interfaces where items might not be immediately apparent or easy to understand. Guide users to one action or element at a time and keep the explanations simple and concise, avoid highlighting more than 6-7 elements.</p>
+            <h5>Inline Hints</h5>
+            <p>Help the users with just in time guidance that educates new or unfamiliar features in an unobtrusive way.</p>
+            <p>These hints might be delivered through a variety of messaging components, such as tooltips, popovers, alerts, and notifications. These should be used when new features or changes occur to the product and might also provide a button to access more extensive oboarding patterns like a quick or guided tour.</p>
+            <h5>Guided Task Completion</h5>
+            <p>Sometimes the best way to learn is by doing. guided task completion are prompts for users to follow a series steps. This can give users an opportunity to familiarize themselve with the product staight away. By helping the users complete a task you are also improving the chance that they will continue to use the feature or product.</p>  
+        </div>
+      </div> <!-- END container -->
+    </div> <!-- END site-content -->
+    <div class="site-cache" id="site-cache"></div>
+  </div> <!-- END site-pusher -->
+</div> <!-- END site-container -->
+</body>
+<script>
+$(document).ready(function(){
+
+	(function($) {
+
+		$('#header__icon').click(function(e){
+			e.preventDefault();
+			$('body').toggleClass('with--sidebar');
+		});
+
+    $('#site-cache').click(function(e){
+      $('body').removeClass('with--sidebar');
+    });
+
+	})(jQuery);
+
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</html>

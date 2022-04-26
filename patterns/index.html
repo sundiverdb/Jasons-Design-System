@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HQY &ndash; Patterns</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../_images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../_images/favicon.png" type="image/x-icon" />
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../_css/bootstrap-grid.css">
+  <link rel="stylesheet" type="text/css" href="../_css/bootstrap-reboot.css">
+  <link rel="stylesheet" type="text/css" href="../_css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../_css/tyrian.css">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+
+  <!-- javascript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+</head>
+
+<body>
+  <div class="site-container">
+    <div class="site-pusher">
+
+      <header class="header">
+
+        <div id="page-header"></div>
+        <script>
+          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+        </script>
+
+      </header>
+
+    <div class="site-content">
+      <div class="container-fluid p-4">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-sm-3 col-xl-2 bd-sidebar">
+            <h5 class="mt-2 pb-2">Patterns</h5>
+            <div class="div-2 mb-2"></div>
+
+            <div id="patterns-nav"></div>
+            <script>
+              $( "#patterns-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #patterns" );
+            </script>
+
+          </div>
+          <div class="col-12 col-sm-8 col-xl-10">
+              <h1 class="m-0 text-purple">Overview</h1>
+              <h3 class="text-gray60 light w-70 lh-3 mb-4">Patterns represent solutions to interactions that solve our most common design problems.</h3>
+              <p>Patterns are provided to make sure that the foundational elements and components are applied to designs correctly</p>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="card mb-4">
+                    <div class="card-body pb-0">
+                      <h3 class="m-0 light text-primary">Accessibilty</h3>
+                    </div>
+                      <a href="../patterns/accessibility/index.html"><img src="../_images/accessibility.svg" class="card-img-top" alt="Accessibilty"></a>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card mb-4">
+                    <div class="card-body pb-0">
+                      <h3 class="m-0 light text-primary">Empty States</h3>
+                    </div>
+                      <a href="../patterns/empty-states/index.html"><img src="../_images/empty-states.svg" class="card-img-top" alt="Empty States"></a>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card mb-4">
+                    <div class="card-body pb-0">
+                      <h3 class="m-0 light text-primary">Loading States</h3>
+                    </div>
+                      <a href="../patterns/loading-states/index.html"><img src="../_images/loading-states.svg" class="card-img-top" alt="Loading States"></a>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card mb-4">
+                    <div class="card-body pb-0">
+                      <h3 class="m-0 light text-primary">Onboarding</h3>
+                    </div>
+                      <a href="../patterns/onboarding/index.html"><img src="../_images/onboarding.svg" class="card-img-top" alt="Onboarding"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="card mb-4">
+                    <div class="card-body pb-0">
+                      <h3 class="m-0 light text-primary">Page Header</h3>
+                    </div>
+                      <a href="../patterns/page-header/index.html"><img src="../_images/page-header.svg" class="card-img-top" alt="Page Header"></a>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card mb-4">
+                    <div class="card-body pb-0">
+                      <h3 class="m-0 light text-primary">Page Layout</h3>
+                    </div>
+                      <a href="../patterns/page-layout/index.html"><img src="../_images/page-layout.svg" class="card-img-top" alt="Page Layout"></a>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card mb-4">
+                    <div class="card-body pb-0">
+                      <h3 class="m-0 light text-primary">System Messages</h3>
+                    </div>
+                      <a href="../patterns/system-messages/index.html"><img src="../_images/system-messages.svg" class="card-img-top" alt="System Messages"></a>
+                  </div>
+                </div>
+              </div>
+            <p class="mt-4">For additional specifics and question about interaction patterns contact a member of the UX team.</p>
+
+          </div>
+        </div>
+      </div> <!-- END container -->
+    </div> <!-- END site-content -->
+    <div class="site-cache" id="site-cache"></div>
+  </div> <!-- END site-pusher -->
+</div> <!-- END site-container -->
+<script>
+  var cipboard = new ClipboardJS('.btn-clipboard)'); clipboard.on('success', function(e) { console.log(e); }); clipboard.on('error', function(e) { console.log(e); });
+</script>
+</body>
+<script>
+$(document).ready(function(){
+
+	(function($) {
+
+		$('#header__icon').click(function(e){
+			e.preventDefault();
+			$('body').toggleClass('with--sidebar');
+		});
+
+    $('#site-cache').click(function(e){
+      $('body').removeClass('with--sidebar');
+    });
+
+	})(jQuery);
+
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</html>

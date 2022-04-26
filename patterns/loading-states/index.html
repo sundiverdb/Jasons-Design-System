@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HQY &ndash; Loading States</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../_images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../../_images/favicon.png" type="image/x-icon" />
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-grid.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-reboot.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian.css">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+
+  <!-- javascript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+</head>
+
+<body>
+  <div class="site-container">
+    <div class="site-pusher">
+
+      <header class="header">
+
+        <div id="page-header"></div>
+        <script>
+          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+        </script>
+
+      </header>
+
+    <div class="site-content">
+      <div class="container-fluid p-4">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-sm-3 col-xl-2 bd-sidebar">
+            <h5 class="mt-2 pb-2">Patterns</h5>
+            <div class="div-2 mb-2"></div>
+
+            <div id="patterns-nav"></div>
+            <script>
+              $( "#patterns-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #patterns" );
+            </script>
+
+          </div>
+          <div class="col-12 col-sm-9 col-xl-10">
+            <h1 class="text-purple mt-0">Loading States</h1>
+            <h3 class="text-gray60 light lh-3 w-70 mb-4">Loading states ease user frustration when dense page content or data must be loaded from a server.</h3>
+
+
+            <p>Loading states indicate to the user that content is loading, often with an animated graphic such as a spinner or "ghost content" (also called "skeleton screens") that roughly simulate what the content will look like when loaded.</p>
+            <p>Ghost content, when used while a screen is loading in the background, can often be perceived by the user to be shorter in duration than a blank screen or simple spinners. Animating the content with a moving or "shimmering" effect can also help decrease perceived duration.</p>
+
+            <h2 class="mt-4">Types of loading states</h2>
+
+            <h3 class="mt-4">Spinners</h3>
+            <p>Spinners are page- or block-level loading animations that display while content is loading behind it. Page-level spinners often  have a page-size translucent block behind them partially obscuring the page behind it to indicate that the page is temporarily inoperable.</p>
+            <h5>Examples:</h5>
+            <p class="mt-4"><strong>Animated .gif</strong></p>
+            <p>This example may not loop properly depending on your browser.</p>
+            <p><img class="" src="../../_images/loading-spinner.gif" alt="Example of a basic spinner"></p>
+            <p class="mt-4"><strong>Bootstrap default</strong></p>
+            <p>HealthEquity uses the default Bootstrap spinner. More information can be found at the <a href="../../components/spinners/index.html">spinner component page</a>.</p>
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+
+            <h3 class="mt-4">Ghost content</h3>
+
+            <p>Ghost content animations are simply .gif image files with transparent backgrounds used to approximate the look of the content being loaded. They can be made using any animation tool that allows gradients, masking and alpha channels. The UX team uses <a href="https://www.adobe.com/products/animate.html">Adobe Animate</a>. Contact Kevin Jackson at <a href="mailto:kjackson@healthequity.com">kjackson@healthequity.com</a> to have an animation made to a specific size with specific ghost content.</p>
+            <h5>Examples:</h5>
+            <p class="mt-4"><strong>138 x 282</strong></p>
+            <!--<div class="card p-4">   </div>-->
+            <p><img src="../../_images/loading-placeholder138x282.gif" alt="Ghost content, 138x282" class=""></p>
+
+            <p class="mt-4"><strong>638 x 297</strong></p>
+
+            <p><img src="../../_images/loading-placeholder638x297.gif" alt="Ghost content, 638x297" class=""></p>
+
+            <p class="mt-4"><strong>725 x 335</strong></p>
+
+            <p><img src="../../_images/loading-placeholder725x335.gif" alt="Ghost content, 725x335" class=""></p>
+
+            <p class="mt-4"><strong>752 x 27</strong></p>
+
+            <p><img src="../../_images/loading-placeholder752x27.gif" alt="Ghost content, 752x27" class=""></p>
+
+
+
+        </div>
+      </div> <!-- END container -->
+    </div> <!-- END site-content -->
+    <div class="site-cache" id="site-cache"></div>
+  </div> <!-- END site-pusher -->
+</div> <!-- END site-container -->
+</body>
+<script>
+$(document).ready(function(){
+
+  (function($) {
+
+    $('#header__icon').click(function(e){
+      e.preventDefault();
+      $('body').toggleClass('with--sidebar');
+    });
+
+    $('#site-cache').click(function(e){
+      $('body').removeClass('with--sidebar');
+    });
+
+  })(jQuery);
+
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</html>
