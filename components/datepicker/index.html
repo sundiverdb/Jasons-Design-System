@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Components &ndash; Datepicker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../_images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../../_images/favicon.png" type="image/x-icon" />
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-grid.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-reboot.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian-icons.css">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+
+  <!-- javascript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="site-container">
+    <div class="site-pusher">
+
+      <header class="header">
+
+        <div id="page-header"></div>
+        <script>
+          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+        </script>
+
+      </header>
+
+    <div class="site-content">
+      <div class="container-fluid p-4">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-sm-3 col-xl-2 bd-sidebar">
+            <h5 class="mt-2 pb-2">Components</h5>
+            <div class="div-2 mb-2"></div>
+
+            <div id="components-nav"></div>
+            <script>
+              $( "#components-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #components" );
+            </script>
+
+          </div>
+          <div class="col-12 col-sm-8 col-xl-10">
+            <h1 class="m-0 text-purple">Datepicker</h1>
+            <h3 class="text-gray60 light lh-3 w-70 mb-4">Datepickers help with date selection.</h3>
+            <p>We mostly use an input group with a calendar icon button that launches the datepicker in a popup, but the datepicker can also be used inline.</p>
+            <h2>Input Group</h2>
+            <p></p>
+
+            <div class="row">
+              <div class="col-xl-4">
+                <label>Date</label>
+                <div class="input-group mb-3 w-50">
+                  <input type="text" class="form-control" placeholder="mm/dd/yyyy" aria-label="Datepicker" aria-describedby="button-datepicker">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary btn-tight" type="button" id="button-datepicker"><span class="t-calendar"></span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="callout-card callout-warning w-70">
+              <p>Only use placeholders when it is clear the placeholder will not be confused with the expected input. Placeholders may cause confusion as the input field may be viewed as already filled.</p>
+            </div>
+
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"input-group mb-3"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">class</span><span class="o">=</span><span class="s">"form-control"</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">"mm/dd/yyyy"</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">"Datepicker"</span> <span class="na">aria-describedby</span><span class="o">=</span><span class="s">"button-datepicker"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"input-group-append"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-outline-secondary"</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">id</span><span class="o">=</span><span class="s">"button-datepicker"</span><span class="p">&gt;</span><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"t-calendar"</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+
+            <h3>Popup</h3>
+            <p>We use the <a href="https://ng-bootstrap.github.io/#/components/datepicker/overview" target="_blank">ng-Bootstrap</a> datepicker, with some minor styling updates.</p>
+
+            <p class="mt-4">For examples and additional specifics on using a datepicker follow the link below.</p>
+            <p class="text-gray54"><a  href="https://ng-bootstrap.github.io/#/components/datepicker/overview" target="_blank">ng-bootstrap.github.io/#/components/datepicker/overview</a></p>
+
+          </div>
+        </div>
+      </div> <!-- END container -->
+    </div> <!-- END site-content -->
+    <div class="site-cache" id="site-cache"></div>
+  </div> <!-- END site-pusher -->
+</div> <!-- END site-container -->
+
+</body>
+
+<script>
+$(document).ready(function(){
+
+	(function($) {
+
+		$('#header__icon').click(function(e){
+			e.preventDefault();
+			$('body').toggleClass('with--sidebar');
+		});
+
+    $('#site-cache').click(function(e){
+      $('body').removeClass('with--sidebar');
+    });
+
+	})(jQuery);
+
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</html>

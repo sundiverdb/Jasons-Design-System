@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Components &ndash; Toasts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../_images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../../_images/favicon.png" type="image/x-icon" />
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-grid.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-reboot.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian-icons.css">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+
+  <!-- javascript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+</head>
+
+<body>
+  <div class="site-container">
+    <div class="site-pusher">
+
+      <header class="header">
+
+        <div id="page-header"></div>
+        <script>
+          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+        </script>
+
+      </header>
+
+    <div class="site-content">
+      <div class="container-fluid p-4">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-sm-3 col-xl-2 bd-sidebar">
+            <h5 class="mt-2 pb-2">Components</h5>
+            <div class="div-2 mb-2"></div>
+
+            <div id="components-nav"></div>
+            <script>
+              $( "#components-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #components" );
+            </script>
+
+          </div>
+          <div class="col-12 col-sm-8 col-xl-10">
+            <h1 class="m-0 text-purple">Toasts</h1>
+            <h3 class="text-gray60 light lh-3 w-70 mb-4">Lightweight notifications designed to mimic the push notifications that have been popularized by mobile and desktop operating systems.</h3>
+            <h2>Overview</h2>
+            <p>Things to know when using the toast plugin:</p>
+            <ul>
+              <li class="mb-1">If you're building our JavaScript from source, it <a href="https://getbootstrap.com/docs/4.5/getting-started/javascript/#util" target="_blank">requires util.js.</a></li>
+              <li class="mb-1">Toasts are opt-in for performance reasons, so you must initialize them yourself.</li>
+              <li class="mb-1">Please note that you are responsible for positioning toasts.</li>
+              <li class="mb-1">Toasts will automatically hide if you do not specify <code>autohide: false</code>.</li>
+            </ul>
+            <h2 class="mt-4">Examples</h2>
+            <p>To encourage extensible and predictable toasts, you can have a header and body. Toast headers use <code>display: flex</code>, allowing easy alignment of content thanks to our margin and flexbox utilities.</p>
+            <p class="mb-5">Toasts are as flexible as you need and have very little required markup. At a minimum, we require a single element to contain your "toasted" content and strongly encourage a dismiss button.</p>
+
+<div class="toast fade show mb-5" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header">
+    <strong class="mr-auto">HQY Design System</strong>
+    <small>11 mins ago</small>
+    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true" class="t-close"></span>
+    </button>
+  </div>
+  <div class="toast-body">
+    Hello, world! This is a toast message.
+  </div>
+</div>
+
+            <div class="bd-clipboard invisible">
+              <button class="btn-clipboard" type="button" data-clipboard-action="copy" data-clipboard-target="pre" data-toggle="tooltip" data-placement="top" data-original-title="Copy to clipboard">Copy</button>
+            </div>
+            <div class="highlight">
+<pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast"</span> <span class="na">role=</span><span class="s">"alert"</span> <span class="na">aria-live=</span><span class="s">"assertive"</span> <span class="na">aria-atomic=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;strong</span> <span class="na">class=</span><span class="s">"mr-auto"</span><span class="nt">&gt;</span>HQY Design System<span class="nt">&lt;/strong&gt;</span>
+    <span class="nt">&lt;small&gt;</span>11 mins ago<span class="nt">&lt;/small&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"ml-2 mb-1 close"</span> <span class="na">data-dismiss=</span><span class="s">"toast"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="na">class=</span><span class="s">"t-close"</span><span class="nt">&gt;</span><span class="ni"></span><span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-body"</span><span class="nt">&gt;</span>
+    Hello, world! This is a toast message.
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+            </div>
+            <h2 id="stacking" class="mt-4">Stacking
+              <a class="anchor" href="#stacking">#</a>
+            </h2>
+            <p class="mb-5">When you have multiple toasts, we default to vertically stacking them in a readable manner.</p>
+            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <strong class="mr-auto">HQY Design System</strong>
+                <small class="text-muted">just now</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                  <span aria-hidden="true" class="t-close"></span>
+                </button>
+              </div>
+              <div class="toast-body">
+                See? Just like this.
+              </div>
+            </div>
+
+            <div class="toast fade show mb-5" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <strong class="mr-auto">HQY Design System</strong>
+                <small class="text-muted">2 seconds ago</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                  <span aria-hidden="true" class="t-close"></span>
+                </button>
+              </div>
+              <div class="toast-body">
+                Heads up, toasts will stack automatically
+              </div>
+            </div>
+
+            <div class="bd-clipboard invisible">
+              <button class="btn-clipboard" type="button" data-clipboard-action="copy" data-clipboard-target="pre" data-toggle="tooltip" data-placement="top" data-original-title="Copy to clipboard">Copy</button>
+            </div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast"</span> <span class="na">role=</span><span class="s">"alert"</span> <span class="na">aria-live=</span><span class="s">"assertive"</span> <span class="na">aria-atomic=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;strong</span> <span class="na">class=</span><span class="s">"mr-auto"</span><span class="nt">&gt;</span>HQY Design System<span class="nt">&lt;/strong&gt;</span>
+    <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>just now<span class="nt">&lt;/small&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"ml-2 mb-1 close"</span> <span class="na">data-dismiss=</span><span class="s">"toast"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="na">class=</span><span class="s">"t-close"</span><span class="nt">&gt;</span><span class="ni"></span><span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-body"</span><span class="nt">&gt;</span>
+    See? Just like this.
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast"</span> <span class="na">role=</span><span class="s">"alert"</span> <span class="na">aria-live=</span><span class="s">"assertive"</span> <span class="na">aria-atomic=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;strong</span> <span class="na">class=</span><span class="s">"mr-auto"</span><span class="nt">&gt;</span>HQY Design System<span class="nt">&lt;/strong&gt;</span>
+    <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>2 seconds ago<span class="nt">&lt;/small&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"ml-2 mb-1 close"</span> <span class="na">data-dismiss=</span><span class="s">"toast"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="na">class=</span><span class="s">"t-close"</span><span class="nt">&gt;</span><span class="ni"></span><span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-body"</span><span class="nt">&gt;</span>
+    Heads up, toasts will stack automatically
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></div>
+            <h2 id="placement" class="mt-4">Placement
+              <a class="anchor" href="#placement">#</a>
+            </h2>
+            <p>Place toasts with custom CSS as you need them. The top right is often used for notifications, as is the top middle. If you're only ever going to show one toast at a time, put the positioning styles right on the <code>.toast</code>.</p>
+
+            <div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 100px;">
+              <div class="toast fade show" style="position: absolute; top: 0; right: 0;">
+                <div class="toast-header">
+                  <strong class="mr-auto">HQY Design System</strong>
+                  <small>11 mins ago</small>
+                  <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true" class="t-close"></span>
+                  </button>
+                </div>
+                <div class="toast-body">
+                  Hello, world! This is a toast message.
+                </div>
+              </div>
+            </div>
+
+            <div class="bd-clipboard invisible">
+              <button class="btn-clipboard" type="button" data-clipboard-action="copy" data-clipboard-target="pre" data-toggle="tooltip" data-placement="top" data-original-title="Copy to clipboard">Copy</button>
+            </div>
+<div class="highlight mt-3">
+<pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">aria-live=</span><span class="s">"polite"</span> <span class="na">aria-atomic=</span><span class="s">"true"</span> <span class="na">style=</span><span class="s">"position: relative; min-height: 200px;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast"</span> <span class="na">style=</span><span class="s">"position: absolute; top: 0; right: 0;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-header"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;strong</span> <span class="na">class=</span><span class="s">"mr-auto"</span><span class="nt">&gt;</span>HQY Design System<span class="nt">&lt;/strong&gt;</span>
+      <span class="nt">&lt;small&gt;</span>11 mins ago<span class="nt">&lt;/small&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"ml-2 mb-1 close"</span> <span class="na">data-dismiss=</span><span class="s">"toast"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="na">class=</span><span class="s">"t-close"</span><span class="nt">&gt;</span><span class="ni"></span><span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-body"</span><span class="nt">&gt;</span>
+      Hello, world! This is a toast message.
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+            <p>For systems that generate more notifications, consider using a wrapping element so they can easily stack.</p>
+            <div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
+              <!-- Position it -->
+              <div style="position: absolute; top: 0; right: 0;">
+
+                <!-- Then put toasts within -->
+                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                  <div class="toast-header">
+                    <strong class="mr-auto">HQY Design System</strong>
+                    <small class="text-muted">just now</small>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                      <span aria-hidden="true" class="t-close"></span>
+                    </button>
+                  </div>
+                  <div class="toast-body">
+                    See? Just like this.
+                  </div>
+                </div>
+
+                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                  <div class="toast-header">
+                    <strong class="mr-auto">HQY Design System</strong>
+                    <small class="text-muted">2 seconds ago</small>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                      <span aria-hidden="true" class="t-close"></span>
+                    </button>
+                  </div>
+                  <div class="toast-body">
+                    Heads up, toasts will stack automatically
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bd-clipboard invisible">
+              <button class="btn-clipboard" type="button" data-clipboard-action="copy" data-clipboard-target="pre" data-toggle="tooltip" data-placement="top" data-original-title="Copy to clipboard">Copy</button>
+            </div>
+<div class="highlight mt-3">
+<pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">aria-live=</span><span class="s">"polite"</span> <span class="na">aria-atomic=</span><span class="s">"true"</span> <span class="na">style=</span><span class="s">"position: relative; min-height: 200px;"</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- Position it --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"position: absolute; top: 0; right: 0;"</span><span class="nt">&gt;</span>
+
+    <span class="c">&lt;!-- Then put toasts within --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast"</span> <span class="na">role=</span><span class="s">"alert"</span> <span class="na">aria-live=</span><span class="s">"assertive"</span> <span class="na">aria-atomic=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-header"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;strong</span> <span class="na">class=</span><span class="s">"mr-auto"</span><span class="nt">&gt;</span>HQY Design System<span class="nt">&lt;/strong&gt;</span>
+        <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>just now<span class="nt">&lt;/small&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"ml-2 mb-1 close"</span> <span class="na">data-dismiss=</span><span class="s">"toast"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="na">class=</span><span class="s">"t-close"</span><span class="nt">&gt;</span><span class="ni"></span><span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-body"</span><span class="nt">&gt;</span>
+        See? Just like this.
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast"</span> <span class="na">role=</span><span class="s">"alert"</span> <span class="na">aria-live=</span><span class="s">"assertive"</span> <span class="na">aria-atomic=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-header"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;strong</span> <span class="na">class=</span><span class="s">"mr-auto"</span><span class="nt">&gt;</span>HQY Design System<span class="nt">&lt;/strong&gt;</span>
+        <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>2 seconds ago<span class="nt">&lt;/small&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"ml-2 mb-1 close"</span> <span class="na">data-dismiss=</span><span class="s">"toast"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="na">class=</span><span class="s">"t-close"</span><span class="nt">&gt;</span><span class="ni"></span><span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-body"</span><span class="nt">&gt;</span>
+        Heads up, toasts will stack automatically
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+            <p>You can also get fancy with flexbox utilities to align toasts horizontally and/or vertically.</p>
+
+<!-- Flexbox container for aligning the toasts -->
+<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center" style="min-height: 200px;">
+
+  <!-- Then put toasts within -->
+  <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <strong class="mr-auto">HQY Design System</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+        <span aria-hidden="true" class="t-close"></span>
+      </button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
+</div>
+
+            <div class="bd-clipboard invisible">
+              <button class="btn-clipboard" type="button" data-clipboard-action="copy" data-clipboard-target="pre" data-toggle="tooltip" data-placement="top" data-original-title="Copy to clipboard">Copy</button>
+            </div>
+<div class="highlight mt-3">
+<pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Flexbox container for aligning the toasts --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">aria-live=</span><span class="s">"polite"</span> <span class="na">aria-atomic=</span><span class="s">"true"</span> <span class="na">class=</span><span class="s">"d-flex justify-content-center align-items-center"</span> <span class="na">style=</span><span class="s">"min-height: 200px;"</span><span class="nt">&gt;</span>
+
+    <span class="c">&lt;!-- Then put toasts within --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast"</span> <span class="na">role=</span><span class="s">"alert"</span> <span class="na">aria-live=</span><span class="s">"assertive"</span> <span class="na">aria-atomic=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-header"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;strong</span> <span class="na">class=</span><span class="s">"mr-auto"</span><span class="nt">&gt;</span>HQY Design System<span class="nt">&lt;/strong&gt;</span>
+        <span class="nt">&lt;small&gt;</span>11 mins ago<span class="nt">&lt;/small&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"ml-2 mb-1 close"</span> <span class="na">data-dismiss=</span><span class="s">"toast"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="na">class=</span><span class="s">"t-close"</span><span class="nt">&gt;</span><span class="ni"></span><span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-body"</span><span class="nt">&gt;</span>
+        Hello, world! This is a toast message.
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+            <!-- Flexbox container for aligning the toasts -->
+            <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center" style="min-height: 200px;">
+
+              <!-- Then put toasts within -->
+              <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                  <strong class="mr-auto">HQY Design System</strong>
+                  <small>11 mins ago</small>
+                  <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true" class="t-close"></span>
+                  </button>
+                </div>
+                <div class="toast-body">
+                  Hello, world! This is a toast message.
+                </div>
+              </div>
+            </div>
+
+            <h2 id="custom-toasts" class="mt-4">Custom Toasts
+              <a class="anchor" href="#custom-toasts">#</a>
+            </h2>
+            <p>Toasts are available in six different styles. To use a custom style, use the required <code>.toast</code> class with one of the five required contextual classes (e.g., <code>.toast-success</code>).</p>
+            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <span class="t-question-circle-alt mr-2"></span> <strong class="mr-auto">Default toast</strong>
+                <small class="text-muted">just now</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                  <span aria-hidden="true" class="t-close"></span>
+                </button>
+              </div>
+              <div class="toast-body">
+                See? Just like this.
+              </div>
+            </div>
+
+            <div class="toast toast-success fade show" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <span class="t-success mr-2"></span> <strong class="mr-auto">Success toast</strong>
+                <small class="text-muted">2 seconds ago</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                  <span aria-hidden="true" class="t-close"></span>
+                </button>
+              </div>
+              <div class="toast-body">
+                Heads up, success achieved!
+              </div>
+            </div>
+
+            <div class="toast toast-error fade show" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <span class="t-error mr-2"></span> <strong class="mr-auto">Error toast</strong>
+                <small class="text-muted">10 seconds ago</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                  <span aria-hidden="true" class="t-close"></span>
+                </button>
+              </div>
+              <div class="toast-body">
+                Heads up, there was an error.
+              </div>
+            </div>
+
+            <div class="toast toast-warning fade show" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <span class="t-warning mr-2"></span> <strong class="mr-auto">Warning toast</strong>
+                <small class="text-muted">30 seconds ago</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                  <span aria-hidden="true" class="t-close"></span>
+                </button>
+              </div>
+              <div class="toast-body">
+                Heads up, there might be something to check on.
+              </div>
+            </div>
+
+            <div class="toast toast-info fade show" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <span class="t-info-circle mr-2"></span> <strong class="mr-auto">Info toast</strong>
+                <small class="text-muted">1 minute ago</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                  <span aria-hidden="true" class="t-close"></span>
+                </button>
+              </div>
+              <div class="toast-body">
+                Heads up, this might be helpful to know.
+              </div>
+            </div>
+
+            <div class="toast toast-dark fade show mb-5" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <span class="t-question-circle mr-2"></span> <strong class="mr-auto">Dark toast</strong>
+                <small class="text-muted">5 minutes ago</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                  <span aria-hidden="true" class="t-close"></span>
+                </button>
+              </div>
+              <div class="toast-body">
+                No, I am not burnt.
+              </div>
+            </div>
+            <div class="bd-clipboard invisible">
+              <button class="btn-clipboard" type="button" data-clipboard-action="copy" data-clipboard-target="pre" data-toggle="tooltip" data-placement="top" data-original-title="Copy to clipboard">Copy</button>
+            </div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast"</span> <span class="na">role=</span><span class="s">"alert"</span> <span class="na">aria-live=</span><span class="s">"assertive"</span> <span class="na">aria-atomic=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;strong</span> <span class="na">class=</span><span class="s">"mr-auto"</span><span class="nt">&gt;</span>Default toast<span class="nt">&lt;/strong&gt;</span>
+    <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>just now<span class="nt">&lt;/small&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"ml-2 mb-1 close"</span> <span class="na">data-dismiss=</span><span class="s">"toast"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="na">class=</span><span class="s">"t-close"</span><span class="nt">&gt;</span><span class="ni"></span><span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-body"</span><span class="nt">&gt;</span>
+    See? Just like this.
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast toast-success"</span> <span class="na">role=</span><span class="s">"alert"</span> <span class="na">aria-live=</span><span class="s">"assertive"</span> <span class="na">aria-atomic=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;strong</span> <span class="na">class=</span><span class="s">"mr-auto"</span><span class="nt">&gt;</span>Success toast<span class="nt">&lt;/strong&gt;</span>
+    <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>2 seconds ago<span class="nt">&lt;/small&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"ml-2 mb-1 close"</span> <span class="na">data-dismiss=</span><span class="s">"toast"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="na">class=</span><span class="s">"t-close"</span><span class="nt">&gt;</span><span class="ni"></span><span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-body"</span><span class="nt">&gt;</span>
+    Heads up, success achieved!
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast toast-error"</span> <span class="na">role=</span><span class="s">"alert"</span> <span class="na">aria-live=</span><span class="s">"assertive"</span> <span class="na">aria-atomic=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;strong</span> <span class="na">class=</span><span class="s">"mr-auto"</span><span class="nt">&gt;</span>Error toast<span class="nt">&lt;/strong&gt;</span>
+    <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>10 seconds ago<span class="nt">&lt;/small&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"ml-2 mb-1 close"</span> <span class="na">data-dismiss=</span><span class="s">"toast"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="na">class=</span><span class="s">"t-close"</span><span class="nt">&gt;</span><span class="ni"></span><span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-body"</span><span class="nt">&gt;</span>
+    Heads up, there was an error.
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast toast-warning"</span> <span class="na">role=</span><span class="s">"alert"</span> <span class="na">aria-live=</span><span class="s">"assertive"</span> <span class="na">aria-atomic=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;strong</span> <span class="na">class=</span><span class="s">"mr-auto"</span><span class="nt">&gt;</span>Warning toast<span class="nt">&lt;/strong&gt;</span>
+    <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>30 seconds ago<span class="nt">&lt;/small&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"ml-2 mb-1 close"</span> <span class="na">data-dismiss=</span><span class="s">"toast"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="na">class=</span><span class="s">"t-close"</span><span class="nt">&gt;</span><span class="ni"></span><span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-body"</span><span class="nt">&gt;</span>
+    Heads up, there might be something to check on.
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast toast-info"</span> <span class="na">role=</span><span class="s">"alert"</span> <span class="na">aria-live=</span><span class="s">"assertive"</span> <span class="na">aria-atomic=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;strong</span> <span class="na">class=</span><span class="s">"mr-auto"</span><span class="nt">&gt;</span>Info toast<span class="nt">&lt;/strong&gt;</span>
+    <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>1 minute ago<span class="nt">&lt;/small&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"ml-2 mb-1 close"</span> <span class="na">data-dismiss=</span><span class="s">"toast"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="na">class=</span><span class="s">"t-close"</span><span class="nt">&gt;</span><span class="ni"></span><span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-body"</span><span class="nt">&gt;</span>
+    Heads up, this might be helpful to know.
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast toast-dark"</span> <span class="na">role=</span><span class="s">"alert"</span> <span class="na">aria-live=</span><span class="s">"assertive"</span> <span class="na">aria-atomic=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;strong</span> <span class="na">class=</span><span class="s">"mr-auto"</span><span class="nt">&gt;</span>Info toast<span class="nt">&lt;/strong&gt;</span>
+    <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>5 minutes ago<span class="nt">&lt;/small&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"ml-2 mb-1 close"</span> <span class="na">data-dismiss=</span><span class="s">"toast"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="na">class=</span><span class="s">"t-close"</span><span class="nt">&gt;</span><span class="ni"></span><span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-body"</span><span class="nt">&gt;</span>
+    No, I am not burnt.
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+</code></div>
+
+            <p class="mt-4">For additional specifics on using toasts follow the link below.</p>
+            <p class="text-gray54"><a  href="https://getbootstrap.com/docs/4.5/components/toasts/" target="_blank">getbootstrap.com/docs/4.5/components/toasts/</a></p>
+
+          </div>
+        </div>
+      </div> <!-- END container -->
+    </div> <!-- END site-content -->
+    <div class="site-cache" id="site-cache"></div>
+  </div> <!-- END site-pusher -->
+</div> <!-- END site-container -->
+<script>
+  var cipboard = new ClipboardJS('.btn-clipboard)'); clipboard.on('success', function(e) { console.log(e); }); clipboard.on('error', function(e) { console.log(e); });
+</script>
+</body>
+<script>
+$(document).ready(function(){
+
+	(function($) {
+
+		$('#header__icon').click(function(e){
+			e.preventDefault();
+			$('body').toggleClass('with--sidebar');
+		});
+
+    $('#site-cache').click(function(e){
+      $('body').removeClass('with--sidebar');
+    });
+
+	})(jQuery);
+
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Components &ndash; Collapse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../_images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../../_images/favicon.png" type="image/x-icon" />
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-grid.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-reboot.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian-icons.css">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+
+  <!-- javascript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+</head>
+
+<body>
+  <div class="site-container">
+    <div class="site-pusher">
+
+      <header class="header">
+
+        <div id="page-header"></div>
+        <script>
+          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+        </script>
+
+      </header>
+
+    <div class="site-content">
+      <div class="container-fluid p-4">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-sm-3 col-xl-2 bd-sidebar">
+            <h5 class="mt-2 pb-2">Components</h5>
+            <div class="div-2 mb-2"></div>
+
+            <div id="components-nav"></div>
+            <script>
+              $( "#components-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #components" );
+            </script>
+
+          </div>
+          <div class="col-12 col-sm-8 col-xl-10">
+            <h1 class="m-0 text-purple">Collapse</h1>
+            <h3 class="text-gray60 light lh-3 w-70 mb-4">Toggle the visibility of content with a custom button and indicator.</h3>
+            <h3>How it works</h3>
+            <p>The collapse component is used to show and hide content. A buttons is used as to toggle the display of targeted content that is mapped to the toggle. Collapsing an element will animate the <code>height</code> from its current value to 0. Given how CSS handles animations, you cannot use <code>padding</code> on a <code>.collapse</code> element. Instead, use the class as an independent wrapping element.</p>
+            <h2>Example</h2>
+            <p>Click the button below to show and hide another element via class changes:</p>
+            <ul>
+              <li><code class="highlighter-rouge">.collapse</code> hides content</li>
+              <li><code class="highlighter-rouge">.collapsing</code> is applied during transitions</li>
+              <li><code class="highlighter-rouge">.collapse.show</code> shows content</li>
+            </ul>
+            <p>Use a button with the <code class="highlighter-rouge">data-target</code> attribute. The <code class="highlighter-rouge">data-toggle="collapse"</code> is required.</p>
+            <!-- Collapse Example 1 -->
+            <div>
+              <button class="p-2" data-toggle="collapse" data-target="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><span class="t-chevron-right rotate-chevron mr-1"></span><span class="text-gray66">Collapse toggle button</span></button>
+
+              <div class="collapse" id="collapseExample">
+                <div class="row">
+                  <div class="col">
+                    <p class="ml-3">
+                      Omnium hominum quos ad amorem veritatis natura superior impressit hoc maxime interesse videtur: ut, quemadmodum de labore antiquorum ditati sunt, ita et ipsi posteris prolaborent, quatenus ab eis posteritas habeat quo ditetur.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bd-clipboard invisible">
+              <button class="btn-clipboard" type="button" data-clipboard-action="copy" data-clipboard-target="pre" data-toggle="tooltip" data-placement="top" data-original-title="Copy to clipboard">Copy</button>
+            </div>
+<div class="highlight mt-3"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"p-2"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">href=</span><span class="s">"#collapseExample1"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseExample1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"t-chevron-right rotate-90 mr-1"</span><span class="nt">&gt;</span><span class="nt">&lt;/span&gt;</span>Collapse toggle button
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse"</span> <span class="na">id=</span><span class="s">"collapseExample1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span><span class="nt">&gt;</span>Omnium hominum quos ad amorem veritatis natura superior impressit hoc maxime interesse videtur: ut, quemadmodum de labore antiquorum ditati sunt,
+      ita et ipsi posteris prolaborent, quatenus ab eis posteritas habeat quo ditetur.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+
+<h2 id="accordian"class="mt-5">Accordian example
+  <a class="anchor" href="#accordian">#</a>
+</h2>
+<p>Using the <a href="../components/cards/">card</a> component, you can extend the default collapse behavior to create an accordion. To properly achieve the accordion style, be sure to use <code>.accordion</code> as a wrapper.</p>
+
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header ml-1" id="headingOne">
+      <button class="p-2" href="#collapseOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><span class="t-chevron-right rotate-chevron mr-1"></span><span class="text-gray66">Collapsible Group Item #1</span></button>
+    </div>
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body pt-1">
+        Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the <code>.show</code> class.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header ml-1" id="headingTwo">
+      <button class="p-2" href="#collapseTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><span class="t-chevron-right rotate-chevron mr-1"></span><span class="text-gray66">Collapsible Group Item #2</span></button>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body pt-1">
+        Some placeholder content for the second accordion panel. This panel is hidden by default.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header ml-1" id="headingThree">
+      <button class="p-2" href="#collapseThree" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><span class="t-chevron-right rotate-chevron mr-1"></span><span class="text-gray66">Collapsible Group Item #3</span></button>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body pt-1">
+        And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"accordion"</span> <span class="na">id</span><span class="o">=</span><span class="s">"accordionExample"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"card"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"card-header ml-1"</span> <span class="na">id</span><span class="o">=</span><span class="s">"headingOne"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">"mb-0"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">"p-2"</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">"collapse"</span> <span class="na">data-target</span><span class="o">=</span><span class="s">"#collapseOne"</span> <span class="na">aria-expanded</span><span class="o">=</span><span class="s">"true"</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">"collapseOne"</span><span class="p">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"t-chevron-right rotate-90 mr-1"</span><span class="nt">&gt;</span><span class="nt">&lt;/span&gt;</span>Collapsible Group Item #1
+        <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"collapseOne"</span> <span class="na">class</span><span class="o">=</span><span class="s">"collapse show"</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">"headingOne"</span> <span class="na">data-parent</span><span class="o">=</span><span class="s">"#accordionExample"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"card-body pt-1"</span><span class="p">&gt;</span>
+        Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>.show<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span> class.
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"card"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"card-header ml-1"</span> <span class="na">id</span><span class="o">=</span><span class="s">"headingTwo"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">"mb-0"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">"p-2 collapsed"</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">"collapse"</span> <span class="na">data-target</span><span class="o">=</span><span class="s">"#collapseTwo"</span> <span class="na">aria-expanded</span><span class="o">=</span><span class="s">"false"</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">"collapseTwo"</span><span class="p">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"t-chevron-right rotate-90 mr-1"</span><span class="nt">&gt;</span><span class="nt">&lt;/span&gt;</span>Collapsible Group Item #2
+        <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"collapseTwo"</span> <span class="na">class</span><span class="o">=</span><span class="s">"collapse"</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">"headingTwo"</span> <span class="na">data-parent</span><span class="o">=</span><span class="s">"#accordionExample"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"card-body pt-1"</span><span class="p">&gt;</span>
+        Some placeholder content for the second accordion panel. This panel is hidden by default.
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"card"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"card-header ml-1"</span> <span class="na">id</span><span class="o">=</span><span class="s">"headingThree"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">"mb-0"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">"p-2 collapsed"</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">"collapse"</span> <span class="na">data-target</span><span class="o">=</span><span class="s">"#collapseThree"</span> <span class="na">aria-expanded</span><span class="o">=</span><span class="s">"false"</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">"collapseThree"</span><span class="p">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"t-chevron-right rotate-90 mr-1"</span><span class="nt">&gt;</span><span class="nt">&lt;/span&gt;</span>Collapsible Group Item #3
+        <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"collapseThree"</span> <span class="na">class</span><span class="o">=</span><span class="s">"collapse"</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">"headingThree"</span> <span class="na">data-parent</span><span class="o">=</span><span class="s">"#accordionExample"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"card-body pt-1"</span><span class="p">&gt;</span>
+        And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+
+
+            <p class="mt-4">For additional specifics on using the collapse component follow the link below.</p>
+            <p class="text-gray54"><a  href="https://getbootstrap.com/docs/4.6/components/collapse/" target="_blank">getbootstrap.com/docs/4.6/components/collapse/</a></p>
+
+          </div>
+        </div>
+      </div> <!-- END container -->
+    </div> <!-- END site-content -->
+    <div class="site-cache" id="site-cache"></div>
+  </div> <!-- END site-pusher -->
+</div> <!-- END site-container -->
+<script>
+  var cipboard = new ClipboardJS('.btn-clipboard)'); clipboard.on('success', function(e) { console.log(e); }); clipboard.on('error', function(e) { console.log(e); });
+</script>
+</body>
+<script>
+$(document).ready(function(){
+
+	(function($) {
+
+		$('#header__icon').click(function(e){
+			e.preventDefault();
+			$('body').toggleClass('with--sidebar');
+		});
+
+    $('#site-cache').click(function(e){
+      $('body').removeClass('with--sidebar');
+    });
+
+	})(jQuery);
+
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</html>

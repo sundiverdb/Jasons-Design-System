@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Components &ndash; Tables</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../_images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../../_images/favicon.png" type="image/x-icon" />
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-grid.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-reboot.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian.css">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+
+  <!-- javascript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+</head>
+
+<body>
+  <div class="site-container">
+    <div class="site-pusher">
+
+      <header class="header">
+
+        <div id="page-header"></div>
+        <script>
+          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+        </script>
+
+      </header>
+
+    <div class="site-content">
+      <div class="container-fluid p-4">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-sm-3 col-xl-2 bd-sidebar">
+            <h5 class="mt-2 pb-2">Components</h5>
+            <div class="div-2 mb-2"></div>
+
+            <div id="components-nav"></div>
+            <script>
+              $( "#components-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #components" );
+            </script>
+
+          </div>
+          <div class="col-12 col-sm-8 col-xl-10">
+            <h1 class="m-0 text-purple">Tables</h1>
+            <h3 class="text-gray60 light lh-3 w-70 mb-4">Use tables to display data sets, that provide consistent comparable, readable, scannable, and sortable views of the data</h3>
+            <h2>Example</h2>
+            <p>Due to the widespread use of tables across third-party widgets like calendars and date pickers, we've designed our tables to be <strong>opt-in</strong>. Just add the base class <code class="highlighter-rouge">.table</code> to any <code class="highlighter-rouge">&lt;table&gt;</code>, then extend with custom styles or our various included modifier classes.</p>
+            <p>Tables are created using the same classes and structures provided in Bootstrap. They have been branded and modified for HealthEquity.</p>
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col" class="sticky-header">#</th>
+                  <th scope="col" class="sticky-header">First</th>
+                  <th scope="col" class="sticky-header">Last</th>
+                  <th scope="col" class="sticky-header">Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="bd-clipboard invisible">
+              <button class="btn-clipboard" type="button" data-clipboard-action="copy" data-clipboard-target="pre" data-toggle="tooltip" data-placement="top" data-original-title="Copy to clipboard">Copy</button>
+            </div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Handle<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Mark<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Otto<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>@mdo<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Jacob<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Thornton<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>@fat<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Larry<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>the Bird<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></div>
+          <h4 id="table-header" class="mt-4">Table Header
+            <a class="anchor" href="#table-header">#</a>
+          </h4>
+          <p>Add <code>.theader</code> class with appropriate <code>clspan</code> to the <code>&lt;th&gt;</code> tag.</p>
+          <table class="table">
+              <thead>
+                <tr class="theader">
+                  <th colspan="4" class="theader">Table Header</th>
+                </tr>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="bd-clipboard invisible">
+              <button class="btn-clipboard" type="button" data-clipboard-action="copy" data-clipboard-target="pre" data-toggle="tooltip" data-placement="top" data-original-title="Copy to clipboard">Copy</button>
+            </div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr <span class="na">class=</span><span class="s">"theader"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">clspan=</span><span class="s">"4"</span><span class="nt">&gt;</span><span class="nt"> <span class="na">class=</span><span class="s">"theader"</span><span class="nt">&gt;</span></span>Table Header<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Handle<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Mark<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Otto<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>@mdo<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Jacob<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Thornton<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>@fat<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Larry<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>the Bird<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></div>
+
+            <h4 id="striped-rows" class="mt-4">Striped rows
+              <a class="anchor" href="#striped-rows">#</a>
+            </h4>
+            <p>Use <code>.table-striped</code> to add zebra-striping to any table row within the <code>&lt;tbody&gt;</code>.</p>
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="bd-clipboard invisible">
+                  <button class="btn-clipboard" type="button" data-clipboard-action="copy" data-clipboard-target="pre" data-toggle="tooltip" data-placement="top" data-original-title="Copy to clipboard">Copy</button>
+                </div>
+    <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-striped"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Handle<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Mark<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Otto<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>@mdo<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Jacob<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Thornton<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>@fat<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Larry<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>the Bird<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></div>
+
+            <h4 id="input-fields" class="mt-4">Input Fields in Tables
+              <a class="anchor" href="#input-fields">#</a>
+            </h4>
+            <p>Add <code>.tinput</code> class to the <code>&lt;td&gt;</code> and <code>&lt;input&gt;</code> tags.</p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td class="tinput"><input class="form-control tinput" id="exampleInput1" aria-describedby="value" placeholder="&ndash;" type="value"></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td class="tinput"><input class="form-control tinput" id="exampleInput2" aria-describedby="value" placeholder="&ndash;" type="value"></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td class="tinput"><input class="form-control tinput" id="exampleInput3" aria-describedby="value" placeholder="&ndash;" type="value"></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="bd-clipboard invisible">
+              <button class="btn-clipboard" type="button" data-clipboard-action="copy" data-clipboard-target="pre" data-toggle="tooltip" data-placement="top" data-original-title="Copy to clipboard">Copy</button>
+            </div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Handle<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Mark<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Otto<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td <span class="na">class=</span><span class="s">"tinput"</span>&gt;</span><span class="nt">&lt;input <span class="na">class=</span><span class="s">"form-control tinput"</span> <span class="na">id=</span><span class="s">"exampleInput1"</span> <span class="na">aria-describedby=</span><span class="s">"value"</span> <span class="na">placeholder=</span><span class="s">"&ndash;"</span> <span class="na">type=</span><span class="s">"value"</span>&gt;</span><span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Jacob<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Thornton<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td <span class="na">class=</span><span class="s">"tinput"</span>&gt;</span><span class="nt">&lt;input <span class="na">class=</span><span class="s">"form-control tinput"</span> <span class="na">id=</span><span class="s">"exampleInput2"</span> <span class="na">aria-describedby=</span><span class="s">"value"</span> <span class="na">placeholder=</span><span class="s">"&ndash;"</span> <span class="na">type=</span><span class="s">"value"</span>&gt;</span><span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Larry<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>the Bird<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td <span class="na">class=</span><span class="s">"tinput"</span>&gt;</span><span class="nt">&lt;input <span class="na">class=</span><span class="s">"form-control tinput"</span> <span class="na">id=</span><span class="s">"exampleInput3"</span> <span class="na">aria-describedby=</span><span class="s">"value"</span> <span class="na">placeholder=</span><span class="s">"&ndash;"</span> <span class="na">type=</span><span class="s">"value"</span>&gt;</span><span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></div>
+
+            <h2 id="responsive-css" class="mt-4">Responsive CSS Tables
+              <a class="anchor" href="#responsive-css">#</a>
+            </h2>
+            <p>These tables appear to be HTML tables in large form factor but in small form factor they become cards.</p>
+            <p>It is recommended to use an unordered list but the styles are related to classes not tags so different markup structure can be used.</p>
+            <div class="callout-card callout-warning w-60 bg-ice">
+              <h4 class="mt-2">Currency</h4>
+              <p>Always right align the titles and content of table columns that pertain to currency. Add the <code>.text-right</code> class from Boostrap's typography utilities where necessary to right align content.</p>
+            </div>
+            <h4>Table View</h4>
+            <ul>
+              <li><code>&lt;table&gt;</code> = <code>.css-table</code></li>
+              <li><code>&lt;thead&gt;</code> = <code>.css-thead</code></li>
+              <li><code>&lt;tbody&gt;</code> = <code>.css-tbody</code></li>
+              <li><code>&lt;tfoot&gt;</code> = <code>.css-tfoot</code></li>
+              <li><code>&lt;tr&gt;</code> = <code>.css-tr</code></li>
+              <li><code>&lt;th&gt;</code> = <code>.css-th</code></li>
+              <li><code>&lt;td&gt;</code> = <code>.css-td</code></li>
+            </ul>
+            <h4>Card View</h4>
+
+            <p>Place inline labels inside <code>span</code> tags with the <code>.css-td</code> class and use <code>.d-none-lg</code> and <code>.d-none-xl</code> classes to hide the lable for large form factor when in the table grid view.</p>
+            <ul class="mb-4">
+              <li>Header for card with large type = <code>.tcard-header</code></li>
+              <li>Elements that go in the footer of a card = <code>.tcard-footer</code></li>
+            </ul>
+
+              <div class="css-table">
+                  <ul class="css-thead">
+                    <li class="css-tr">
+                      <span class="css-th">Date</span>
+                      <span class="css-th">Transaction</span>
+                      <span class="css-th text-right">Contributions</span>
+                      <span class="css-th text-right">Distribution</span>
+                      <span class="css-th text-right">Balance</span>
+                    </li>
+
+                  </ul>
+                  <ul class="css-tbody">
+                    <li class="css-tr">
+
+                      <!-- Use class tcard-header to add emphasis to something that will be a header in small form factor. -->
+                      <span class="css-td tcard-header">2/1/2015</span>
+                      <span class="css-td"><a href="">claim Payment ID:0000683-0066</a></span>
+                      <span class="css-td text-right"><span class="d-lg-none d-xl-none">Contributions:</span> $100.00</span>
+                      <span class="css-td text-right"><span class="d-lg-none d-xl-none">Distribution:</span><span class="neg-number"> -$20.00</span></span>
+
+                      <!-- Use class tcard-footer to separate to something that will be a footer in small form factor. -->
+                      <span class="css-td tcard-footer text-right"><span class="d-lg-none d-xl-none">Balance</span> $12.983.87</span>
+                    </li>
+                    <li class="css-tr">
+                      <span class="css-td tcard-header">2/1/2015</span>
+                      <span class="css-td"><a href="">claim Payment ID:0000683-0066</a></span>
+                      <span class="css-td text-right"><span class="d-lg-none d-xl-none">Contributions:</span> $100.00</span>
+                      <span class="css-td text-right"><span class="d-lg-none d-xl-none">Distribution:</span><span class="neg-number"> -$20.00</span></span>
+
+                      <span class="css-td tcard-footer text-right"><span class="d-lg-none d-xl-none">Balance:</span> $12.983.87</span>
+                    </li>
+
+                  </ul>
+                  <ul class="css-tfoot">
+                    <li class="css-tr">
+                      <span class="css-td tcard-header">Total</span>
+                      <span class="css-td"></span>
+                      <span class="css-td por-number card-section text-right"><span class="d-lg-none d-xl-none">Contributions:</span> $2,500.00</span>
+                      <span class="css-td card-section neg-number text-right"><span class="d-lg-none d-xl-none text-gray70">Distribution:</span> $4,217.94</span>
+                      <span class="css-td text-right"></span>
+                    </li>
+                  </ul>
+                </div><!-- .css-table -->
+
+                <div class="bd-clipboard invisible">
+                  <button class="btn-clipboard" type="button" data-clipboard-action="copy" data-clipboard-target="pre" data-toggle="tooltip" data-placement="top" data-original-title="Copy to clipboard">Copy</button>
+                </div>
+  <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div <span class="na">class=</span><span class="s">"css-table"</span>&gt;</span>
+  <span class="nt">&lt;ul <span class="na">class=</span><span class="s">"css-thead"</span>&gt;</span>
+    <span class="nt">&lt;li <span class="na">class=</span><span class="s">"css-tr"</span>&gt;</span>
+      <span class="nt">&lt;span <span class="na">class=</span><span class="s">"css-th"</span>&gt;</span>Date<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span <span class="na">class=</span><span class="s">"css-th"</span>&gt;</span>Transaction<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span <span class="na">class=</span><span class="s">"css-th text-right"</span>&gt;</span>Contributions<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span <span class="na">class=</span><span class="s">"css-th text-right"</span>&gt;</span>Distribution<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span <span class="na">class=</span><span class="s">"css-th text-right"</span>&gt;</span>Balance<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;ul <span class="na">class=</span><span class="s">"css-tbody"</span>&gt;</span>
+    <span class="nt">&lt;li <span class="na">class=</span><span class="s">"css-tr"</span>&gt;</span>
+      <span class="nc">&lt;!-- Use class card-header to add emphasis to something that will be a header in small form factor. --&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"css-td card-header"</span>&gt;</span>2/1/2015<span class="na">&lt;/span&gt;</span>
+      <span class="nt">&lt;span <span class="na">class=</span><span class="s">"css-td"</span>&gt;</span><span class="nt">&lt;a <span class="na">href=</span><span class="s">" "</span>&gt;</span>claim Payment ID:0000683-0066<span class="nt">&lt;/a&gt;</span><span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span <span class="na">class=</span><span class="s">"css-td text-right"</span>&gt;&lt;span <span class="na">class=</span><span class="s">"d-lg-none d-xl-none"</span>&gt;</span>Contributions<span class="nt">&lt;/span&gt;</span> $100.00<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span <span class="na">class=</span><span class="s">"css-td text-right"</span>&gt;&lt;span <span class="na">class=</span><span class="s">"d-lg-none d-xl-none"</span>&gt;</span>Distribution<span class="nt">&lt;/span&gt;</span><span class="nt">&lt;span <span class="na">class=</span><span class="s">"neg-number"</span>&gt;</span> -$20.00<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
+
+      <span class="nc">&lt;!-- Use class card-footer to separate to something that will be a footer in small form factor. --&gt;</span>
+      <span class="nt">&lt;span <span class="na">class=</span><span class="s">"css-td card-footer text-right"</span>&gt;</span><span class="nt">&lt;span <span class="na">class=</span><span class="s">"d-lg-none d-xl-none"</span>&gt;</span>Balance<span class="nt">&lt;/span&gt;</span> $12.983.87<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li <span class="na">class=</span><span class="s">"css-tr"</span>&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"css-td card-header"</span>&gt;</span>2/1/2015<span class="na">&lt;/span&gt;</span>
+      <span class="nt">&lt;span <span class="na">class=</span><span class="s">"css-td"</span>&gt;</span><span class="nt">&lt;a <span class="na">href=</span><span class="s">" "</span>&gt;</span>claim Payment ID:0000683-0066<span class="nt">&lt;/a&gt;</span><span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span <span class="na">class=</span><span class="s">"css-td text-right"</span>&gt;&lt;span <span class="na">class=</span><span class="s">"d-lg-none d-xl-none"</span>&gt;</span>Contributions<span class="nt">&lt;/span&gt;</span> $100.00<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span <span class="na">class=</span><span class="s">"css-td text-right"</span>&gt;&lt;span <span class="na">class=</span><span class="s">"d-lg-none d-xl-none"</span>&gt;</span>Distribution<span class="nt">&lt;/span&gt;</span><span class="nt">&lt;span <span class="na">class=</span><span class="s">"neg-number"</span>&gt;</span> -$20.00<span class="nt">&lt;/span&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;span <span class="na">class=</span><span class="s">"css-td card-footer text-right"</span>&gt;</span><span class="nt">&lt;span <span class="na">class=</span><span class="s">"d-lg-none d-xl-none"</span>&gt;</span>Balance<span class="nt">&lt;/span&gt;</span> $12.983.87<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;ul <span class="na">class=</span><span class="s">"css-tfoot"</span>&gt;</span>
+    <span class="nt">&lt;li <span class="na">class=</span><span class="s">"css-tr"</span>&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"css-td card-header"</span>&gt;</span>Total<span class="na">&lt;/span&gt;</span>
+      <span class="nt">&lt;span <span class="na">class=</span><span class="s">"css-td"</span>&gt;</span><span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span <span class="na">class=</span><span class="s">"css-td text-right"</span>&gt;&lt;span <span class="na">class=</span><span class="s">"d-lg-none d-xl-none"</span>&gt;</span>Contributions<span class="nt">&lt;/span&gt;</span> $2,500.00<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span <span class="na">class=</span><span class="s">"css-td text-right"</span>&gt;&lt;span <span class="na">class=</span><span class="s">"d-lg-none d-xl-none"</span>&gt;</span>Distribution<span class="nt">&lt;/span&gt;</span> $12,983.87<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span <span class="na">class=</span><span class="s">"css-td card-footer text-right"</span>&gt;</span><span class="nt">&lt;span <span class="na">class=</span><span class="s">"d-lg-none d-xl-none"</span>&gt;</span>Balance<span class="nt">&lt;/span&gt;</span> $12.983.87<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+            <p class="mt-4">Bootstrap provides some additional options for using tables, to view those follow the link below.</p>
+            <p class="text-gray54"><a  href="https://getbootstrap.com/docs/4.3/content/tables/" target="_blank">getbootstrap.com/docs/4.3/content/tables/</a></p>
+
+          </div>
+        </div>
+      </div> <!-- END container -->
+    </div> <!-- END site-content -->
+    <div class="site-cache" id="site-cache"></div>
+  </div> <!-- END site-pusher -->
+</div> <!-- END site-container -->
+<script>
+  var cipboard = new ClipboardJS('.btn-clipboard)'); clipboard.on('success', function(e) { console.log(e); }); clipboard.on('error', function(e) { console.log(e); });
+</script>
+</body>
+<script>
+$(document).ready(function(){
+
+	(function($) {
+
+		$('#header__icon').click(function(e){
+			e.preventDefault();
+			$('body').toggleClass('with--sidebar');
+		});
+
+    $('#site-cache').click(function(e){
+      $('body').removeClass('with--sidebar');
+    });
+
+	})(jQuery);
+
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</html>

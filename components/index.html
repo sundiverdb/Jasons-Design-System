@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Components &ndash; Overview</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../_images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../_images/favicon.png" type="image/x-icon" />
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../_css/bootstrap-grid.css">
+  <link rel="stylesheet" type="text/css" href="../_css/bootstrap-reboot.css">
+  <link rel="stylesheet" type="text/css" href="../_css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../_css/tyrian.css">
+  <link rel="stylesheet" type="text/css" href="../_css/tyrian-icons.css">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet"> <!-- lato -->
+  <link rel="stylesheet" href="https://use.typekit.net/ter1zgq.css">  <!-- museo sans -->
+  <link rel="stylesheet" href="http://fonts.cdnfonts.com/css/neue-haas-grotesk-text-pro"> <!-- neue haas grotesk -->
+
+  <!-- javascript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+</head>
+
+<body>
+  <div class="site-container">
+    <div class="site-pusher">
+
+      <header class="header">
+
+        <div id="page-header"></div>
+        <script>
+          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+        </script>
+
+      </header>
+
+    <div class="site-content">
+      <div class="container-fluid p-4">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-sm-3 col-xl-2 bd-sidebar">
+            <h5 class="mt-2 pb-2">Components</h5>
+            <div class="div-2 mb-2"></div>
+            <div id="components-nav"></div>
+            <script>
+              $( "#components-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #components" );
+            </script>
+
+          </div>
+          <div class="col-12 col-sm-8 col-xl-10">
+            <h1 class="m-0 text-purple">Overview</h1>
+            <h3 class="text-gray60 light w-70 lh-3 mb-4">Components are the building blocks of the design system. </h3>
+            <p>Each component has been designed and coded to provide a consistent experience across our products. Built with accessible HTML and CSS with instructions for how each variation may be implemented.</p>
+            <div class="card mt-4">
+              <div class="card-body m-3">
+                <h2 class="mt-0 text-purple">Status</h2>
+                <div class="row pb-2 border-bottom">
+                  <div class="col-4 text-gray54">
+                    Component
+                  </div>
+                  <div class="col-3 text-gray54">
+                    Code
+                  </div>
+                  <div class="col-3 text-gray54">
+                    Figma Library
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Alerts</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Badges</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Buttons</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Callout</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Cards</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Charts</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-adjust rotate-90 text-yellow"></span> In progress</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle-alt text-gray54"></span> Under Consideration</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Checkbox</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Collapse</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-adjust rotate-90 text-blue"></span> In progress</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Datepicker</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Dropdown</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">File Upload</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-adjust rotate-90 text-blue"></span> In progress</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Forms</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">List</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Modal</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Pagination</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Popover</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-adjust rotate-90 text-green"></span> Partially Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Progress</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Radio Button</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Range</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Spinner</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Switches</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Tables</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-adjust rotate-90 text-yellow"></span> In progress</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Tabs</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Toasts</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Tooltip</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <p class="mt-4">For additional specifics on using components follow the link below.</p>
+            <p class="text-gray54"><a  href="https://getbootstrap.com/docs/4.3/components/" target="_blank">getbootstrap.com/docs/4.3/components/</a></p>
+
+          </div>
+        </div>
+      </div> <!-- END container -->
+    </div> <!-- END site-content -->
+    <div class="site-cache" id="site-cache"></div>
+  </div> <!-- END site-pusher -->
+</div> <!-- END site-container -->
+<script>
+  var cipboard = new ClipboardJS('.btn-clipboard)'); clipboard.on('success', function(e) { console.log(e); }); clipboard.on('error', function(e) { console.log(e); });
+</script>
+</body>
+<script>
+$(document).ready(function(){
+
+	(function($) {
+
+		$('#header__icon').click(function(e){
+			e.preventDefault();
+			$('body').toggleClass('with--sidebar');
+		});
+
+    $('#site-cache').click(function(e){
+      $('body').removeClass('with--sidebar');
+    });
+
+	})(jQuery);
+
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</html>

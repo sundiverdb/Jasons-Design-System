@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Components &ndash; File Upload</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../_images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../../_images/favicon.png" type="image/x-icon" />
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-grid.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-reboot.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian-icons.css">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+
+  <!-- javascript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+</head>
+
+<body>
+  <div class="site-container">
+    <div class="site-pusher">
+
+      <header class="header">
+
+        <div id="page-header"></div>
+        <script>
+          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+        </script>
+
+      </header>
+
+    <div class="site-content">
+      <div class="container-fluid p-4">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-sm-3 col-xl-2 bd-sidebar">
+            <h5 class="mt-2 pb-2">Components</h5>
+            <div class="div-2 mb-2"></div>
+
+            <div id="components-nav"></div>
+            <script>
+              $( "#components-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #components" );
+            </script>
+
+          </div>
+          <div class="col-12 col-sm-8 col-xl-10">
+            <h1 class="m-0 text-purple">File Upload</h1>
+            <h3 class="text-gray60 light lh-3 w-70 mb-4">Allow the user to upload a file or submit content of their own with a file browser or custom drag and drop field.</h3>
+            <h2 class="mt-4">File browser</h2>
+              <p>Input groups include support for custom file inputs. Browser default versions of these are not supported.</p>
+              <div class="input-group mb-3 w-40">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                  <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                </div>
+              </div>
+              <div class="bd-clipboard invisible">
+                <button class="btn-clipboard" type="button" data-clipboard-action="copy" data-clipboard-target="pre" data-toggle="tooltip" data-placement="top" data-original-title="Copy to clipboard">Copy</button>
+              </div>
+              <div class="highlight mt-3"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group mb-3"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"custom-file"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">class=</span><span class="s">"custom-file-label"</span> <span class="na">for=</span><span class="s">"inputGroupFile01"</span> <span class="na">aria-describedby=</span><span class="s">"inputGroupFileAddon01"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-file-label"</span> <span class="na">for=</span><span class="s">"inputGroupFile01"</span><span class="nt">&gt;</span>Choose file<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+            <h2>Drag and Drop</h2>
+            <p>This is a how our drag and drop element should appear. On the left is the static state. On the right is the active state. The active state appears when something is being dragged into/over the area.</p>
+            <div class="callout-card callout-danger w-70">
+              <p>Files should be automatically uploaded and processed after being selected or dropped into the target area.</p>
+            </div>
+              <section class="row">
+      					<div class="col-sm-5 hidden-xs mb-3">
+                  <h5>Normal display</h5>
+                  <div class="input-group">
+                    <div class="custom-file-target mb-1">
+                      <input type="file" class="custom-file-input-target" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">
+                      <label class="custom-file-label-target" for="inputGroupFile02">
+                        <div class="d-flex flex-row">
+                          <div class="display-3 text-spruce">
+                            <span class="t-cloud-upload" aria-valuetext="PDF"></span>
+                          </div>
+                          <div class="mt-2 ml-2">Drag &amp; Drop or<br><strong class="text-spruce">Browse your device</strong></div>
+                        </div>
+                      </label>
+                    </div>
+                    <small class="text-muted">Files must be in PDF, PNG, JPG, or GIF format and cannot exceed 15mb in size and can't be a secure PDF.</small>
+                  </div>
+                </div>
+
+      					<div class="col-sm-5 hidden-xs mb-3">
+                  <h5>Active display</h5>
+                  <div class="input-group">
+                    <div class="custom-file-target mb-1">
+                      <input type="file" class="custom-file-input-target" for="inputGroupFile03" aria-describedby="inputGroupFileAddon03">
+                      <label class="custom-file-label-target target-active" for="inputGroupFile03">
+                        <div class="d-flex flex-row">
+                          <div class="display-3 text-spruce ml-2">
+                            <span class="t-cloud-upload" aria-valuetext="PDF"></span>
+                          </div>
+                          <div class="mt-2 ml-2">Drag &amp; Drop or<br><strong class="text-spruce">Browse your device</strong></div>
+                        </div>
+                      </label>
+                    </div>
+                    <small class="text-muted">Files must be in PDF, PNG, JPG, or GIF format and cannot exceed 15mb in size and can't be a secure PDF.</small>
+                  </div>
+                </div>
+
+				</section>
+            <div class="bd-clipboard invisible">
+              <button class="btn-clipboard" type="button" data-clipboard-action="copy" data-clipboard-target="pre" data-toggle="tooltip" data-placement="top" data-original-title="Copy to clipboard">Copy</button>
+            </div>
+<div class="highlight mt-3"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"custom-file-target"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">class=</span><span class="s">"custom-file-input-target"</span> <span class="na">for=</span><span class="s">"inputGroupFile02"</span> <span class="na">aria-describedby=</span><span class="s">"inputGroupFileAddon02"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-file-label-target"</span> <span class="na">for=</span><span class="s">"inputGroupFile02"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-row"</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mt-1"</span><span class="nt">&gt;</span><span class="nt">&gt;</span>Drag &amp; Drop or<span class="nt">&lt;br&gt;</span><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-spruce"</span><span class="nt">&gt;</span>Browse your device<span class="nt">&lt;/span&gt;</span><span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"display-4 text-gray58 ml-2"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"t-file-pdf"</span> <span class="na">aria-valuetext=</span><span class="s">"PDF"</span><span class="nt">&gt;</span><span class="nt">&lt;/span&gt;</span><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"t-file-image"</span> <span class="na">aria-valuetext=</span><span class="s">"JPG, PNG, GIF"</span><span class="nt">&gt;</span><span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>Files must be in PDF, PNG, JPG, or GIF format and cannot exceed 15mb in size and can't be a secure PDF.<span class="nt">&lt;/small&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"custom-file-target"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">class=</span><span class="s">"custom-file-input-target"</span> <span class="na">for=</span><span class="s">"inputGroupFile02"</span> <span class="na">aria-describedby=</span><span class="s">"inputGroupFileAddon02"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-file-label-target target-active"</span> <span class="na">for=</span><span class="s">"inputGroupFile02"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-flex flex-row"</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mt-1"</span><span class="nt">&gt;</span><span class="nt">&gt;</span>Drag &amp; Drop or<span class="nt">&lt;br&gt;</span><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text-spruce"</span><span class="nt">&gt;</span>Browse your device<span class="nt">&lt;/span&gt;</span><span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"display-4 text-gray58 ml-2"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"t-file-pdf"</span> <span class="na">aria-valuetext=</span><span class="s">"PDF"</span><span class="nt">&gt;</span><span class="nt">&lt;/span&gt;</span><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"t-file-image"</span> <span class="na">aria-valuetext=</span><span class="s">"JPG, PNG, GIF"</span><span class="nt">&gt;</span><span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>Files must be in PDF, PNG, JPG, or GIF format and cannot exceed 15mb in size and can't be a secure PDF.<span class="nt">&lt;/small&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+            <p class="mt-4">For additional specifics on using file upload follow the link below.</p>
+            <p class="text-gray54"><a  href="https://getbootstrap.com/docs/4.3/components/forms/#file-browser" target="_blank">getbootstrap.com/docs/4.3/components/forms/#file-browser</a></p>
+            <p class="text-gray54"><a  href="https://mdbootstrap.com/plugins/angular/file-upload/" target="_blank">mdbootstrap.com/plugins/angular/file-upload/</a></p>
+          </div>
+        </div>
+      </div> <!-- END container -->
+    </div> <!-- END site-content -->
+    <div class="site-cache" id="site-cache"></div>
+  </div> <!-- END site-pusher -->
+</div> <!-- END site-container -->
+<script>
+  var cipboard = new ClipboardJS('.btn-clipboard)'); clipboard.on('success', function(e) { console.log(e); }); clipboard.on('error', function(e) { console.log(e); });
+</script>
+</body>
+<script>
+$(document).ready(function(){
+
+	(function($) {
+
+		$('#header__icon').click(function(e){
+			e.preventDefault();
+			$('body').toggleClass('with--sidebar');
+		});
+
+    $('#site-cache').click(function(e){
+      $('body').removeClass('with--sidebar');
+    });
+
+	})(jQuery);
+
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</html>

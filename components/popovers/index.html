@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Components &ndash; Popovers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../../_images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../../_images/favicon.png" type="image/x-icon" />
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-grid.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-reboot.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian.css">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+
+  <!-- javascript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+      $('.example-popover').popover({
+        container: 'body'
+      })
+    })
+  </script>
+</head>
+
+<body>
+  <div class="site-container">
+    <div class="site-pusher">
+
+      <header class="header">
+
+        <div id="page-header"></div>
+        <script>
+          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+        </script>
+
+      </header>
+
+    <div class="site-content">
+      <div class="container-fluid p-4">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-sm-3 col-xl-2 bd-sidebar">
+            <h5 class="mt-2 pb-2">Components</h5>
+            <div class="div-2 mb-2"></div>
+
+            <div id="components-nav"></div>
+            <script>
+              $( "#components-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #components" );
+            </script>
+
+          </div>
+          <div class="col-12 col-sm-8 col-xl-10">
+            <h1 class="m-0 text-purple">Popovers</h1>
+            <h3 class="text-gray60 light lh-3 w-70 mb-4">Popovers allow users to get contextual help or information about specific elements when clicking or tapping on them.</h3>
+            <p>Popovers may contain content and interactive elements like buttons or links. Hiding interactive content in popovers is discouraged, as they are best used for education or providing additional details.</p>
+            <p>Tyrian's Popovers that are identical to the default Bootstrap Popovers with minor updates to the colors and font.</p>
+            <h2>Overview</h2>
+            <p>Things to know when using the popover plugin:</p>
+            <ul>
+              <li>Popovers rely on the 3rd party library <a href="https://popper.js.org/" target="_blank">Popper.js</a> for positioning. You must include <a href="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" target="_blank">popper.min.js</a> before bootstrap.js or use <code class="highlighter-rouge">bootstrap.bundle.min.js</code> / <code class="highlighter-rouge">bootstrap.bundle.js</code> which contains Popper.js in order for popovers to work!</li>
+              <li>Popovers require the <a href="https://getbootstrap.com/docs/4.5/components/tooltips/" target="_blank">tooltip plugin</a> as a dependency.</li>
+              <li>If you’re building our JavaScript from source, it <a href="https://getbootstrap.com/docs/4.5/getting-started/javascript/#util" target="_blank">requires <code class="highlighter-rouge">util.js</code></a>.</li>
+              <li>Popovers are opt-in for performance reasons, so <strong>you must initialize them yourself</strong>.</li>
+              <li>Zero-length <code class="highlighter-rouge">title</code> and <code class="highlighter-rouge">content</code> values will never show a popover.</li>
+              <li>Specify <code class="highlighter-rouge">container: 'body'</code> to avoid rendering problems in more complex components (like our input groups, button groups, etc).</li>
+              <li>Triggering popovers on hidden elements will not work.</li>
+              <li>Popovers for <code class="highlighter-rouge">.disabled</code> or <code class="highlighter-rouge">disabled</code> elements must be triggered on a wrapper element.</li>
+              <li>When triggered from anchors that wrap across multiple lines, popovers will be centered between the anchors’ overall width. Use <code class="highlighter-rouge">.text-nowrap</code> on your <code class="highlighter-rouge">&lt;a&gt;</code>s to avoid this behavior.</li>
+              <li>Popovers must be hidden before their corresponding elements have been removed from the DOM.</li>
+              <li>Popovers can be triggered thanks to an element inside a shadow DOM.</li>
+            </ul>
+            <div class="callout-card callout-info w-70">
+              <p>The animation effect of this component is dependent on the <code class="highlighter-rouge">prefers-reduced-motion</code> media query. See the <a href="https://getbootstrap.com/docs/4.5/getting-started/accessibility/#reduced-motion" target="_blank">reduced motion section of Bootstrap's accessibility documentation</a>.</p>
+            </div>
+            <h4>Enable popovers everywhere</h4>
+            <p>One way to initialize all popovers on a page would be to select them by their <code class="highlighter-rouge">data-toggle</code> attribute:</p>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">[data-toggle="popover"]</span><span class="dl">'</span><span class="p">).</span><span class="nx">popover</span><span class="p">()</span>
+<span class="p">})</span></code></pre></figure>
+
+            <p class="mt-4">For examples and additional specifics on using popovers follow the link below.</p>
+            <p class="text-gray54"><a  href="https://getbootstrap.com/docs/4.5/components/popovers/" target="_blank">getbootstrap.com/docs/4.5/components/popovers/</a></p>
+
+          </div>
+        </div>
+      </div> <!-- END container -->
+    </div> <!-- END site-content -->
+    <div class="site-cache" id="site-cache"></div>
+  </div> <!-- END site-pusher -->
+</div> <!-- END site-container -->
+
+</body>
+
+<script>
+$(document).ready(function(){
+
+	(function($) {
+
+		$('#header__icon').click(function(e){
+			e.preventDefault();
+			$('body').toggleClass('with--sidebar');
+		});
+
+    $('#site-cache').click(function(e){
+      $('body').removeClass('with--sidebar');
+    });
+
+	})(jQuery);
+
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</html>
