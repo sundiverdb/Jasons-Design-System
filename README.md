@@ -10,6 +10,4 @@ Tyrian is based on Bootstrap 4.x
 
 The system was built to be used for HealthEquity's web portals.
 
-Please see David Broschinsky dbroschinsky@healthequity.com for access to the Figma library if desired.
-
 ---------------------------------------
