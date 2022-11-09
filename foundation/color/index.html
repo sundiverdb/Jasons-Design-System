@@ -9,20 +9,13 @@
   <link rel="icon" href="../../_images/favicon.png" type="image/x-icon" />
 
   <!-- css -->
-  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-grid.css">
-  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-reboot.css">
-  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
-  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="../../_css/tyrian.css">
-
-  <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian-icons.css">
 
   <!-- javascript -->
-  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     $(function () {
     $('[data-toggle="tooltip"]').tooltip()
@@ -38,7 +31,11 @@
 
         <div id="page-header"></div>
         <script>
-          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+          let header = "https://design.healthequity.com/_ajax/header.html"
+
+          fetch (header)
+          .then(x => x.text())
+          .then(y => document.getElementById("page-header").innerHTML = y);
         </script>
 
       </header>
@@ -52,7 +49,11 @@
 
             <div id="foundation-nav"></div>
             <script>
-              $( "#foundation-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #foundation" );
+              let foundation = "https://design.healthequity.com/_ajax/foundation-nav.html"
+
+              fetch (foundation)
+              .then(x => x.text())
+              .then(y => document.getElementById("foundation-nav").innerHTML = y);
             </script>
 
           </div>
@@ -61,293 +62,284 @@
             <h3 class="text-gray60 light lh-3 w-70 mb-4">We use color to emphasize action, establish patterns, provide visual cues, and create associations.</h3>
             <div class="row">
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-lavender bg-tyrian">
+                <div class="card border-0 rounded-lg mb-4 text-lavender bg-tyrian">
                   <div class="card-body">
                     <h5 class="card-title">Tyrian</h5>
                     <p class="card-text light">#3a1d56<br>hsl(271, 50, 23)</p>
-                    <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AAA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                    <p class="mb-1 text-gray80">AA <span class="badge badge-dark ml-1 mr-3">Fail</span> &nbsp;<span class="text-white">AAA</span> <span class="badge badge-dark ml-1">Pass</span></p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-white bg-purple">
+                <div class="card border-0 rounded-lg mb-4 text-white bg-purple">
                   <div class="card-body">
                     <h5 class="card-title">HQY - Purple</h5>
                     <p class="card-text light">#592c82<br>hsl(271, 49, 34)<br></p>
-                    <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AAA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                    <p class="mb-1 text-gray80">AA <span class="badge badge-dark ml-1 mr-3">Fail</span> &nbsp;<span class="text-white">AAA</span> <span class="badge badge-dark ml-1">Pass</span></p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-white bg-violet">
+                <div class="card border-0 rounded-lg mb-4 text-white bg-violet">
                   <div class="card-body">
                     <h5 class="card-title">Violet</h5>
                     <p class="card-text light">#8959b5<br>hsl(271, 38, 53)</p>
-                    <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                    <p class="mb-1 text-gray80">AA+ <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Pass</span></p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-tyrian bg-lavender">
+                <div class="card border-0 rounded-lg mb-4 text-tyrian bg-lavender">
                   <div class="card-body">
                     <h5 class="card-title">Lavender</h5>
                     <p class="card-text light">#c095e8<br>hsl(271, 64, 75)</p>
-                    <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                    <p class="mb-1 text-gray80">AA <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Fail</span></p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-purple bg-thistle">
+                <div class="card border-0 rounded-lg mb-4 text-purple bg-thistle">
                   <div class="card-body">
                     <h5 class="card-title">Thistle</h5>
                     <p class="card-text light">#e7e0ed<br>hsl(271, 30, 91)</p>
-                    <p class="mb-1 text-gray80">AAA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                    <p class="mb-1 text-gray80">AAA <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Fail</span></p>
                   </div>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-celeste bg-cypress">
+                <div class="card border-0 rounded-lg mb-4 text-celeste bg-cypress">
                   <div class="card-body">
                     <h5 class="card-title">Cypress</h5>
-                    <p class="card-text light">#00424d<br>hsl(188, 100, 15)</p>
-                    <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AAA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                    <p class="card-text light">#00434d<br>hsl(188, 100, 15)</p>
+                    <p class="mb-1 text-gray80">AA <span class="badge badge-dark ml-1 mr-3">Fail</span> &nbsp;<span class="text-white">AAA</span> <span class="badge badge-dark ml-1">Pass</span></p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-white bg-spruce">
+                <div class="card border-0 rounded-lg mb-4 text-white bg-spruce">
                   <div class="card-body">
                     <h5 class="card-title">Spruce</h5>
                     <p class="card-text light">#006c7d<br>hsl(188, 100, 25)</p>
-                    <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                    <p class="mb-1 text-gray80">AA <span class="badge badge-dark ml-1 mr-3">Fail</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Pass</span></p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-cypress bg-teal">
+                <div class="card border-0 rounded-lg mb-4 text-cypress bg-teal">
                   <div class="card-body">
                     <h5 class="card-title">HQY - Teal</h5>
                     <p class="card-text light">#00aac6<br>hsl(188, 100, 39)</p>
-                    <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                    <p class="mb-1 text-gray80">AA <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Fail</span></p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-cypress bg-celeste">
+                <div class="card border-0 rounded-lg mb-4 text-cypress bg-celeste">
                   <div class="card-body">
                     <h5 class="card-title">Celeste</h5>
                     <p class="card-text light">#b2e5ed<br>hsl(188, 62, 81)</p>
-                    <p class="mb-1 text-gray80">AAA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                    <p class="mb-1 text-gray80">AAA <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Fail</span></p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-spruce bg-azure">
+                <div class="card border-0 rounded-lg mb-4 text-spruce bg-azure">
                   <div class="card-body">
                     <h5 class="card-title">Azure</h5>
-                    <p class="card-text light">#d9f3f7<br>hsl(188, 65, 91)</p>
-                    <p class="mb-1 text-gray80">AAA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                    <p class="card-text light">#e1edef<br>hsl(188, 30, 91)</p>
+                    <p class="mb-1 text-gray80">AAA <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Fail</span></p>
                   </div>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-capri bg-cerulean">
+                <div class="card border-0 rounded-lg mb-4 text-capri bg-cerulean">
                   <div class="card-body">
                     <h5 class="card-title">Cerulean</h5>
                     <p class="card-text light">#0d3047<br>hsl(204, 69, 16)</p>
-                    <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AAA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                    <p class="mb-1 text-gray80">AA <span class="badge badge-dark ml-1 mr-3">Fail</span> &nbsp;<span class="text-white">AAA</span> <span class="badge badge-dark ml-1">Pass</span></p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-white bg-blue">
+                <div class="card border-0 rounded-lg mb-4 text-white bg-blue">
                   <div class="card-body">
                     <h5 class="card-title">HQY - Blue</h5>
                     <p class="card-text light">#0070b9<br>hsl(204, 100, 36)</p>
-                    <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                    <p class="mb-1 text-gray80">AA+ <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Pass</span></p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-cerulean bg-capri">
+                <div class="card border-0 rounded-lg mb-4 text-cerulean bg-capri">
                   <div class="card-body">
                     <h5 class="card-title">Capri</h5>
                     <p class="card-text light">#2fa2ed<br>hsl(204, 84, 56)</p>
-                    <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                    <p class="mb-1 text-gray80">AA <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Fail</span></p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-cerulean bg-powder">
+                <div class="card border-0 rounded-lg mb-4 text-cerulean bg-powder">
                   <div class="card-body">
                     <h5 class="card-title">Powder</h5>
                     <p class="card-text light">#d4e5f0<br>hsl(204, 48, 89)</p>
-                    <p class="mb-1 text-gray80">AAA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                    <p class="mb-1 text-gray80">AAA <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Fail</span></p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-blue bg-ice">
+                <div class="card border-0 rounded-lg mb-4 text-blue bg-ice">
                   <div class="card-body">
                     <h5 class="card-title">Ice</h5>
                     <p class="card-text light">#f2f7fb<br>hsl(204, 53, 97)</p>
-                    <p class="mb-1 text-gray80">AAA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                    <p class="mb-1 text-gray80">AAA <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Fail</span></p>
                   </div>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-mint bg-viridian">
+                <div class="card border-0 rounded-lg mb-4 text-mint bg-viridian">
                   <div class="card-body">
                     <h5 class="card-title">Viridian</h5>
-                    <p class="card-text light">#163927<br>hsl(148, 44, 15)</p>
-                    <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AAA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                    <p class="card-text light">#163926<br>hsl(148, 44, 15)</p>
+                    <p class="mb-1 text-gray80">AA <span class="badge badge-dark ml-1 mr-3">Fail</span> &nbsp;<span class="text-white">AAA</span> <span class="badge badge-dark ml-1">Pass</span></p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-white bg-forest">
+                <div class="card border-0 rounded-lg mb-4 text-white bg-forest">
                   <div class="card-body">
                     <h5 class="card-title">Forest</h5>
-                    <p class="card-text light">#488045<br>hsl(117, 30, 39)</p>
-                    <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                    <p class="card-text light">#347954<br>hsl(48, 40, 34)</p>
+                    <p class="mb-1 text-gray80">AA+ <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Pass</span></p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-white bg-green">
-                  <div class="card-body">
-                    <h5 class="card-title">HQY - Green</h5>
-                    <p class="card-text light">#53934f<br>hsl(116, 30, 44)</p>
-                    <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA+</span><span class="badge badge-dark ml-1">Pass</span></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-viridian bg-mint">
+                <div class="card border-0 rounded-lg mb-4 text-viridian bg-mint">
                   <div class="card-body">
                     <h5 class="card-title">Mint</h5>
                     <p class="card-text light">#4bbf81<br>hsl(148, 48, 52)</p>
-                    <p class="mb-1 text-gray80">AAA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                    <p class="mb-1 text-gray80">AAA <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Fail</span></p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-viridian bg-fern">
+                <div class="card border-0 rounded-lg mb-4 text-viridian bg-fern">
                   <div class="card-body">
                     <h5 class="card-title">Fern</h5>
-                    <p class="card-text light">#e1eae0<br>hsl(116, 19, 90)</p>
-                    <p class="mb-1 text-gray80">AAA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                    <p class="card-text light">#dfebe5<br>hsl(148, 24, 90)</p>
+                    <p class="mb-1 text-gray80">AAA <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Fail</span></p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-forest bg-celadon">
+                <div class="card border-0 rounded-lg mb-4 text-forest bg-celadon">
                   <div class="card-body">
                     <h5 class="card-title">Celadon</h5>
-                    <p class="card-text light">#f7fbf7<br>hsl(116, 33, 98)</p>
-                    <p class="mb-1 text-gray80">AAA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                    <p class="card-text light">#f8fcfa<br>hsl(148, 32, 98)</p>
+                    <p class="mb-1 text-gray80">AAA <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Fail</span></p>
                   </div>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-yellow bg-umber">
+                <div class="card border-0 rounded-lg mb-4 text-yellow bg-umber">
                   <div class="card-body">
                     <h5 class="card-title">Raw Umber</h5>
-                    <p class="card-text light">#4d3e1f<br>hsl(40, 43, 16)</p>
-                    <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AAA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                    <p class="card-text light">#3a2f17<br>hsl(40, 60, 16)</p>
+                    <p class="mb-1 text-gray80">AA <span class="badge badge-dark ml-1 mr-3">Fail</span> &nbsp;<span class="text-white">AAA</span> <span class="badge badge-dark ml-1">Pass</span></p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 bg-yellow">
+                <div class="card border-0 rounded-lg mb-4 bg-yellow">
                   <div class="card-body">
                     <h5 class="card-title">Yellow</h5>
                     <p class="card-text light">#ffcc66<br>hsl(40, 100, 70)</p>
-                    <p class="mb-1 text-gray80">AAA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                    <p class="mb-1 text-gray80">AAA <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Fail</span></p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-gray72 bg-lemon">
+                <div class="card border-0 rounded-lg mb-4 text-gray72 bg-lemon">
                   <div class="card-body">
                     <h5 class="card-title">Lemon</h5>
                     <p class="card-text light">#ffeabf<br>hsl(40, 100, 87)</p>
-                    <p class="mb-1 text-gray80">AAA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                    <p class="mb-1 text-gray80">AAA <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Fail</span></p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-gray66 bg-canary">
+                <div class="card border-0 rounded-lg mb-4 text-gray66 bg-canary">
                   <div class="card-body">
                     <h5 class="card-title">Canary</h5>
                     <p class="card-text light">#fff7e8<br>hsl(40, 100, 95)</p>
-                    <p class="mb-1 text-gray80">AAA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                    <p class="mb-1 text-gray80">AAA <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Fail</span></p>
                   </div>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-ruby bg-carmine">
+                <div class="card border-0 rounded-lg mb-4 text-ruby bg-carmine">
                   <div class="card-body">
                     <h5 class="card-title">Carmine</h5>
                     <p class="card-text light">#3d0b1a<br>hsl(342, 69, 14)</p>
-                    <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AAA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                    <p class="mb-1 text-gray80">AA <span class="badge badge-dark ml-1 mr-3">Fail</span> &nbsp;<span class="text-white">AAA</span> <span class="badge badge-dark ml-1">Pass</span></p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-white bg-red">
+                <div class="card border-0 rounded-lg mb-4 text-white bg-red">
                   <div class="card-body">
                     <h5 class="card-title">Red</h5>
                     <p class="card-text light">#d80443<br>hsl(342, 96, 43)</p>
-                    <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                    <p class="mb-1 text-gray80">AA+ <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Pass</span></p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-carmine bg-ruby">
+                <div class="card border-0 rounded-lg mb-4 text-carmine bg-ruby">
                   <div class="card-body">
                     <h5 class="card-title">Ruby</h5>
                     <p class="card-text light">#ff3370<br>hsl(342, 100, 60)</p>
-                    <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA+</span><span class="badge badge-dark ml-1">Pass</span></p>
+                    <p class="mb-1 text-gray80">AA <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA+</span> <span class="badge badge-dark ml-1">Pass</span></p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-carmine bg-pink">
+                <div class="card border-0 rounded-lg mb-4 text-carmine bg-pink">
                   <div class="card-body">
                     <h5 class="card-title">Pink</h5>
                     <p class="card-text light">#f7d5df<br>hsl(342, 68, 90)</p>
-                    <p class="mb-1 text-gray80">AAA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                    <p class="mb-1 text-gray80">AAA <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Fail</span></p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                <div class="card border-0 mb-4 text-red bg-fairy">
+                <div class="card border-0 rounded-lg mb-4 text-red bg-fairy">
                   <div class="card-body">
                     <h5 class="card-title">Fairy</h5>
                     <p class="card-text light">#fff9f9<br>hsl(342, 100, 98)</p>
-                    <p class="mb-1 text-gray80">AAA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                    <p class="mb-1 text-gray80">AAA <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Fail</span></p>
                   </div>
                 </div>
               </div>
               </div>
               <div class="row">
                 <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                  <div class="card border-0 mb-4 text-white bg-magenta">
+                  <div class="card border-0 rounded-lg mb-4 text-white bg-magenta">
                     <div class="card-body">
                       <h5 class="card-title">Magenta</h5>
                       <p class="card-text light">#d55891<br>hsl(333, 60, 59)</p>
-                      <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA+</span><span class="badge badge-dark ml-1">Pass</span></p>
+                      <p class="mb-1 text-gray80">AA <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA+</span> <span class="badge badge-dark ml-1">Pass</span></p>
                     </div>
                   </div>
                 </div>
@@ -357,135 +349,135 @@
               </h2>
               <div class="row">
                 <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                  <div class="card border-0 mb-4 text-white bg-gray90">
+                  <div class="card border-0 rounded-lg mb-4 text-white bg-gray90">
                     <div class="card-body">
                       <h5 class="card-title">Gray 90%</h5>
                       <p class="card-text light">#1a1a1a<br>hsl(0, 0, 10)</p>
-                      <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AAA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                      <p class="mb-1 text-gray80">AA <span class="badge badge-dark ml-1 mr-3">Fail</span> &nbsp;<span class="text-white">AAA</span> <span class="badge badge-dark ml-1">Pass</span></p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                  <div class="card border-0 mb-4 text-white bg-gray88">
+                  <div class="card border-0 rounded-lg mb-4 text-white bg-gray88">
                     <div class="card-body">
                       <h5 class="card-title">Gray 88%</h5>
                       <p class="card-text light">#1f1f1f<br>hsl(0, 0, 12)</p>
-                      <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AAA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                      <p class="mb-1 text-gray80">AA <span class="badge badge-dark ml-1 mr-3">Fail</span> &nbsp;<span class="text-white">AAA</span> <span class="badge badge-dark ml-1">Pass</span></p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                  <div class="card border-0 mb-4 text-white bg-gray80">
+                  <div class="card border-0 rounded-lg mb-4 text-white bg-gray80">
                     <div class="card-body">
                       <h5 class="card-title">Gray 80%</h5>
                       <p class="card-text light">#323232<br>hsl(0, 0, 20)</p>
-                      <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AAA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                      <p class="mb-1 text-gray80">AA <span class="badge badge-dark ml-1 mr-3">Fail</span> &nbsp;<span class="text-white">AAA</span> <span class="badge badge-dark ml-1">Pass</span></p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                  <div class="card border-0 mb-4 text-white bg-gray72">
+                  <div class="card border-0 rounded-lg mb-4 text-white bg-gray72">
                     <div class="card-body">
                       <h5 class="card-title">Gray 72%</h5>
                       <p class="card-text light">#474747<br>hsl(0, 0, 28)</p>
-                      <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AAA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                      <p class="mb-1 text-gray80">AA <span class="badge badge-dark ml-1 mr-3">Fail</span> &nbsp;<span class="text-white">AAA</span> <span class="badge badge-dark ml-1">Pass</span></p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                  <div class="card border-0 mb-4 text-white bg-gray66">
+                  <div class="card border-0 rounded-lg mb-4 text-white bg-gray66">
                     <div class="card-body">
                       <h5 class="card-title">Gray 66%</h5>
                       <p class="card-text light">#595959<br>hsl(0, 0, 35)</p>
-                      <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AAA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                      <p class="mb-1 text-gray80">AA <span class="badge badge-dark ml-1 mr-3">Fail</span> &nbsp;<span class="text-white">AAA</span> <span class="badge badge-dark ml-1">Pass</span></p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                  <div class="card border-0 mb-4 text-white bg-gray58">
+                  <div class="card border-0 rounded-lg mb-4 text-white bg-gray58">
                     <div class="card-body">
                       <h5 class="card-title">Gray 58%</h5>
                       <p class="card-text light">#6c6c6c<br>hsl(0, 0, 42)</p>
-                      <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                      <p class="mb-1 text-gray80">AA <span class="badge badge-dark ml-1 mr-3">Fail</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Pass</span></p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                  <div class="card border-0 mb-4 text-white bg-gray54">
+                  <div class="card border-0 rounded-lg mb-4 text-white bg-gray54">
                     <div class="card-body">
                       <h5 class="card-title">Gray 54%</h5>
                       <p class="card-text light">#767676<br>hsl(0, 0, 46)</p>
-                      <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Fail</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Pass</span></p>
+                      <p class="mb-1 text-gray80">AA <span class="badge badge-dark ml-1 mr-3">Fail</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Pass</span></p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                  <div class="card border-0 mb-4 text-white bg-gray42">
+                  <div class="card border-0 rounded-lg mb-4 text-white bg-gray42">
                     <div class="card-body">
                       <h5 class="card-title">Gray 42%</h5>
                       <p class="card-text light">#949494<br>hsl(0, 0, 58)</p>
-                      <p class="mb-1 text-gray80">AA+<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA+</span><span class="badge badge-dark ml-1">Pass</span></p>
+                      <p class="mb-1 text-gray80">AA+ <span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA+</span> <span class="badge badge-dark ml-1">Pass</span></p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                  <div class="card border-0 mb-4 bg-gray30">
+                  <div class="card border-0 rounded-lg mb-4 bg-gray30">
                     <div class="card-body">
                       <h5 class="card-title">Gray 30%</h5>
                       <p class="card-text light">#afafaf<br>hsl(0, 0, 69)</p>
-                      <p class="mb-1 text-gray80">AA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                      <p class="mb-1 text-gray80">AA <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Fail</span></p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                  <div class="card border-0 mb-4 bg-gray24">
+                  <div class="card border-0 rounded-lg mb-4 bg-gray24">
                     <div class="card-body">
                       <h5 class="card-title">Gray 24%</h5>
                       <p class="card-text light">#c2c2c2<br>hsl(0, 0, 76)</p>
-                      <p class="mb-1 text-gray80">AAA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                      <p class="mb-1 text-gray80">AAA <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Fail</span></p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                  <div class="card border-0 mb-4 bg-gray15">
+                  <div class="card border-0 rounded-lg mb-4 bg-gray15">
                     <div class="card-body">
                       <h5 class="card-title">Gray 15%</h5>
                       <p class="card-text light">#dcdcdc<br>hsl(0, 0, 86)</p>
-                      <p class="mb-1 text-gray80">AAA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                      <p class="mb-1 text-gray80">AAA <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Fail</span></p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                  <div class="card border-0 mb-4 bg-gray5">
+                  <div class="card border-0 rounded-lg mb-4 bg-gray5">
                     <div class="card-body">
                       <h5 class="card-title">Gray 5%</h5>
                       <p class="card-text light">#eeeeee<br>hsl(0, 0, 93)</p>
-                      <p class="mb-1 text-gray80">AAA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                      <p class="mb-1 text-gray80">AAA <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Fail</span></p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                  <div class="card border-0 mb-4 bg-gray2">
+                  <div class="card border-0 rounded-lg mb-4 bg-gray2">
                     <div class="card-body">
                       <h5 class="card-title">Gray 2%</h5>
                       <p class="card-text light">#fafafa<br>hsl(0, 0, 98)</p>
-                      <p class="mb-1 text-gray80">AAA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                      <p class="mb-1 text-gray80">AAA <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Fail</span></p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-4 col-xl-2 col-print-4">
-                  <div class="card border-0 mb-4 bg-white">
+                  <div class="card border-0 rounded-lg mb-4 bg-white">
                     <div class="card-body">
                       <h5 class="card-title">White</h5>
                       <p class="card-text light">#ffffff<br>hsl(0, 0, 100)</p>
-                      <p class="mb-1 text-gray80">AAA<span class="badge badge-dark ml-1 mr-3">Pass</span><span class="text-white">AA</span><span class="badge badge-dark ml-1">Fail</span></p>
+                      <p class="mb-1 text-gray80">AAA <span class="badge badge-dark ml-1 mr-3">Pass</span> &nbsp;<span class="text-white">AA</span> <span class="badge badge-dark ml-1">Fail</span></p>
                     </div>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
+
         </div>
       </div> <!-- END container -->
     </div> <!-- END site-content -->
@@ -511,5 +503,5 @@ $(document).ready(function(){
 
 });
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 </html>
