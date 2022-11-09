@@ -9,20 +9,13 @@
   <link rel="icon" href="../../_images/favicon.png" type="image/x-icon" />
 
   <!-- css -->
-  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-grid.css">
-  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-reboot.css">
-  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
-  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="../../_css/tyrian.css">
-
-  <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian-icons.css">
 
   <!-- javascript -->
-  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     $(function () {
     $('[data-toggle="tooltip"]').tooltip()
@@ -38,7 +31,11 @@
 
         <div id="page-header"></div>
         <script>
-          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+          let header = "https://design.healthequity.com/_ajax/header.html"
+
+          fetch (header)
+          .then(x => x.text())
+          .then(y => document.getElementById("page-header").innerHTML = y);
         </script>
 
       </header>
@@ -53,55 +50,76 @@
 
             <div id="foundation-nav"></div>
             <script>
-              $( "#foundation-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #foundation" );
+              let foundation = "https://design.healthequity.com/_ajax/foundation-nav.html"
+
+              fetch (foundation)
+              .then(x => x.text())
+              .then(y => document.getElementById("foundation-nav").innerHTML = y);
             </script>
 
           </div>
           <div class="col-12 col-sm-9 col-xl-10">
             <h1 class="m-0 text-purple">Typography</h1>
-            <h3 class="text-gray60 light lh-3 w-70 mb-4">We use typography to establish a clear hierarchy, and organize the experience.</h3>
+            <h3 class="text-gray60 light lh-3 w-70 mb-4">We use typography to establish clear hierarchy, and organize the experience.</h3>
+            <p>We use a system font stack. A "system font stack" is basically a way of telling the web browser to use the font that the operating system is already using. This helps improve load times over using web fonts. Below are examples of what the fonts would look like on both macOS and Windows machines.</p>
             <div class="row">
               <div class="col-md-4">
-                <h3 class="text-gray54">Lato</h3>
+                <h3 class="text-gray54">macOS</h3>
                 <h1 class="m-0">h1. Heading</h1>
-                <p class="text-gray54 light">Lato 400 &ndash; 2.5rem &ndash; 40px</p>
+                <p class="text-gray54 light">SF Pro Display 700 &ndash; 2.5rem &ndash; 40px</p>
                 <h2 class="mb-0">h2. Heading</h2>
-                <p class="text-gray54 light">Lato 400 &ndash; 2rem &ndash; 32px</p>
+                <p class="text-gray54 light">SF Pro Display 700 &ndash; 2rem &ndash; 32px</p>
                 <h3 class="mb-0">h3. Heading</h3>
-                <p class="text-gray54 light">Lato 400 &ndash; 1.75rem &ndash; 28px</p>
+                <p class="text-gray54 light">SF Pro Display 700 &ndash; 1.75rem &ndash; 28px</p>
                 <h4 class="mb-0">h4. Heading</h4>
-                <p class="text-gray54 light">Lato 400 &ndash; 1.5rem &ndash; 24px</p>
+                <p class="text-gray54 light">SF Pro Display 700 &ndash; 1.5rem &ndash; 24px</p>
                 <h5 class="mb-0">h5. Heading</h5>
-                <p class="text-gray54 light">Lato 400 &ndash; 1.25rem &ndash; 20px</p>
+                <p class="text-gray54 light">SF Pro Display 700 &ndash; 1.25rem &ndash; 20px</p>
                 <h6 class="mb-0">h6. Heading</h6>
-                <p class="text-gray54 light">Lato 400 &ndash; 1.125rem &ndash; 18px</p>
+                <p class="text-gray54 light">SF Pro Display 700 &ndash; 1.125rem &ndash; 18px</p>
                 <p class="mb-0">p. Paragraph</p>
-                <p class="text-gray54 light">Lato 400 &ndash; 1rem &ndash; 16px</p>
+                <p class="text-gray54 light">SF Pro Text 400 &ndash; 1rem &ndash; 16px</p>
                 <a href="#">a. Link</a>
-                <p class="text-gray54 light">Lato 400 &ndash; 1rem &ndash; 16px &ndash; #0070b9</p>
+                <p class="text-gray54 light">SF Pro Text 400 &ndash; 1rem &ndash; 16px &ndash; Spruce #006c7d</p>
+                <label>label. Form</label>
+                <p class="text-gray54 light">SF Pro Text 700 &ndash; 1rem &ndash; 14px</p>
+                <small class="mb-0">small. Paragraph</small>
+                <p class="text-gray54 light">SF Pro Text 400 &ndash; 1rem &ndash; 12px</p>
               </div>
               <div class="col-md-4">
-                <h3 class="condensed text-gray54">Oswald</h3>
-                <h1 class="condensed text-primary m-0">h1. Heading</h1>
-                <p class="text-gray54 light">Oswald &ndash; 2.5rem &ndash; 40px</p>
-                <h2 class="condensed text-primary mb-0">h2. Heading</h2>
-                <p class="text-gray54 light">Oswald &ndash; 2rem &ndash; 32px</p>
-                <h3 class="condensed text-primary mb-0">h3. Heading</h3>
-                <p class="text-gray54 light">Oswald &ndash; 1.75rem &ndash; 28px</p>
-                <h3 class="slab text-gray54 mt-5">Sanchez Slab</h3>
-                <h4 class="slab text-spruce mb-0">h4. Heading</h4>
-                <p class="text-gray54 light">Sanchez Slab &ndash; 1.5rem &ndash; 24px</p>
+                <h3 class="text-gray54 segoe">Windows</h3>
+                <h1 class="m-0 segoe">h1. Heading</h1>
+                <p class="text-gray54 light segoe">Segoe UI 700 &ndash; 2.5rem &ndash; 40px</p>
+                <h2 class="mb-0 segoe">h2. Heading</h2>
+                <p class="text-gray54 light segoe">Segoe UI 700 &ndash; 2rem &ndash; 32px</p>
+                <h3 class="mb-0 segoe">h3. Heading</h3>
+                <p class="text-gray54 light segoe">Segoe UI 700 &ndash; 1.75rem &ndash; 28px</p>
+                <h4 class="mb-0 segoe">h4. Heading</h4>
+                <p class="text-gray54 light segoe">Segoe UI 700 &ndash; 1.5rem &ndash; 24px</p>
+                <h5 class="mb-0 segoe">h5. Heading</h5>
+                <p class="text-gray54 light segoe">Segoe UI 700 &ndash; 1.25rem &ndash; 20px</p>
+                <h6 class="mb-0 segoe">h6. Heading</h6>
+                <p class="text-gray54 light segoe">Segoe UI 700 &ndash; 1.125rem &ndash; 18px</p>
+                <p class="mb-0 segoe">p. Paragraph</p>
+                <p class="text-gray54 light segoe">Segoe UI 400 &ndash; 1rem &ndash; 16px</p>
+                <a class="segoe" href="#">a. Link</a>
+                <p class="text-gray54 light segoe">Segoe UI 400 &ndash; 1rem &ndash; 16px &ndash; Spruce #006c7d</p>
+                <label>label. Form</label>
+                <p class="text-gray54 light segoe">Segoe UI 700 &ndash; 1rem &ndash; 14px</p>
+                <small class="mb-0 segoe">small. Paragraph</small>
+                <p class="text-gray54 light segoe">Segoe UI 400 &ndash; 1rem &ndash; 12px</p>
               </div>
             </div>
-            <div class="row">
+            <div class="row mt-4">
               <div class="col-md-4">
                 <h3 id="font-weight">Font weight
                   <a class="anchor" href="#font-weight">#</a>
                 </h3>
-                <p class="font-weight-bold"><code>.font-weight-bold</code> for 700 Bold text</p>
-                <p class="font-weight-normal"><code>.font-weight-normal</code> for 400 Normal weight text</p>
-                <p class="font-weight-light"><code>.font-weight-light</code> for 300 Light weight text</p>
-                <p class="font-italic"><code>.font-italic</code> for Italic text</p>
+                <p class="fw-bold"><code>.fw-bold</code> for 700 bold text</p>
+                <p class="fw-normal"><code>.fw-normal</code> for 400 normal weight text</p>
+                <p class="fw-light"><code>.fw-light</code> for 300 light weight text</p>
+                <p class="fst-italic"><code>.fst-italic</code> for italic text</p>
+                <p class="fst-normal"><code>.fst-normal</code> for text with normal font style</p>
                 <h3 id="text-transform" class="mt-5">Text transform
                   <a class="anchor" href="#text-transform">#</a>
                 </h3>
@@ -121,14 +139,30 @@
               <div class="col-md-4">
                 <h3>Display headings</h3>
                 <p>Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a <strong>display heading</strong>&ndash;a larger, slightly more opinionated heading style.</p>
-                <h1 class="m-0 display-1">Display 1</h1>
-                <p class="text-gray54 light ml-2">Lato 300 &ndash; 4.5rem &ndash; 72px</p>
-                <h2 class="m-0 display-2">Display 2</h2>
-                <p class="text-gray54 light ml-2">Lato 300 &ndash; 3.75rem &ndash; 60px</p>
-                <h3 class="m-0 display-3">Display 3</h3>
-                <p class="text-gray54 light ml-2">Lato 300 &ndash; 3rem &ndash; 48px</p>
-                <h4 class="m-0 display-4">Display 4</h4>
-                <p class="text-gray54 light ml-2">Lato 300 &ndash; 2.5rem &ndash; 40px</p>
+                <div class="row">
+                  <div class="col-md-6">
+                    <h3 class="text-gray54">macOS</h3>
+                    <h1 class="m-0 display-1">Display 1</h1>
+                    <p class="text-gray54 light ml-1">SF Pro Display 300 &ndash; 4.5rem &ndash; 72px</p>
+                    <h2 class="m-0 display-2">Display 2</h2>
+                    <p class="text-gray54 light ml-1">SF Pro Display 300 &ndash; 3.75rem &ndash; 60px</p>
+                    <h3 class="m-0 display-3">Display 3</h3>
+                    <p class="text-gray54 light ml-1">SF Pro Display 300 &ndash; 3rem &ndash; 48px</p>
+                    <h4 class="m-0 display-4">Display 4</h4>
+                    <p class="text-gray54 light ml-1">SF Pro Display 300 &ndash; 2.5rem &ndash; 40px</p>
+                  </div>
+                  <div class="col-md-6">
+                    <h3 class="text-gray54 segoe">Windows</h3>
+                    <h1 class="m-0 display-1 segoe">Display 1</h1>
+                    <p class="text-gray54 light ml-1 segoe">Segoe UI 300 &ndash; 4.5rem &ndash; 72px</p>
+                    <h2 class="m-0 display-2 segoe">Display 2</h2>
+                    <p class="text-gray54 light ml-1 segoe">Segoe UI 300 &ndash; 3.75rem &ndash; 60px</p>
+                    <h3 class="m-0 display-3 segoe">Display 3</h3>
+                    <p class="text-gray54 light ml-1 segoe">Segoe UI 300 &ndash; 3rem &ndash; 48px</p>
+                    <h4 class="m-0 display-4 segoe">Display 4</h4>
+                    <p class="text-gray54 light ml-1 segoe">Segoe UI 300 &ndash; 2.5rem &ndash; 40px</p>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="row mt-4">
@@ -146,7 +180,7 @@
                 <p class="text-violet">.text-violet for Violet (#8959b5)</p>
                 <p class="text-blue">.text-blue for HQY Blue (#0070b9)</p>
                 <p class="text-spruce">.text-spruce for Spruce (#007f94)</p>
-                <p class="text-forest">.text-forest for Forest (#488045)</p>
+                <p class="text-forest">.text-forest for Forest (#347954)</p>
                 <p class="text-red">.text-red for Red (#d80443)</p>
               </div>
               <div class="col-md-4">
@@ -166,9 +200,9 @@
               </div>
             </div>
             <div class="row">
-              
+
               <div class="col-md-4">
-                
+
               </div>
             </div>
             <div class="row">
@@ -188,12 +222,12 @@
             <p>Bootstrap v4.3 ships with the option to enable responsive font sizes, allowing text to scale more naturally across device and viewport sizes. <abbr title="Responsive font sizes">RFS</abbr> can be enabled by changing the <code class="highlighter-rouge">$enable-responsive-font-sizes</code> Sass variable to <code class="highlighter-rouge">true</code> and recompiling Bootstrap.</p>
             <p>To support <abbr title="Responsive font sizes">RFS</abbr>, we use a Sass mixin to replace our normal <code class="highlighter-rouge">font-size</code> properties. Responsive font sizes will be compiled into <code class="highlighter-rouge">calc()</code> functions with a mix of <code class="highlighter-rouge">rem</code> and viewport units to enable the responsive scaling behavior. More about <abbr title="Responsive font sizes">RFS</abbr> and its configuration can be found on its <a href="https://github.com/twbs/rfs/tree/v8.0.4">GitHub repository</a>.</p>
               <h4 class="mt-4 text-gray54">Font Size Chart</h4>
-              <img class="w-100" src="../../_images/rfs-chart.svg" alt="Responsive Font Size Chart">
+              <img class="w-90" src="../../_images/rfs-chart.svg" alt="Responsive Font Size Chart">
             <div class="row">
               <div class="col">
                 <p class="mt-4">For additional specifics on using the Bootstrap text utilities follow the link below.</p>
-                <p class="mt-5 text-gray54"><a  href="https://getbootstrap.com/docs/4.5/content/typography/" target="_blank">getbootstrap.com/docs/4.5/content/typography/</a></p>
-                <p class="text-gray54"><a  href="https://getbootstrap.com/docs/4.5/utilities/text/" target="_blank">getbootstrap.com/docs/4.5/utilities/text/</a></p>
+                <p class="mt-5 text-gray54"><a  href="https://getbootstrap.com/docs/5.2/content/typography/" target="_blank">getbootstrap.com/docs/5.x/content/typography/</a></p>
+                <p class="text-gray54"><a  href="https://getbootstrap.com/docs/5.2/utilities/text/" target="_blank">getbootstrap.com/docs/5.x/utilities/text/</a></p>
               </div>
             </div>
 
@@ -224,5 +258,4 @@ $(document).ready(function(){
 
 });
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </html>
