@@ -9,20 +9,13 @@
   <link rel="icon" href="../../_images/favicon.png" type="image/x-icon" />
 
   <!-- css -->
-  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-grid.css">
-  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-reboot.css">
-  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
-  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="../../_css/tyrian.css">
-
-  <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian-icons.css">
 
   <!-- javascript -->
-  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     $(function () {
     $('[data-toggle="tooltip"]').tooltip()
@@ -38,9 +31,13 @@
 
         <div id="page-header"></div>
         <script>
-          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+          let header = "https://design.healthequity.com/_ajax/header.html"
+
+          fetch (header)
+          .then(x => x.text())
+          .then(y => document.getElementById("page-header").innerHTML = y);
         </script>
-        
+
       </header>
 
     <div class="site-content">
@@ -49,10 +46,14 @@
           <div class="col-12 col-sm-3 col-xl-2 bd-sidebar">
             <h5 class="mt-2 pb-2">Patterns</h5>
             <div class="div-2 mb-2"></div>
-            
+
             <div id="patterns-nav"></div>
             <script>
-              $( "#patterns-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #patterns" );
+              let patterns = "https://design.healthequity.com/_ajax/patterns-nav.html"
+
+              fetch (patterns)
+              .then(x => x.text())
+              .then(y => document.getElementById("patterns-nav").innerHTML = y);
             </script>
 
           </div>
@@ -64,54 +65,46 @@
             <img class="w-100" src="../../_images/pageheader-default.png" alt="Default page header">
             <ol class="mb-5 pl-3">
               <li class="mb-2"><strong>The page header</strong> spans the full width of the view port and is fixed to the top of the page.</li>
-              <li class="mb-2"><strong>Logos</strong> are restricted to a max-width of 240px and a max-height of 48px. Logos smaller than this will render at size. This allows our current suggested size of 360px by 64px for partner logos to be proportionally reduced in size with accuracy.</li>
-              <li class="mb-2"><strong>Navigation hover menu</strong> text summarizes the content of the links in the hover menu, and are indicated by an <a href="https://fontawesome.com/v4.7.0/icon/angle-down" target="_blank">angle down icon</a> to the right of the navigation text.</li>
-              <li class="mb-2"><strong>Navigation links</strong> summarize the content of the page they link to.</li>
-              <li class="mb-2"><strong>The username and id number</strong> appears below the right side of the page header. This element is global to inform the user of their session and id number.</li>
-              <li class="mb-2"><strong>System actions and information</strong> quick event driven actions or links to key information for the account appears right aligned on the page header with an associated icon and a summarized title.</li>
-            </ol>
-            <h3 id="hover-states" class="mt-5">Hover States
-              <a class="anchor" href="#hover-states">#</a>
-            </h3>
-            <img class="w-100" src="../../_images/pageheader-hover.png" alt="Page header hover states">
-            <ol class="pl-3 mt-3">
-              <li class="mb-2"><strong>A hover menu</strong> navigation link displays a dropdown menu with additional navigation links on hover.</li>
-              <li class="mb-2"><strong>Dropdown hover menu links</strong> appear with a white background.</li>
-              <li class="mb-2"><strong>Dropdown hover menu links on hover</strong> appear with a light gray background.</li>
-              <li class="mb-2"><strong>All primary navigation links</strong> on hover have purple text and a purple border on the bottom.</li>
-              <li class="mb-2"><strong>The icons and labels</strong> that are in the system action area turn purple on hover.</li>
+              <li class="mb-2"><strong>The HealthEquity logo</strong> is enclosed in a purple rectangle that spans the full height of the header 96px and a proportionate width of 263px.</li>
+              <li class="mb-2"><strong>Global navigation items</strong> are displayed with an icon and a description directly below. Both icon and text should provide a clear picture of what would happen when clicked.</li>
+              <li class="mb-2"><strong>Messages indicator</strong>, when there are unread messages a blue dot indicator is present top right of the icon.</li>
+              <li class="mb-2"><strong>Profile</strong> details of the members name and id number are always visible to the right of the menu items.</li>
+              <li class="mb-2"><strong>Profile cirlce</strong> the members intitials are contained in a circle to quicly reference the member in active session, both the profile details and the circle open the profile dropdown when selected.</li>
             </ol>
             <h3 id="dropdowns" class="mt-5">Dropdowns
               <a class="anchor" href="#dropdowns">#</a>
             </h3>
-            <img class="w-100" src="../../_images/pageheader-dropdown.png" alt="Page header dropdown">
+            <img class="w-100" src="../../_images/pageheader-dropdown.png" alt="Page header dropdowns">
             <ol class="pl-3 mt-3">
-              <li class="mb-2"><strong>A dropdown</strong> can be added to one of the links the right aligned system actions menu instead of executing the event directly.</li>
+              <li class="mb-2"><strong>A messages dropdown</strong> appears when the icon or text is selected. The number of unread messages is displayed in the header of the dropdown.</li>
+              <li class="mb-2"><strong>Recent messages</strong> are displayed in the dropdown and can be selected to navigate and read the entirety of any message.</li>
+              <li class="mb-2"><strong>The profile dropdown</strong> is displayed when the profile details or circle is selected. If there are multiple accounts they will be displayed with links to the account and its profile.</li>
             </ol>
             <h3 id="co-branding" class="mt-5">Co-Branding
               <a class="anchor" href="#co-branding">#</a>
             </h3>
             <img class="w-100" src="../../_images/pageheader-cobrand.png" alt="Page header co-branding">
             <ol class="pl-3 mt-3">
-              <li class="mb-2"><strong>The partner logo</strong> replaces HealthEquity's when requested.</li>
-              <li class="mb-2"><strong>The stacked HealthEquity logo</strong> will be added to the far right side of the page header by default, but a partner may request that the HealthEquity logo does not show here and only shows in the footer.</li>
+              <li class="mb-2"><strong>A partner logo</strong> may replace HealthEquity's when requested. Partner logos are restricted to a max-width of 240px and a max-height of 48px. Logos smaller than this should render at size. This allows our previous suggested size of 360px by 64px for partner logos to be proportionally reduced in size with accuracy.</li>
+              <li><strong>The HealthEquity logo</strong> may appear alongside a partner logo with a gray vertical bar separating them. Otherwise a HealthEquity logo in grayscale format displays in the footer unless specified.</li>
             </ol>
             <h3 id="responsive" class="mt-5">Responsive
               <a class="anchor" href="#responsive">#</a>
             </h3>
             <img class="w-100" src="../../_images/pageheader-responsive.png" alt="Responsive page headers">
             <ol class="pl-3 mt-3">
-              <li class="mb-2"><strong>At a tablet</strong> size viewport less than 768px wide the page header navigation links should not display. The navigation links display depends on their width and may collapse at a wider viewport breakpoint.</li>
-              <li class="mb-2"><strong>The hamburger menu</strong> icon appears to the left of the logo once the navigation links have collapsed within.</li>
-              <li class="mb-2"><strong>The logo</strong> at tablet size remains at either a max-width of 240px or a max-height of 48px.</li>
-              <li class="mb-2"><strong>A mobile</strong> size viewport can be used all the way to a minimum of 320px wide.</li>
-              <li class="mb-2"><strong>The logo</strong> at a mobile viewport of 480px or less the logo is restriced to a max-width of 120px.</li>
+              <li class="mb-2"><strong>At a tablet</strong> size viewport (less than 768px wide) the page header displays entirely purple and navigation links should not display.</li>
+              <li class="mb-2"><strong>The hamburger menu</strong> icon appears to the left of the header. When selected menu should display as a dropdown containing all the navigation links.</li>
+              <li class="mb-2"><strong>The logo</strong> shifts to be centered in the viewport and is reduced in size to either a max-width of 120px or a max-height of 24px.</li>
+              <li class="mb-2"><strong>Safe Space</strong> should be included for any status bars with the same purple background color.</li>
+              <li class="mb-2"><strong>A mobile</strong> size viewport should be adjusted to include safe space for any notches as well as the status bar.</li>
+              <li class="mb-2"><strong>The logo</strong> for a mobile viewport is centered and kept at a max-width of 120px or a max-height of 24px.</li>
+              <li class="mb-2"><strong>Partner logos</strong> on a mobile viewport are also centered and restriced to a max-width of 120px or a max-height of 24px. In scenarios where both the partner and the HealthEquity logo are side by side the second logo should no longer be displayed.</li>
             </ol>
             <h3 class="mt-5">Responsive Menu</h3>
             <img class="w-100" src="../../_images/pageheader-responsivemenu.png" alt="Responsive page headers">
             <ol class="pl-3 mt-3">
-              <li class="mb-2"><strong>The responsive menu</strong> slides out as a drawer on the left side of the viewport offsetting a pages content when the hamburger menu icon is selected. The menu also displays the full height of the viewport and becomes scrollable when necessary.</li>
-              <li class="mb-2"><strong>The navigation links</strong> have a similar appearance to those of the hover menu with a white background and gray border on the bottom.</li>
+              <li class="mb-2"><strong>The responsive menu</strong> appears as a dropdown below the header on the left side of the viewport overlaying a pages content, when the hamburger menu icon is selected.</li>
             </ol>
         </div>
       </div> <!-- END container -->
@@ -138,5 +131,5 @@ $(document).ready(function(){
 
 });
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 </html>
