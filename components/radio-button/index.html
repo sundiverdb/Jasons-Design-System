@@ -9,20 +9,13 @@
   <link rel="icon" href="../../_images/favicon.png" type="image/x-icon" />
 
   <!-- css -->
-  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-grid.css">
-  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-reboot.css">
-  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
-  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="../../_css/tyrian.css">
-
-  <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian-icons.css">
 
   <!-- javascript -->
-  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     $(function () {
     $('[data-toggle="tooltip"]').tooltip()
@@ -38,7 +31,11 @@
 
         <div id="page-header"></div>
         <script>
-          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+          let header = "https://design.healthequity.com/_ajax/header.html"
+
+          fetch (header)
+          .then(x => x.text())
+          .then(y => document.getElementById("page-header").innerHTML = y);
         </script>
 
       </header>
@@ -52,7 +49,11 @@
 
             <div id="components-nav"></div>
             <script>
-              $( "#components-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #components" );
+              let components = "https://design.healthequity.com/_ajax/components-nav.html"
+
+              fetch (components)
+              .then(x => x.text())
+              .then(y => document.getElementById("components-nav").innerHTML = y);
             </script>
 
           </div>
@@ -65,7 +66,7 @@
             <h4>Default (stacked)</h4>
             <p>By default, any number of radios that are immediate sibling will be vertically stacked and appropriately spaced with <code class="highlighter-rouge">.form-radio</code>.</p>
             <div class="callout-card callout-warning w-70">
-              <p>Try and design without using disabled states. Disabled elements may cause confusion when the reason for the element being disabled isn't clear. Provide a clear validation reason when disabling an element.</p>
+              <p class="mb-0">Try and design without using disabled states. Disabled elements may cause confusion when the reason for the element being disabled isn't clear. Provide a clear validation reason when disabling an element.</p>
             </div>
             <div class="form-radio">
               <input class="form-radio-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
@@ -121,8 +122,8 @@
               <label class="form-radio-label" for="inlineRadio2">2</label>
             </div>
             <div class="form-radio form-radio-inline mb-3">
-              <input class="form-radio-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
-              <label class="form-radio-label" for="inlineRadio3">3 (disabled)</label>
+              <input class="form-radio-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+              <label class="form-radio-label" for="inlineRadio3">3</label>
             </div>
 
             <div class="bd-clipboard invisible">
@@ -146,7 +147,7 @@
             </h4>
             <p>These differ from the Switches and Checkbox components in that they may have more than two options but only a single option can be selected, and the options are not simply toggled on or off.</p>
             <div class="callout-card callout-warning w-70">
-              <p>This format should be used when you need radio buttons distinguished from standard or inline radio buttons.</p>
+              <p class="mb-0">This format should be used when you need radio buttons distinguished from standard or inline radio buttons.</p>
             </div>
             <div class="form-radio-switch">
               <input type="radio" id="radio-one" name="switch-one" value="yes" checked/>
@@ -181,7 +182,7 @@
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
             <p class="mt-4">For additional specifics on using alerts follow the link below.</p>
-            <p class="text-gray54"><a  href="https://getbootstrap.com/docs/4.5/components/forms/#checkboxes-and-radios" target="_blank">getbootstrap.com/docs/4.5/components/forms/#checkboxes-and-radios</a></p>
+            <p class="text-gray54"><a  href="https://getbootstrap.com/docs/5.2/forms/checks-radios/#radios" target="_blank">getbootstrap.com/docs/5.x/forms/checks-radios/#radios</a></p>
           </div>
         </div>
       </div> <!-- END container -->
@@ -211,5 +212,4 @@ $(document).ready(function(){
 
 });
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </html>
