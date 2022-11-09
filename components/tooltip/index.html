@@ -1,28 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Components &ndash; Tooltip</title>
+  <title>Components &ndash; Overview</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <!-- favicon -->
-  <link rel="shortcut icon" href="../../_images/favicon.png" type="image/x-icon" />
-  <link rel="icon" href="../../_images/favicon.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="../_images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="../_images/favicon.png" type="image/x-icon" />
 
   <!-- css -->
-  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-grid.css">
-  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-reboot.css">
-  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
-  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="../../_css/tyrian.css">
-
-  <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian-icons.css">
 
   <!-- javascript -->
-  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     $(function () {
     $('[data-toggle="tooltip"]').tooltip()
@@ -38,7 +31,11 @@
 
         <div id="page-header"></div>
         <script>
-          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+          let header = "https://design.healthequity.com/_ajax/header.html"
+
+          fetch (header)
+          .then(x => x.text())
+          .then(y => document.getElementById("page-header").innerHTML = y);
         </script>
 
       </header>
@@ -49,73 +46,303 @@
           <div class="col-12 col-sm-3 col-xl-2 bd-sidebar">
             <h5 class="mt-2 pb-2">Components</h5>
             <div class="div-2 mb-2"></div>
-
             <div id="components-nav"></div>
             <script>
-              $( "#components-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #components" );
+              let components = "https://design.healthequity.com/_ajax/components-nav.html"
+
+              fetch (components)
+              .then(x => x.text())
+              .then(y => document.getElementById("components-nav").innerHTML = y);
             </script>
 
           </div>
           <div class="col-12 col-sm-8 col-xl-10">
-            <h1 class="m-0 text-purple">Tooltip</h1>
-            <h3 class="text-gray60 light lh-3 w-70 mb-4">Tooltips provide additional information upon hover or focus. The information should be contextual, useful, but nonessential information. Tooltips should be short.</h3>
-            <h2>Overview</h2>
-            <p>Things to know when using the tooltip plugin:</p>
-            <ul>
-              <li>Tooltips rely on the 3rd party library <a href="https://popper.js.org/">Popper.js</a> for positioning. You must include <a href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">popper.min.js</a> before bootstrap.js or use <code class="highlighter-rouge">bootstrap.bundle.min.js</code> / <code class="highlighter-rouge">bootstrap.bundle.js</code> which contains Popper.js in order for tooltips to work!</li>
-              <li>If you're building our JavaScript from source, it <a href="/docs/4.3/getting-started/javascript/#util">requires <code class="highlighter-rouge">util.js</code></a>.</li>
-              <li>Tooltips are opt-in for performance reasons, so <strong>you must initialize them yourself</strong>.</li>
-              <li>Tooltips with zero-length titles are never displayed.</li>
-              <li>Specify <code class="highlighter-rouge">container: 'body'</code> to avoid rendering problems in more complex components (like our input groups, button groups, etc).</li>
-              <li>Triggering tooltips on hidden elements will not work.</li>
-              <li>Tooltips for <code class="highlighter-rouge">.disabled</code> or <code class="highlighter-rouge">disabled</code> elements must be triggered on a wrapper element.</li>
-              <li>When triggered from hyperlinks that span multiple lines, tooltips will be centered. Use <code class="highlighter-rouge">white-space: nowrap;</code> on your <code class="highlighter-rouge">&lt;a&gt;</code>s to avoid this behavior.</li>
-              <li>Tooltips must be hidden before their corresponding elements have been removed from the DOM.</li>
-              <li>Tooltips can be triggered thanks to an element inside a shadow DOM.</li>
-            </ul>
-            <div class="callout-card callout-info">
-                <p>The animation effect of this component is dependent on the <code class="highlighter-rouge">prefers-reduced-motion</code> media query. See the <a href="/docs/4.3/getting-started/accessibility/#reduced-motion">reduced motion section of bootstrap's accessibility documentation</a>.</p>
-            </div>
-            <h2 class="mt-4">Enable tooltips everywhere</h2>
-            <p>One way to initialize all tooltips on a page would be to select them by their <code class="highlighter-rouge">data-toggle</code> attribute:</p>
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s1">'[data-toggle="tooltip"]'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">()</span>
-<span class="p">})</span></code></pre></figure>
-            <h2 class="mt-4">Examples</h2>
-            <p>Hover over the buttons below to see the four tooltips directions: top, right, bottom, and left.</p>
-            <div class="mb-4">
-                <div class="">
-                  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip on top">Tooltip on top</button>
-                  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
-                  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
-                  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
-                  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">Tooltip with HTML</button>
+            <h1 class="m-0 text-purple">Overview</h1>
+            <h3 class="text-gray60 light w-70 lh-3 mb-4">Components are the building blocks of the design system. </h3>
+            <p>Each component has been designed and coded to provide a consistent experience across our products. Built with accessible HTML and CSS with instructions for how each variation may be implemented.</p>
+            <div class="card mt-4">
+              <div class="card-body m-3">
+                <h2 class="mt-0 text-purple">Status</h2>
+                <div class="row pb-2 border-bottom">
+                  <div class="col-4 text-gray54">
+                    Component
+                  </div>
+                  <div class="col-3 text-gray54">
+                    Code
+                  </div>
+                  <div class="col-3 text-gray54">
+                    Figma Library
+                  </div>
                 </div>
+                <div class="row mt-3">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Alerts</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Badges</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Buttons</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Callout</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Cards</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Charts</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-adjust rotate-90 text-yellow"></span> In progress</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle-alt text-gray54"></span> Under Consideration</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Checkbox</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Collapse</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Datepicker</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-blue"></span> See ng-Bootstrap</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Dropdown</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">File Upload</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-adjust rotate-90 text-yellow"></span> In progress</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Forms</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">List</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Modal</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Pagination</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Popover</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Progress</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Radio Button</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Range</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Spinner</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Switches</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Tables</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-adjust rotate-90 text-yellow"></span> In progress</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-adjust rotate-90 text-yellow"></span> In progress</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Tabs</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <p class="font-weight-bold">Tooltip</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Live</p>
+                  </div>
+                  <div class="col-3">
+                    <p><span class="t-circle text-green"></span> Updated</p>
+                  </div>
+                </div>
+
               </div>
-            <div class="bd-clipboard invisible">
-              <button class="btn-clipboard" type="button" data-clipboard-action="copy" data-clipboard-target="pre" data-toggle="tooltip" data-placement="top" data-original-title="Copy to clipboard">Copy</button>
             </div>
-            <div class="highlight">
-<pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-placement=</span><span class="s">"top"</span> <span class="na">title=</span><span class="s">"Tooltip on top"</span><span class="nt">&gt;</span>
-  Tooltip on top
-<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-placement=</span><span class="s">"right"</span> <span class="na">title=</span><span class="s">"Tooltip on right"</span><span class="nt">&gt;</span>
-  Tooltip on right
-<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-placement=</span><span class="s">"bottom"</span> <span class="na">title=</span><span class="s">"Tooltip on bottom"</span><span class="nt">&gt;</span>
-  Tooltip on bottom
-<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-placement=</span><span class="s">"left"</span> <span class="na">title=</span><span class="s">"Tooltip on left"</span><span class="nt">&gt;</span>
-  Tooltip on left
-<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-toggle=</span><span class="s">"tooltip"</span> <span class="na">data-html=</span><span class="s">"true"</span> <span class="na">title=</span><span class="s">"&lt;em&gt;Tooltip&lt;/em&gt; &lt;u&gt;with&lt;/u&gt; &lt;b&gt;HTML&lt;/b&gt;"</span><span class="nt">&gt;</span>
-  Tooltip with HTML
-<span class="nt">&lt;/button&gt;</span></code></pre>
-            </div>
-
-
-            <p class="mt-4">For additional specifics on using tooltips follow the link below.</p>
-            <p class="text-gray54"><a  href="https://getbootstrap.com/docs/4.5/components/tooltips/" target="_blank">getbootstrap.com/docs/4.5/components/tooltips/</a></p>
+            <p class="mt-4">For additional specifics on using components follow the link below.</p>
+            <p class="text-gray54"><a  href="https://getbootstrap.com/docs/5.2/getting-started/introduction/" target="_blank">getbootstrap.com/docs/5.x/getting-started/introduction/</a></p>
 
           </div>
         </div>
