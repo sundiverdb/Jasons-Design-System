@@ -9,20 +9,13 @@
   <link rel="icon" href="../../_images/favicon.png" type="image/x-icon" />
 
   <!-- css -->
-  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-grid.css">
-  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-reboot.css">
-  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
-  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="../../_css/tyrian.css">
-
-  <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian-icons.css">
 
   <!-- javascript -->
-  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     $(function () {
     $('[data-toggle="tooltip"]').tooltip()
@@ -38,7 +31,11 @@
 
         <div id="page-header"></div>
         <script>
-          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+          let header = "https://design.healthequity.com/_ajax/header.html"
+
+          fetch (header)
+          .then(x => x.text())
+          .then(y => document.getElementById("page-header").innerHTML = y);
         </script>
 
       </header>
@@ -52,7 +49,11 @@
 
             <div id="foundation-nav"></div>
             <script>
-              $( "#foundation-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #foundation" );
+              let foundation = "https://design.healthequity.com/_ajax/foundation-nav.html"
+
+              fetch (foundation)
+              .then(x => x.text())
+              .then(y => document.getElementById("foundation-nav").innerHTML = y);
             </script>
 
           </div>
@@ -60,84 +61,127 @@
             <h1 class="m-0 text-purple">Object Styles</h1>
             <h3 class="text-gray60 light lh-3 w-70 mb-4">Specific shapes or effects can help establish hierarchy on the page and give cues about interaction.</h3>
             <h2>Borders</h2>
-            <h4 class="text-gray66">Border-Radius</h4>
+            <h4 class="text-gray66 mb-0">Radius</h4>
             <p>Add classes to an element to easily round its corners.</p>
 
-            <div class="row">
+            <div class="row mb-4">
               <div class="col-2">
                 <div class="card card-body rounded-0">
-                  <p>For no border-radius use the <code>.rounded-0</code> class</p>
+                  <p class="text-center">For no border radius use <code>.rounded-0</code></p>
                 </div>
               </div>
               <div class="col-2">
                 <div class="card card-body rounded">
-                  <p>For a border-radius of <code>.25rem</code> use the <code>.rounded</code> class</p>
+                  <p class="text-center">For a border radius of <code>.25rem</code> use <code>.rounded</code></p>
                 </div>
               </div>
               <div class="col-2">
                 <div class="card card-body rounded-lg">
-                  <p>For a border-radius of <code>.5rem</code> use the <code>.rounded-lg</code> class</p>
+                  <p class="text-center">For a border radius of <code>.5rem</code> use <code>.rounded-lg</code></p>
                 </div>
               </div>
               <div class="col-2">
                 <div class="card card-body rounded-xl">
-                  <p>For a border-radius of <code>1rem</code> use the <code>.rounded-xl</code> class</p>
+                  <p class="text-center">For a border radius of <code>1rem</code> use <code>.rounded-xl</code></p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-2">
+                <div class="card card-body rounded-circle">
+                  <p class="mb-1 text-center">For a circle or oval use <code>.rounded-circle</code></p>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card card-body rounded-pill">
+                  <p class="text-center">For a pill use <br><code>.rounded-pill</code></p>
                 </div>
               </div>
             </div>
 
-            <h4 class="text-gray66">Border-Colors</h4>
+
+            <h4 class="text-gray66 mb-0">Color</h4>
             <p>The classes are named using the format <code class="highlighter-rouge">border-{name}</code>.</p>
 
-            <h5>Examples</h5>
             <div class="row">
               <div class="col-2">
                 <div class="card card-body border-primary">
-                  <p>primary</p>
+                  <h6>primary</h6>
                 </div>
               </div>
               <div class="col-2">
                 <div class="card card-body border-secondary">
-                  <p>secondary</p>
+                  <h6>secondary</h6>
                 </div>
               </div>
             </div>
             <div class="row mt-4">
               <div class="col-2">
                 <div class="card card-body border-success">
-                  <p>success</p>
+                  <h6>success</h6>
                 </div>
               </div>
               <div class="col-2">
                 <div class="card card-body border-danger">
-                  <p>danger</p>
+                  <h6>danger</h6>
                 </div>
               </div>
               <div class="col-2">
                 <div class="card card-body border-warning">
-                  <p>warning</p>
+                  <h6>warning</h6>
                 </div>
               </div>
               <div class="col-2">
                 <div class="card card-body border-info">
-                  <p>info</p>
+                  <h6>info</h6>
                 </div>
               </div>
             </div>
             <div class="row mt-4">
               <div class="col-2">
                 <div class="card card-body border-light">
-                  <p>light</p>
+                  <h6>light</h6>
                 </div>
               </div>
               <div class="col-2">
                 <div class="card card-body border-dark">
-                  <p>dark</p>
+                  <h6>dark</h6>
                 </div>
               </div>
               <div class="col-2">
                 <div class="card card-body border-white">
-                  <p>white</p>
+                  <h6>white</h6>
+                </div>
+              </div>
+            </div>
+
+            <h4 class="text-gray66 mb-0">Width</h4>
+            <p>The classes are named using the format <code class="highlighter-rouge">border-{#}</code>.</p>
+
+            <div class="row">
+              <div class="col-2">
+                <div class="card card-body shadow-none border-1">
+                  <h6>border-1</h6>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="card card-body shadow-none border-2">
+                  <h6>border-2</h6>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="card card-body shadow-none border-3">
+                  <h6>border-3</h6>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="card card-body shadow-none border-4">
+                  <h6>border-4</h6>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="card card-body shadow-none border-5">
+                  <h6>border-5</h6>
                 </div>
               </div>
             </div>
@@ -149,14 +193,14 @@
             <div class="row">
               <div class="col-8">
                 <div class="card card-body border-white shadow-none">
-                  <h6 class="m-0 text-gray66">No shadow - <code>.shadow-none</code></h6>
+                  <h6 class="m-0 text-gray66">No shadow<span class="fw-normal"> - <code>.shadow-none</code></span></h6>
                 </div>
               </div>
             </div>
             <div class="row mt-5">
               <div class="col-8">
                 <div class="card card-body border-white shadow-sm">
-                  <h6 class="m-0 text-gray66 d-inline">Small shadow - <code>.shadow-sm</code> <small class="pl-3 text-muted d-inline"><em>h-offset</em>=0 <em class="pl-3">y-offset</em>=2px <em class="pl-3">blur</em>=4px <em class="pl-3">color</em>=rgba(0, 0, 0, .06)</small></h6>
+                  <h6 class="m-0 text-gray66 d-inline">Small shadow<span class="fw-normal"> - <code>.shadow-sm</code> <small class="pl-3 text-muted d-inline"><em>h-offset</em>=0 <em class="pl-3">y-offset</em>=2px <em class="pl-3">blur</em>=4px <em class="pl-3">color</em>=rgba(0, 0, 0, .06)</small></span></h6>
 
                 </div>
               </div>
@@ -164,21 +208,21 @@
             <div class="row mt-5">
               <div class="col-8">
                 <div class="card card-body border-white shadow">
-                  <h6 class="m-0 text-gray66">Regular shadow - <code>.shadow</code> <small class="pl-3 text-muted d-inline"><em>h-offset</em>=0 <em class="pl-3">y-offset</em>=4px <em class="pl-3">blur</em>=8px <em class="pl-3">color</em>=rgba(0, 0, 0, .08)</small></h6>
+                  <h6 class="m-0 text-gray66">Regular shadow<span class="fw-normal"> - <code>.shadow</code> <small class="pl-3 text-muted d-inline"><em>h-offset</em>=0 <em class="pl-3">y-offset</em>=4px <em class="pl-3">blur</em>=8px <em class="pl-3">color</em>=rgba(0, 0, 0, .08)</small></span></h6>
                 </div>
               </div>
             </div>
             <div class="row mt-5 pb-5">
               <div class="col-8">
                 <div class="card card-body border-white shadow-lg">
-                  <h6 class="m-0 text-gray66">Large shadow - <code>.shadow-lg</code> <small class="pl-3 text-muted d-inline"><em>h-offset</em>=0 <em class="pl-3">y-offset</em>=16px <em class="pl-3">blur</em>=32px <em class="pl-3">color</em>=rgba(0, 0, 0, .10)</small></h6>
+                  <h6 class="m-0 text-gray66">Large shadow<span class="fw-normal"> - <code>.shadow-lg</code> <small class="pl-3 text-muted d-inline"><em>h-offset</em>=0 <em class="pl-3">y-offset</em>=16px <em class="pl-3">blur</em>=32px <em class="pl-3">color</em>=rgba(0, 0, 0, .10)</small></span></h6>
                 </div>
               </div>
             </div>
 
             <p class="mt-5">For additional specifics on using the Bootstrap border or shadow utilities follow the links below.</p>
-            <p class="text-gray54"><a  href="https://getbootstrap.com/docs/4.5/utilities/borders/" target="_blank">getbootstrap.com/docs/4.5/utilities/borders/</a></p>
-            <p class="text-gray54"><a  href="https://getbootstrap.com/docs/4.5/utilities/shadows/" target="_blank">getbootstrap.com/docs/4.5/utilities/shadows/</a></p>
+            <p class="text-gray54"><a  href="https://getbootstrap.com/docs/5.2/utilities/borders/" target="_blank">getbootstrap.com/docs/5.x/utilities/borders/</a></p>
+            <p class="text-gray54"><a  href="https://getbootstrap.com/docs/5.2/utilities/shadows/" target="_blank">getbootstrap.com/docs/5.x/utilities/shadows/</a></p>
           </div>
         </div>
       </div> <!-- END container -->
@@ -208,5 +252,5 @@ $(document).ready(function(){
 
 });
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 </html>
