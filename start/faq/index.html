@@ -9,20 +9,13 @@
   <link rel="icon" href="../../_images/favicon.png" type="image/x-icon" />
 
   <!-- css -->
-  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-grid.css">
-  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-reboot.css">
-  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
-  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="../../_css/tyrian.css">
-
-  <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian-icons.css">
 
   <!-- javascript -->
-  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     $(function () {
     $('[data-toggle="tooltip"]').tooltip()
@@ -38,7 +31,11 @@
 
         <div id="page-header"></div>
         <script>
-          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+          let header = "https://design.healthequity.com/_ajax/header.html"
+
+          fetch (header)
+          .then(x => x.text())
+          .then(y => document.getElementById("page-header").innerHTML = y);
         </script>
 
       </header>
@@ -52,7 +49,11 @@
 
             <div id="start-nav"></div>
             <script>
-              $( "#start-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #start" );
+              let start = "https://design.healthequity.com/_ajax/start-nav.html"
+
+              fetch (start)
+              .then(x => x.text())
+              .then(y => document.getElementById("start-nav").innerHTML = y);
             </script>
 
           </div>
@@ -60,7 +61,7 @@
             <h1 class="m-0 text-purple">FAQ</h1>
             <h3 class="text-gray60 light lh-3 mb-4">Commonly asked questions about the design system.</h3>
             <h3 class="mb-2">What is Tyrian?</h3>
-            <p>Tyrian is HealthEquity's Design System which includes a collection of individual brand, foundation, components, mobile guidelines, and patterns for creating a unified frontend experience across HealthEquity's products. Tyrian is built on top of Bootstrap 4.</p>
+            <p>Tyrian is HealthEquity's Design System which includes a collection of individual elements for design foundation, components, mobile guidelines, and patterns for creating a unified frontend experience across HealthEquity's products. Tyrian is built on top of Bootstrap 5.x.</p>
             <h3 class="mt-4 mb-2">How is this any different from a style guide?</h3>
             <p>A style guide is a single point in the design process. A design system is a living document that is continually refined to serve an entire ecosystem of products.</p>
             <h3 class="mt-4 mb-2">How can I participate in building the design system?</h3>
@@ -74,7 +75,7 @@
               <li>Safari Latest</li>
             </ul>
             <h3 class="mt-4 mb-2">I just found a bug, who should I tell?</h3>
-            <p>Contact the UX team/UX guild directly, as we don't have a process in place for handling bugs, yet!</p>
+            <p>Contact the UX team directly or bring them up in a UX huddle meeting, as we don't have a process in place for handling bugs, yet!</p>
             <h3 class="mt-4 mb-2">Why hasn't the bug I reported been fixed yet?</h3>
             <p>Have you made a big enough stink about it? If not, please bring it back up to our attention. We will try and address any bugs that are found as soon as possible.</p>
             <h3 class="mt-4 mb-2">I can't update to the latest version of a component, because it will break stuff?</h3>
@@ -82,9 +83,9 @@
             <h3 class="mt-4 mb-2">I can't seem to find the component I need?</h3>
             <p>If we haven't provided a component here in the design system yet we are most likely using the Bootstrap default. If the component you are looking for doesn't have a bootstrap version, let us know.</p>
             <h3 class="mt-4 mb-2">Where do I go if I still have some concerns or questions?</h3>
-            <p>Please contact a representative of the UX team/UX guild.</p>
-            <p>Email: <a href="mailto:jgrotegut@healthequity.com" target="_top">Jason Grotegut</a> &ndash; <small class="text-gray54">Sr. UX Designer</small><br>
-              Email: <a href="mailto:dstanley@healthequity.com" target="_top">David Stanley</a> &ndash; <small class="text-gray54">Sr. Software Engineer</small></p>
+            <p>Please contact a representative of the UX team/UX huddle.</p>
+            <p>Email: <a href="mailto:jgrotegut@healthequity.com" target="_top">Jason Grotegut</a> &ndash; <small class="text-gray54">Principal UX Designer</small><br>
+              Email: <a href="mailto:tkinsey@healthequity.com" target="_top">Troy Kinsey</a> &ndash; <small class="text-gray54">Sr. Software Engineer</small></p>
           </div>
         </div>
       </div> <!-- END container -->
@@ -92,6 +93,7 @@
     <div class="site-cache" id="site-cache"></div>
   </div> <!-- END site-pusher -->
 </div> <!-- END site-container -->
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script>
   var cipboard = new ClipboardJS('.btn-clipboard)'); clipboard.on('success', function(e) { console.log(e); }); clipboard.on('error', function(e) { console.log(e); });
 </script>
