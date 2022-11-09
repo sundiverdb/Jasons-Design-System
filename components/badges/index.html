@@ -9,20 +9,13 @@
   <link rel="icon" href="../../_images/favicon.png" type="image/x-icon" />
 
   <!-- css -->
-  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-grid.css">
-  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-reboot.css">
-  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
-  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="../../_css/tyrian.css">
-
-  <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../_css/tyrian-icons.css">
 
   <!-- javascript -->
-  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     $(function () {
     $('[data-toggle="tooltip"]').tooltip()
@@ -38,9 +31,13 @@
 
         <div id="page-header"></div>
         <script>
-          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+          let header = "https://design.healthequity.com/_ajax/header.html"
+
+          fetch (header)
+          .then(x => x.text())
+          .then(y => document.getElementById("page-header").innerHTML = y);
         </script>
-        
+
       </header>
 
     <div class="site-content">
@@ -52,93 +49,145 @@
 
             <div id="components-nav"></div>
             <script>
-              $( "#components-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #components" );
+              let components = "https://design.healthequity.com/_ajax/components-nav.html"
+
+              fetch (components)
+              .then(x => x.text())
+              .then(y => document.getElementById("components-nav").innerHTML = y);
             </script>
-            
+
           </div>
           <div class="col-12 col-sm-8 col-xl-10">
             <h1 class="m-0 text-purple">Badges</h1>
             <h3 class="text-gray66 light lh-3 ll-80 mb-4">Small count and labeling component.</h3>
             <h2>Examples</h2>
-            <p class="ll-2">Badges scale to match the size of the immediate parent element by using relative font sizing and <code>em</code> units. Use the <code>.badge-pill</code> modifier class to make badges more rounded (with a larger <code>border-radius</code> and additional horizontal <code>padding</code>).</p>
-            <h1>Example heading <span class="badge badge-pill badge-secondary">New</span></h1>
-            <h2>Example heading <span class="badge badge-pill badge-secondary">New</span></h2>
-            <h3>Example heading <span class="badge badge-pill badge-secondary">New</span></h3>
-            <h4>Example heading <span class="badge badge-pill badge-secondary">New</span></h4>
-            <h5>Example heading <span class="badge badge-pill badge-secondary">New</span></h5>
-            <h6 class="mb-4">Example heading <span class="badge badge-pill badge-secondary">New</span></h6>
+            <p class="ll-2">Badges scale to match the size of the immediate parent element by using relative font sizing and <code>em</code> units. Use the <code>.rounded-pill</code> modifier class to make badges more rounded (with a larger <code>border-radius</code> and additional horizontal <code>padding</code>).</p>
+            <h1>Example heading <span class="badge rounded-pill badge-secondary">New</span></h1>
+            <h2>Example heading <span class="badge rounded-pill badge-secondary">New</span></h2>
+            <h3>Example heading <span class="badge rounded-pill badge-secondary">New</span></h3>
+            <h4>Example heading <span class="badge rounded-pill badge-secondary">New</span></h4>
+            <h5>Example heading <span class="badge rounded-pill badge-secondary">New</span></h5>
+            <h6 class="mb-4">Example heading <span class="badge rounded-pill badge-secondary">New</span></h6>
             <div class="bd-clipboard invisible">
               <button class="btn-clipboard" type="button" data-clipboard-action="copy" data-clipboard-target="pre" data-toggle="tooltip" data-placement="top" data-original-title="Copy to clipboard">Copy</button>
             </div>
             <div class="highlight">
-<pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1&gt;</span>Example heading <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge badge-pill badge-secondary"</span><span class="nt">&gt;</span>New<span class="nt">&lt;/span&gt;&lt;/h1&gt;</span>
-<span class="nt">&lt;h2&gt;</span>Example heading <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge badge-pill badge-secondary"</span><span class="nt">&gt;</span>New<span class="nt">&lt;/span&gt;&lt;/h2&gt;</span>
-<span class="nt">&lt;h3&gt;</span>Example heading <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge badge-pill badge-secondary"</span><span class="nt">&gt;</span>New<span class="nt">&lt;/span&gt;&lt;/h3&gt;</span>
-<span class="nt">&lt;h4&gt;</span>Example heading <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge badge-pill badge-secondary"</span><span class="nt">&gt;</span>New<span class="nt">&lt;/span&gt;&lt;/h4&gt;</span>
-<span class="nt">&lt;h5&gt;</span>Example heading <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge badge-pill badge-secondary"</span><span class="nt">&gt;</span>New<span class="nt">&lt;/span&gt;&lt;/h5&gt;</span>
-<span class="nt">&lt;h6&gt;</span>Example heading <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge badge-pill badge-secondary"</span><span class="nt">&gt;</span>New<span class="nt">&lt;/span&gt;&lt;/h6&gt;</span></code></pre></div>
+<pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1&gt;</span>Example heading <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge rounded-pill badge-secondary"</span><span class="nt">&gt;</span>New<span class="nt">&lt;/span&gt;&lt;/h1&gt;</span>
+<span class="nt">&lt;h2&gt;</span>Example heading <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge rounded-pill badge-secondary"</span><span class="nt">&gt;</span>New<span class="nt">&lt;/span&gt;&lt;/h2&gt;</span>
+<span class="nt">&lt;h3&gt;</span>Example heading <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge rounded-pill badge-secondary"</span><span class="nt">&gt;</span>New<span class="nt">&lt;/span&gt;&lt;/h3&gt;</span>
+<span class="nt">&lt;h4&gt;</span>Example heading <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge rounded-pill badge-secondary"</span><span class="nt">&gt;</span>New<span class="nt">&lt;/span&gt;&lt;/h4&gt;</span>
+<span class="nt">&lt;h5&gt;</span>Example heading <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge rounded-pill badge-secondary"</span><span class="nt">&gt;</span>New<span class="nt">&lt;/span&gt;&lt;/h5&gt;</span>
+<span class="nt">&lt;h6&gt;</span>Example heading <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge rounded-pill badge-secondary"</span><span class="nt">&gt;</span>New<span class="nt">&lt;/span&gt;&lt;/h6&gt;</span></code></pre></div>
             <p class="ll-2">Badges can be used as part of links or buttons to provide a counter.</p>
             <button type="button" class="btn btn-primary">
-              Notifications <span class="badge badge-pill badge-light ml-2">4</span>
+              Notifications <span class="badge rounded-pill badge-light ml-2">4</span>
             </button>
             <div class="bd-clipboard invisible">
               <button class="btn-clipboard" type="button" data-clipboard-action="copy" data-clipboard-target="pre" data-toggle="tooltip" data-placement="top" data-original-title="Copy to clipboard">Copy</button>
             </div>
 <div class="highlight mt-3">
 <pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>
-  Notifications <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge badge-pill badge-light ml-2"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/span&gt;</span>
+  Notifications <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge rounded-pill badge-light ml-2"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/span&gt;</span>
 <span class="nt">&lt;/button&gt;</span></code></pre></div>
             <div class="callout-card callout-warning w-70">
               <h4 id ="assistive-technology"class="mt-0">Conveying meaning to assistive technologies
                 <a class="anchor" href="#assistive-technology">#</a>
               </h4>
-              <p class="lh-2">Depending on how badges are used, they may be confusing for users of screen readers and similar assistive technologies. While the styling of badges provides a visual cue as to their purpose, these users will simply be presented with the content of the badge. Depending on the specific situation, these badges may seem like random additional words or numbers at the end of a sentence, link, or button.</p>
+              <p class="lh-2 mb-0">Depending on how badges are used, they may be confusing for users of screen readers and similar assistive technologies. While the styling of badges provides a visual cue as to their purpose, these users will simply be presented with the content of the badge. Depending on the specific situation, these badges may seem like random additional words or numbers at the end of a sentence, link, or button.</p>
               <p class="lh-2">Consider including additional context with a hidden piece of additional text. Ensure that information denoted by the color is either obvious from the content itself (e.g. the visible text), or is included through alternative means, such as additional text hidden with the <code>.sr-only</code> class.</p>
             </div>
             <button type="button" class="btn btn-primary">
-              Profile <span class="badge badge-pill badge-light ml-2">9</span>
+              Profile <span class="badge rounded-pill badge-light ml-2">9</span>
               <span class="sr-only">unread messages</span>
             </button>
 <div class="highlight mt-3">
 <pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>
-  Profile <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge badge-pill badge-light"</span><span class="nt">&gt;</span>9<span class="nt">&lt;/span&gt;</span>
+  Profile <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge rounded-pill badge-light"</span><span class="nt">&gt;</span>9<span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>unread messages<span class="nt">&lt;/span&gt;</span>
 <span class="nt">&lt;/button&gt;</span></code></pre></div>
+
+            <h2 id="positioned"class="mt-5">Positioned
+              <a class="anchor" href="#positioned">#</a>
+            </h2>
+            <p>Use utilities to modify a <code>.badge</code> and position it in the corner of a link or button.</p>
+            <button type="button" class="btn btn-primary position-relative">
+              <span class="t-bell"></span> Messages
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger border border-white border-2 ">
+                99+
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </button>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-primary position-relative"</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  Messages
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger border border-white border-2"</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    99+
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"visually-hidden"</span><span class="p">&gt;</span>unread messages<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></span></span></code></pre></div>
+
+            <p>You can also replace the <code>.badge</code> class with a few more utilities without a count for a more generic indicator.</p>
+            <button type="button" class="btn btn-primary position-relative">
+              <span class="t-profile-circle"></span> Profile
+              <span class="position-absolute top-0 start-100 translate-middle b-2 bg-danger border border-white border-2 rounded-circle">
+                <span class="visually-hidden">New alerts</span>
+              </span>
+            </button>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-primary position-relative"</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  Profile
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-white border-2 rounded-circle"</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"visually-hidden"</span><span class="p">&gt;</span>New alerts<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></span></span></code></pre></div>
+
             <h2 id="contextual-variations"class="mt-5">Contextual variations
               <a class="anchor" href="#contextual-variations">#</a>
             </h2>
-            <p class="ll-2 mb-4">Add any of the below mentioned modifier classes to change the appearance of a badge. Use the <code>.badge-pill</code> modifier class to make badges more rounded (with a larger <code>border-radius</code> and additional horizontal <code>padding</code>).</p>
-            <span class="badge badge-pill badge-primary">Primary</span>
-            <span class="badge badge-pill badge-secondary">Secondary</span>
-            <span class="badge badge-pill badge-light">Light</span>
-            <span class="badge badge-pill badge-dark">Dark</span>
-            <span class="badge badge-pill badge-success">Success</span>
-            <span class="badge badge-pill badge-info">Info</span>
-            <span class="badge badge-pill badge-warning">Warning</span>
-            <span class="badge badge-pill badge-danger">Danger</span>
-            <div class="highlight mt-3">
-<pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge badge-pill badge-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge badge-pill badge-secondary"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge badge-pill badge-light"</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge badge-pill badge-dark"</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge badge-pill badge-success"</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge badge-pill badge-info"</span><span class="nt">&gt;</span>Info<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge badge-pill badge-warning"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge badge-pill badge-danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/span&gt;</span></code></pre></div>
+            <p class="ll-2 mb-4">Add any of the below mentioned modifier classes to change the appearance of a badge. Use the <code>.rounded-pill</code> modifier class to make badges more rounded (with a larger <code>border-radius</code> and additional horizontal <code>padding</code>).</p>
+            <span class="badge rounded-pill badge-primary">Primary</span>
+            <span class="badge rounded-pill badge-secondary">Secondary</span>
+            <span class="badge rounded-pill badge-light">Light</span>
+            <span class="badge rounded-pill badge-dark">Dark</span>
+            <span class="badge rounded-pill badge-success">Success</span>
+            <span class="badge rounded-pill badge-info">Info</span>
+            <span class="badge rounded-pill badge-warning">Warning</span>
+            <span class="badge rounded-pill badge-danger">Danger</span>
+            <span class="badge rounded-pill badge-primary-alt">Primary Alt</span>
+            <span class="badge rounded-pill badge-secondary-alt">Secondary Alt</span>
+            <span class="badge rounded-pill badge-success-alt">Success Alt</span>
+            <span class="badge rounded-pill badge-info-alt">Info Alt</span>
+            <span class="badge rounded-pill badge-warning-alt">Warning Alt</span>
+            <span class="badge rounded-pill badge-danger-alt">Danger Alt</span>
+<div class="highlight mt-3"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge rounded-pill badge-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge rounded-pill badge-secondary"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge rounded-pill badge-light"</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge rounded-pill badge-dark"</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge rounded-pill badge-success"</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge rounded-pill badge-info"</span><span class="nt">&gt;</span>Info<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge rounded-pill badge-warning"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge rounded-pill badge-danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/span&gt;</span>
+
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge rounded-pill badge-primary-alt"</span><span class="nt">&gt;</span>Primary Alt<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge rounded-pill badge-secondary-alt"</span><span class="nt">&gt;</span>Secondary Alt<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge rounded-pill badge-success-alt"</span><span class="nt">&gt;</span>Success Alt<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge rounded-pill badge-info-alt"</span><span class="nt">&gt;</span>Info Alt<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge rounded-pill badge-warning-alt"</span><span class="nt">&gt;</span>Warning Alt<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge rounded-pill badge-danger-alt"</span><span class="nt">&gt;</span>Danger Alt<span class="nt">&lt;/span&gt;</span></code></pre></div>
             <h2 class="mt-5">Links</h2>
             <p class="lh-2 mb-4">Using the contextual <code>.badge-*</code> classes on an <code>&lt;a&gt;</code> element quickly provide actionable badges with hover and focus states.</p>
-            <a href="#" class="badge badge-pill badge-primary">Primary</a>
-            <a href="#" class="badge badge-pill badge-secondary">Secondary</a>
-            <a href="#" class="badge badge-pill badge-light">Light</a>
-            <a href="#" class="badge badge-pill badge-dark">Dark</a>
+            <a href="#" class="badge rounded-pill badge-primary">Primary</a>
+            <a href="#" class="badge rounded-pill badge-secondary">Secondary</a>
+            <a href="#" class="badge rounded-pill badge-light">Light</a>
+            <a href="#" class="badge rounded-pill badge-dark">Dark</a>
             <div class="highlight mt-3">
-<pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"badge badge-pill badge-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"badge badge-pill badge-secondary"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"badge badge-pill badge-light"</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"badge badge-pill badge-dark"</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/a&gt;</span></code></pre></div>
+<pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"badge rounded-pill badge-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"badge rounded-pill badge-secondary"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"badge rounded-pill badge-light"</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"badge rounded-pill badge-dark"</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/a&gt;</span></code></pre></div>
 
             <p class="mt-4">For additional specifics on using badges follow the link below.</p>
-            <p class="text-gray54"><a  href="https://getbootstrap.com/docs/4.3/components/badge/" target="_blank">getbootstrap.com/docs/4.3/components/badge/</a></p>
+            <p class="text-gray54"><a  href="https://getbootstrap.com/docs/5.2/components/badge/" target="_blank">getbootstrap.com/docs/5.2/components/badge/</a></p>
 
           </div>
         </div>
@@ -169,5 +218,4 @@ $(document).ready(function(){
 
 });
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </html>
