@@ -9,21 +9,13 @@
   <link rel="icon" href="../../_images/favicon.png" type="image/x-icon" />
 
   <!-- css -->
-  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-grid.css">
-  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap-reboot.css">
-  <link rel="stylesheet" type="text/css" href="../../_css/bootstrap.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
-  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="../../_css/tyrian.css">
   <link rel="stylesheet" type="text/css" href="../../_css/tyrian-icons.css">
 
-  <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
-
   <!-- javascript -->
-  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     $(function () {
     $('[data-toggle="tooltip"]').tooltip()
@@ -39,7 +31,11 @@
 
         <div id="page-header"></div>
         <script>
-          $( "#page-header" ).load( "https://design.healthequity.com/_ajax/header.html" );
+          let header = "https://design.healthequity.com/_ajax/header.html"
+
+          fetch (header)
+          .then(x => x.text())
+          .then(y => document.getElementById("page-header").innerHTML = y);
         </script>
 
       </header>
@@ -53,7 +49,11 @@
 
             <div id="patterns-nav"></div>
             <script>
-              $( "#patterns-nav" ).load( "https://design.healthequity.com/_ajax/nav.html #patterns" );
+              let patterns = "https://design.healthequity.com/_ajax/patterns-nav.html"
+
+              fetch (patterns)
+              .then(x => x.text())
+              .then(y => document.getElementById("patterns-nav").innerHTML = y);
             </script>
 
           </div>
@@ -69,9 +69,9 @@
             </h6>
             <ol class="mb-5 pl-3">
               <li class="mb-2"><strong>Label:</strong> Indicates what sort of information the field requires and should be short and concise. Labels are directly above their input and aligned to the left.</li>
-              <li class="mb-2"><strong>Placeholder text:</strong> Let people know how the field should be used. Only add where additional clarification is needed.</li>
+              <li class="mb-2"><strong>Placeholder text:</strong> Let people know how the field should be used. Only add when additional clarification is needed.</li>
               <li class="mb-2"><strong>Input field:</strong> Area where the text will be entered.</li>
-              <li class="mb-2"><strong>Helper text:</strong> Gives context about a field's input. It's best to provide an example or specific syntax for the input here, rather than in the placeholder, so that it's visible after text has been entered. Only use this where clarification is required, and try not to overuse it.</li>
+              <li class="mb-2"><strong>Helper text:</strong> Gives context about a field's input. It's best to provide an example or specific syntax for the input here, rather than in the placeholder, so that it's visible after text has been entered. Only use this where clarification is required.</li>
               <li class="mb-2"><strong>Active input field:</strong> When the field is selected for text entry its border turns blue and a light blue spotlight is added to help focus.</li>
               <li class="mb-2"><strong>Input field validation:</strong> When an error related to the field occurs the border turns red to highlight the error.</li>
               <li class="mb-2"><strong>Validation error:</strong> Displays the error message related to the restrictions of the field. Keep this text as short as possible.</li>
@@ -87,10 +87,10 @@
               <a class="anchor" href="#alert-key">#</a>
             </h6>
             <ol class="mb-5 pl-3">
+              <li class="mb-2"><strong>Icon:</strong> An icon is added to help distiguish the type of alert see the variations in the chart below.</li>
               <li class="mb-2"><strong>Description:</strong> This should describe the issue and any action the user needs to take, if any. The alert will expand with the length of the description but should be as succinct as possible.</li>
-              <li class="mb-2"><strong>Icon (optional):</strong> An icon can be added to help distiguish the type of alert see the variations in the chart below.</li>
               <li class="mb-2"><strong>Actions (optional):</strong> One or more links that enable the user to act on the messages content.</li>
-              <li class="mb-2"><strong>Dismissable (optional):</strong> Gives the user the option to dismiss the alert; this should only be used with alerts that are informative.</li>
+              <li class="mb-2"><strong>Dismissable (optional):</strong> Gives the user the option to dismiss the alert; this should be used with alerts that are simply informative in nature.</li>
             </ol>
             <h5 id="variations" class="mt-2">Variations
               <a class="anchor" href="#variations">#</a>
@@ -108,6 +108,32 @@
             </div>
             <div class="row w-80 mt-4">
               <div class="col-3">
+                Primary
+              </div>
+              <div class="col-3 mt-2">
+                <div class="alert alert-primary d-inline" role="alert">
+                  <span class="t-bell"></span>
+                </div>
+              </div>
+              <div class="col-6">
+                For communicating primary information regarding part of the system.
+              </div>
+            </div>
+            <div class="row w-80 mt-4">
+              <div class="col-3">
+                Secondary
+              </div>
+              <div class="col-3 mt-2">
+                <div class="alert alert-secondary d-inline" role="alert">
+                  <span class="t-bell"></span>
+                </div>
+              </div>
+              <div class="col-6">
+                For communicating secondary information regarding part of the system.
+              </div>
+            </div>
+            <div class="row w-80 mt-4">
+              <div class="col-3">
                 Success
               </div>
               <div class="col-3 mt-2">
@@ -116,7 +142,7 @@
                 </div>
               </div>
               <div class="col-6">
-                Communicates that an action has been successful. Not a common use case for alert messages.
+                Communicates that an action has been successful.
               </div>
             </div>
             <div class="row w-80 mt-4">
@@ -125,7 +151,7 @@
               </div>
               <div class="col-3 mt-2">
                 <div class="alert alert-error d-inline" role="alert">
-                  <span class="t-exclamation-circle"></span>
+                  <span class="t-error"></span>
                 </div>
               </div>
               <div class="col-6">
@@ -163,7 +189,7 @@
                 Light & Dark
               </div>
               <div class="col-3 mt-2">
-                <div class="alert alert-light d-inline mr-3" role="alert">
+                <div class="alert alert-light d-inline me-3" role="alert">
                   <span class="t-question-circle"></span>
                 </div>
                 <div class="alert alert-dark d-inline" role="alert">
@@ -174,29 +200,12 @@
                 For communicating basic information regarding part of the system.
               </div>
             </div>
-            <h3 id="notifications">Notifications
-              <a class="anchor" href="#notifications">#</a>
-            </h3>
-            <p>Use toast notifications to communicate conditions, indicate an event, or to show responses to user actions. Content can include authentication, information, confirmation, warnings, and error messages. It is important to specify which of these the content of the message falls under in order to choose the correct type.</p>
-            <div class="callout-card w-70">
-                <p>Toast notifications by default should appear on top of content in the top right of the viewport just below the page header.</p>
-              </div>
-            <img class="w-100" src="../../_images/messages-notifications.png" alt="Toast notification details">
-            <h6 id="notification-key" class="text-violet mt-3">Notification Key
-              <a class="anchor" href="#notification-key">#</a>
-            </h6>
-            <ol class="mb-5 pl-3">
-              <li class="mb-2"><strong>Title:</strong> Toast notifications should always contain a concise title.</li>
-              <li class="mb-2"><strong>Time Stamp (optional):</strong> Informs the user when the event occurred.</li>
-              <li class="mb-2"><strong>Dismissable:</strong> Gives the user the option to dismiss the notification.</li>
-              <li class="mb-2"><strong>Description:</strong> Descriptions should be concise and limited to three lines in length.</li>
-            </ol>
             <h3 id="full-page">Full Page
               <a class="anchor" href="#full-page">#</a>
             </h3>
             <p>Use full page messages when a complicated process has been completed or fails and it doesn't make sense to leave the user on the current page.</p>
             <div class="callout-card w-70">
-                <p>These messages are presented on a card and top-centered on their own page.</p>
+                <p class="m-0">These messages are presented on a card and top-centered on their own page.</p>
               </div>
             <img class="w-100" src="../../_images/messages-page.png" alt="Full page messaging details">
             <h6 class="text-violet mt-3">Full Page Messaging Key</h6>
@@ -232,5 +241,5 @@ $(document).ready(function(){
 
 });
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 </html>
