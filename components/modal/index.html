@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <title>Components &ndash; Modal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
@@ -34,7 +35,7 @@
 
         <div id="page-header"></div>
         <script>
-          let header = "https://design.healthequity.com/_ajax/header.html"
+          let header = "/_ajax/header.html"
 
           fetch (header)
           .then(x => x.text())
@@ -52,7 +53,7 @@
 
               <div id="components-nav"></div>
               <script>
-                let components = "https://design.healthequity.com/_ajax/components-nav.html"
+                let components = "/_ajax/components-nav.html"
 
                 fetch (components)
                 .then(x => x.text())

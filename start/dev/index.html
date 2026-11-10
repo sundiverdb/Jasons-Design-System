@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <title>Tyrian &ndash; Getting Started: Development</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
@@ -32,7 +33,7 @@
 
         <div id="page-header"></div>
         <script>
-          let header = "https://design.healthequity.com/_ajax/header.html"
+          let header = "/_ajax/header.html"
 
           fetch (header)
           .then(x => x.text())
@@ -50,7 +51,7 @@
 
             <div id="start-nav"></div>
             <script>
-              let start = "https://design.healthequity.com/_ajax/start-nav.html"
+              let start = "/_ajax/start-nav.html"
 
               fetch (start)
               .then(x => x.text())
@@ -117,5 +118,4 @@
     <div class="site-cache" id="site-cache"></div>
   </div> <!-- END site-pusher -->
 </div> <!-- END site-container -->
-<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 </html>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <title>Foundation &ndash; Iconography</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
@@ -31,7 +32,7 @@
 
         <div id="page-header"></div>
         <script>
-          let header = "https://design.healthequity.com/_ajax/header.html"
+          let header = "/_ajax/header.html"
 
           fetch (header)
           .then(x => x.text())
@@ -49,7 +50,7 @@
 
             <div id="foundation-nav"></div>
             <script>
-              let foundation = "https://design.healthequity.com/_ajax/foundation-nav.html"
+              let foundation = "/_ajax/foundation-nav.html"
 
               fetch (foundation)
               .then(x => x.text())
@@ -1528,5 +1529,4 @@ $(document).ready(function(){
 
 });
 </script>
-<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 </html>

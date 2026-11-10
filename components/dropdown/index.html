@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
   <title>Components &ndash; Dropdown</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
@@ -31,7 +33,7 @@
 
         <div id="page-header"></div>
         <script>
-          let header = "https://design.healthequity.com/_ajax/header.html"
+          let header = "/_ajax/header.html"
 
           fetch (header)
           .then(x => x.text())
@@ -49,7 +51,7 @@
 
             <div id="components-nav"></div>
             <script>
-              let components = "https://design.healthequity.com/_ajax/components-nav.html"
+              let components = "/_ajax/components-nav.html"
 
               fetch (components)
               .then(x => x.text())
@@ -127,7 +129,7 @@
   </div> <!-- END site-pusher -->
 </div> <!-- END site-container -->
 <script>
-  var cipboard = new ClipboardJS('.btn-clipboard)'); clipboard.on('success', function(e) { console.log(e); }); clipboard.on('error', function(e) { console.log(e); });
+  var clipboard = new ClipboardJS('.btn-clipboard'); clipboard.on('success', function(e) { console.log(e); }); clipboard.on('error', function(e) { console.log(e); });
 </script>
 </body>
 <script>
